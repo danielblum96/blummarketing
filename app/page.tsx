@@ -335,7 +335,7 @@ export default function BlummarketingLanding() {
                   Email küldése
                   <ArrowRight className="h-5 w-5" aria-hidden="true" />
                 </a>
-                <a href="tel:+3612345678" className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-7 py-4 font-bold transition hover:bg-neutral-100">
+                <a href="tel:06303098589" className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-7 py-4 font-bold transition hover:bg-neutral-100">
                   Telefonos érdeklődés
                 </a>
               </div>
