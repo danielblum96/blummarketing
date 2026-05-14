@@ -1,9 +1,7 @@
 import React from "react";
 import { ArrowRight, BadgeCheck, BarChart3, Camera, Check, Clapperboard, Clock, Megaphone, PlayCircle, ShieldCheck, Sparkles, Target, TrendingUp, Zap } from "lucide-react";
-
-// Next.js App Router javaslat:
-// Fájl: app/page.tsx
-// A metadata blokkot külön az app/layout.tsx vagy page.tsx fájlban használd exportként.
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Blummarketing | Havidíjas TikTok, Meta videó- és fotós tartalomkészítés",
@@ -121,20 +119,7 @@ export default function BlummarketingLanding() {
 
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.28),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.24),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="Blummarketing főoldal">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-neutral-950 shadow-lg">
-              <Sparkles className="h-5 w-5" aria-hidden="true" />
-            </div>
-            <span className="text-lg font-bold tracking-tight">Blummarketing</span>
-          </a>
-          <nav className="hidden items-center gap-8 text-sm text-neutral-300 md:flex" aria-label="Fő navigáció">
-            <a href="#szolgaltatasok" className="hover:text-white">Szolgáltatások</a>
-            <a href="#ajanlat" className="hover:text-white">Csomag</a>
-            <a href="#folyamat" className="hover:text-white">Folyamat</a>
-            <a href="#kapcsolat" className="rounded-full bg-white px-5 py-2.5 font-semibold text-neutral-950 transition hover:bg-neutral-200">Ajánlatkérés</a>
-          </nav>
-        </div>
+        <Navbar />
 
         <div id="top" className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-32 lg:pt-24">
           <div>
@@ -353,10 +338,7 @@ export default function BlummarketingLanding() {
         </div>
       </section>
 
-      <footer className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-10 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-        <p>© {new Date().getFullYear()} Blummarketing. Minden jog fenntartva.</p>
-        <p>Havidíjas tartalomgyártás és hirdetéskezelés TikTokra és Metára.</p>
-      </footer>
+      <Footer />
     </main>
   );
 }
