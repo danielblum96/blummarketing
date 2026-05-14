@@ -135,8 +135,8 @@ export default function MetaPortfolioArticle() {
 
         {/* Article hero */}
         <div className="mx-auto max-w-4xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/blog/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
-            ← Vissza a blogra
+          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+            ← Vissza a tudástárba
           </a>
           <div className="flex flex-wrap gap-2 mb-6">
             {["Meta Ads", "PPC", "Facebook", "Hirdetéskezelő"].map((tag) => (

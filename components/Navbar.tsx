@@ -6,7 +6,7 @@ import { Menu, Sparkles, X } from "lucide-react";
 const navLinks = [
   { href: "/szolgaltatasok/", label: "Szolgáltatások" },
   { href: "/esettanulmanyok/", label: "Esettanulmányok" },
-  { href: "/blog/", label: "Tudástár" },
+  { href: "/tudastar/", label: "Tudástár" },
   { href: "/rolunk/", label: "Rólunk" },
   { href: "/#kapcsolat", label: "Kapcsolat" },
 ];
