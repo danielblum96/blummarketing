@@ -131,7 +131,7 @@ export default function MetaPortfolioArticle() {
       {/* Navbar */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
-        <Navbar basePath="" />
+        <Navbar />
 
         {/* Article hero */}
         <div className="mx-auto max-w-4xl px-6 pb-16 pt-14 lg:px-8">
