@@ -17,6 +17,14 @@ export const metadata = {
 
 const articles = [
   {
+    slug: "tiktok-hirdetesek-beallitasa",
+    title: "TikTok hirdetések beállítása érthetően: mi micsoda, hogyan épül fel?",
+    description: "TikTok Business Center, Ads Manager, hirdetési fiók, Pixel és Events API – megmutatjuk mi micsoda és mire kell figyelni a TikTok hirdetési rendszerben.",
+    date: "2025. február 1.",
+    readTime: "18 perc olvasás",
+    tags: ["TikTok Ads", "PPC", "Business Center"],
+  },
+  {
     slug: "meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal",
     title: "Meta üzleti portfólió, Hirdetéskezelő és Facebook-oldal: mi micsoda?",
     description: "Megmutatjuk mi a különbség az üzleti portfólió, hirdetési fiók és Facebook-oldal között – és miért kritikus ez a PPC-kampányaidhoz.",
