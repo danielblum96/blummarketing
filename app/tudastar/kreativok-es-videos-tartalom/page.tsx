@@ -1,6 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ogImage } from "@/lib/og";
 
 export const metadata = {
   title: "Hirdetési kreatívok PPC kampányokhoz: mitől működik egy kép, videó vagy UGC tartalom?",
@@ -21,6 +22,7 @@ export const metadata = {
     type: "article",
     locale: "hu_HU",
     siteName: "Blummarketing",
+    images: ogImage,
   },
   alternates: {
     canonical: "/tudastar/kreativok-es-videos-tartalom/",

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ogImage } from "@/lib/og";
 
 export const metadata = {
   title: "Rólunk | Blummarketing",
@@ -10,6 +11,7 @@ export const metadata = {
     type: "website",
     locale: "hu_HU",
     siteName: "Blummarketing",
+    images: ogImage,
   },
 };
 

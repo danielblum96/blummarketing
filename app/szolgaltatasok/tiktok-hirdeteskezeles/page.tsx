@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, Check, X } from "lucide-react";
+import { ogImage } from "@/lib/og";
 
 export const metadata = {
   title: "TikTok hirdetéskezelés | Blummarketing",
@@ -13,6 +14,7 @@ export const metadata = {
     type: "website",
     locale: "hu_HU",
     siteName: "Blummarketing",
+    images: ogImage,
   },
   alternates: { canonical: "/szolgaltatasok/tiktok-hirdeteskezeles/" },
 };

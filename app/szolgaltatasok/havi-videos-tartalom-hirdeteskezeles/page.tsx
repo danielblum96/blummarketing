@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight, BadgeCheck, Camera, Check, Clapperboard, Megaphone, PlayCircle, Target, TrendingUp, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ogImage } from "@/lib/og";
 
 export const metadata = {
   title: "Havi videós tartalom + hirdetéskezelés | Blummarketing",
@@ -24,6 +25,7 @@ export const metadata = {
     type: "website",
     locale: "hu_HU",
     siteName: "Blummarketing",
+    images: ogImage,
   },
 };
 

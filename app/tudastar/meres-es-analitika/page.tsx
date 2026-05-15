@@ -1,6 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ogImage } from "@/lib/og";
 
 export const metadata = {
   title: "Online marketing mérés: ha rossz adatból döntesz, rossz irányba költöd a pénzt",
@@ -21,6 +22,7 @@ export const metadata = {
     type: "article",
     locale: "hu_HU",
     siteName: "Blummarketing",
+    images: ogImage,
   },
   alternates: {
     canonical: "/tudastar/meres-es-analitika/",
