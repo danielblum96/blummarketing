@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     siteName: 'Blummarketing',
     locale: 'hu_HU',
     type: 'website',
+    images: [{ url: '/images/blummarketing-og.png', width: 1200, height: 630 }],
   },
   robots: {
     index: true,
