@@ -8,6 +8,7 @@ const szolgaltatasok = {
   href: "/szolgaltatasok/",
   children: [
     { href: "/szolgaltatasok/havi-videos-tartalom-hirdeteskezeles/", label: "Havi videós tartalom + hirdetéskezelés" },
+    { href: "/szolgaltatasok/google-hirdeteskezeles/", label: "Google hirdetéskezelés" },
     { href: "/szolgaltatasok/tiktok-hirdeteskezeles/", label: "TikTok hirdetéskezelés" },
     { href: "/szolgaltatasok/meta-hirdeteskezeles/", label: "Meta hirdetéskezelés" },
     { href: "/szolgaltatasok/weboldal-keszites/", label: "Weboldal készítés" },
