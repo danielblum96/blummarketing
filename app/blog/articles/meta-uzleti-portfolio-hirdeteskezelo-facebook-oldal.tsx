@@ -168,7 +168,7 @@ export default function MetaPortfolioArticle({ backHref = "/blog/", backLabel = 
         <HR />
 
         <H2>A legfontosabb különbség röviden</H2>
-        <P>Mielőtt mélyebbre megyünk, érdemes fejben tartani ezt az egyszerű mondatot:</P>
+        <P>Mielőtt mélyebbre megyünk, ezt érdemes fejben tartani:</P>
         <Blockquote>
           <strong>Az üzleti portfólió birtokolja és rendszerezi a Meta-eszközöket.<br />
           A hirdetési fiók futtatja a hirdetéseket.<br />
