@@ -24,6 +24,12 @@ const services = [
     highlight: true,
   },
   {
+    slug: "google-hirdeteskezeles",
+    title: "Google hirdetéskezelés",
+    description: "Search, Performance Max és Shopping kampányok stratégiai tervezése, beállítása és folyamatos optimalizálása – konverziókövetéssel együtt.",
+    tags: ["Google Ads", "Search", "PPC"],
+  },
+  {
     slug: "tiktok-hirdeteskezeles",
     title: "TikTok hirdetéskezelés",
     description: "TikTok kampányok stratégiai tervezése, beállítása, folyamatos optimalizálása és havi riportálása.",
