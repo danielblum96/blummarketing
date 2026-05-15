@@ -28,10 +28,20 @@ export const metadata: Metadata = {
   },
   description: 'Havidíjas videós és fotós tartalomgyártás TikTokra és Metára hirdetéskezeléssel. 10 videó/hó + kampánymenedzsment 270 000 Ft/hó áron.',
   openGraph: {
+    title: 'Blummarketing | Havidíjas Meta, Google és TikTok hirdetéskezelés',
+    description: 'Havidíjas videós és fotós tartalomgyártás TikTokra és Metára hirdetéskezeléssel. 10 videó/hó + kampánymenedzsment 270 000 Ft/hó áron.',
     siteName: 'Blummarketing',
     locale: 'hu_HU',
     type: 'website',
-    images: [{ url: '/images/blummarketing-og.png', width: 1200, height: 630 }],
+    url: 'https://blummarketing.hu',
+    images: [
+      {
+        url: 'https://blummarketing.hu/images/blummarketing-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blummarketing – Havidíjas hirdetéskezelés',
+      },
+    ],
   },
   robots: {
     index: true,
