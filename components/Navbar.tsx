@@ -3,6 +3,20 @@
 import { useState } from "react";
 import { ChevronDown, Menu, Sparkles, X } from "lucide-react";
 
+const szolgaltatasok = {
+  label: "Szolgáltatások",
+  href: "/szolgaltatasok/",
+  children: [
+    { href: "/szolgaltatasok/havi-videos-tartalom-hirdeteskezeles/", label: "Havi videós tartalom + hirdetéskezelés" },
+    { href: "/szolgaltatasok/tiktok-hirdeteskezeles/", label: "TikTok hirdetéskezelés" },
+    { href: "/szolgaltatasok/meta-hirdeteskezeles/", label: "Meta hirdetéskezelés" },
+    { href: "/szolgaltatasok/foto-es-videokeszites/", label: "Fotó- és videókészítés" },
+    { href: "/szolgaltatasok/social-media-tartalomgyartas/", label: "Social media tartalomgyártás" },
+    { href: "/szolgaltatasok/kreativ-optimalizalas/", label: "Kreatív optimalizálás" },
+    { href: "/szolgaltatasok/weboldal-keszites/", label: "Weboldal készítés" },
+  ],
+};
+
 const tudastar = {
   label: "Tudástár",
   href: "/tudastar/",
@@ -17,16 +31,12 @@ const tudastar = {
   ],
 };
 
-const topLinks = [
-  { href: "/szolgaltatasok/", label: "Szolgáltatások" },
-  { href: "/esettanulmanyok/", label: "Esettanulmányok" },
-  { href: "/rolunk/", label: "Rólunk" },
-  { href: "/#kapcsolat", label: "Kapcsolat" },
-];
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSubOpen, setMobileSubOpen] = useState(false);
+  const [mobileSzolgOpen, setMobileSzolgOpen] = useState(false);
+  const [mobileTudasOpen, setMobileTudasOpen] = useState(false);
+
+  const closeAll = () => setMobileOpen(false);
 
   return (
     <header className="relative z-50">
@@ -41,19 +51,34 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-6 text-sm text-neutral-300 lg:flex" aria-label="Fő navigáció">
-          <a href="/szolgaltatasok/" className="hover:text-white transition-colors">Szolgáltatások</a>
+
+          {/* Szolgáltatások dropdown */}
+          <div className="relative group">
+            <a href="/szolgaltatasok/" className="flex items-center gap-1 hover:text-white transition-colors">
+              Szolgáltatások
+              <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" aria-hidden="true" />
+            </a>
+            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 rounded-2xl border border-white/10 bg-neutral-900 p-3 shadow-2xl">
+              {szolgaltatasok.children.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
           <a href="/esettanulmanyok/" className="hover:text-white transition-colors">Esettanulmányok</a>
 
           {/* Tudástár dropdown */}
           <div className="relative group">
-            <a
-              href="/tudastar/"
-              className="flex items-center gap-1 hover:text-white transition-colors"
-            >
+            <a href="/tudastar/" className="flex items-center gap-1 hover:text-white transition-colors">
               Tudástár
               <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" aria-hidden="true" />
             </a>
-            {/* Dropdown panel */}
             <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 rounded-2xl border border-white/10 bg-neutral-900 p-3 shadow-2xl">
               <p className="mb-2 px-3 text-xs font-black uppercase tracking-widest text-neutral-500">
                 {tudastar.sectionLabel}
@@ -80,7 +105,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white lg:hidden"
-          onClick={() => { setMobileOpen((v) => !v); setMobileSubOpen(false); }}
+          onClick={() => { setMobileOpen((v) => !v); setMobileSzolgOpen(false); setMobileTudasOpen(false); }}
           aria-label={mobileOpen ? "Menü bezárása" : "Menü megnyitása"}
         >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -94,40 +119,24 @@ export default function Navbar() {
           aria-label="Mobil navigáció"
         >
           <ul className="flex flex-col gap-1">
-            {topLinks.slice(0, 2).map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
 
-            {/* Tudástár with submenu */}
+            {/* Szolgáltatások */}
             <li>
               <button
                 className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
-                onClick={() => setMobileSubOpen((v) => !v)}
+                onClick={() => setMobileSzolgOpen((v) => !v)}
               >
-                Tudástár
-                <ChevronDown className={`h-4 w-4 transition-transform ${mobileSubOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                Szolgáltatások
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileSzolgOpen ? "rotate-180" : ""}`} aria-hidden="true" />
               </button>
-              {mobileSubOpen && (
+              {mobileSzolgOpen && (
                 <ul className="mt-1 ml-4 flex flex-col gap-1 border-l border-white/10 pl-4">
-                  <li>
-                    <p className="px-2 py-1 text-xs font-black uppercase tracking-widest text-neutral-500">
-                      {tudastar.sectionLabel}
-                    </p>
-                  </li>
-                  {tudastar.children.map((item) => (
+                  {szolgaltatasok.children.map((item) => (
                     <li key={item.href}>
                       <a
                         href={item.href}
                         className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-400 transition hover:bg-white/10 hover:text-white"
-                        onClick={() => setMobileOpen(false)}
+                        onClick={closeAll}
                       >
                         {item.label}
                       </a>
@@ -137,24 +146,49 @@ export default function Navbar() {
               )}
             </li>
 
-            {topLinks.slice(2).map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a href="/esettanulmanyok/" className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>
+                Esettanulmányok
+              </a>
+            </li>
 
-            <li className="mt-2">
-              <a
-                href="/#kapcsolat"
-                className="block rounded-full bg-white px-4 py-3 text-center text-sm font-bold text-neutral-950 transition hover:bg-neutral-200"
-                onClick={() => setMobileOpen(false)}
+            {/* Tudástár */}
+            <li>
+              <button
+                className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
+                onClick={() => setMobileTudasOpen((v) => !v)}
               >
+                Tudástár
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileTudasOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+              </button>
+              {mobileTudasOpen && (
+                <ul className="mt-1 ml-4 flex flex-col gap-1 border-l border-white/10 pl-4">
+                  <li>
+                    <p className="px-2 py-1 text-xs font-black uppercase tracking-widest text-neutral-500">{tudastar.sectionLabel}</p>
+                  </li>
+                  {tudastar.children.map((item) => (
+                    <li key={item.href}>
+                      <a
+                        href={item.href}
+                        className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-400 transition hover:bg-white/10 hover:text-white"
+                        onClick={closeAll}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <a href="/rolunk/" className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>Rólunk</a>
+            </li>
+            <li>
+              <a href="/#kapcsolat" className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>Kapcsolat</a>
+            </li>
+            <li className="mt-2">
+              <a href="/#kapcsolat" className="block rounded-full bg-white px-4 py-3 text-center text-sm font-bold text-neutral-950 transition hover:bg-neutral-200" onClick={closeAll}>
                 Ajánlatkérés
               </a>
             </li>

@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Szolgáltatások | Blummarketing",
-  description: "Blummarketing szolgáltatásai: havidíjas videós tartalomkészítés, Meta és TikTok hirdetéskezelés vállalkozásoknak.",
+  description: "Blummarketing szolgáltatásai: videós tartalom, Meta és TikTok hirdetéskezelés, fotózás, social media tartalomgyártás, kreatív optimalizálás és weboldal készítés.",
   openGraph: {
     title: "Szolgáltatások | Blummarketing",
-    description: "Havidíjas videós tartalomkészítés és hirdetéskezelés vállalkozásoknak.",
+    description: "Videós tartalom, hirdetéskezelés, fotózás, social media és weboldal készítés.",
     type: "website",
     locale: "hu_HU",
     siteName: "Blummarketing",
@@ -21,6 +21,43 @@ const services = [
     description: "Havi 10 rövid videó TikTokra és Metára, fotós kreatívok, valamint TikTok és Meta kampánykezelés – egy csomagban, fix havidíjon.",
     price: "270 000 Ft / hó",
     tags: ["TikTok", "Meta", "Videó", "Hirdetéskezelés"],
+    highlight: true,
+  },
+  {
+    slug: "tiktok-hirdeteskezeles",
+    title: "TikTok hirdetéskezelés",
+    description: "TikTok kampányok stratégiai tervezése, beállítása, folyamatos optimalizálása és havi riportálása.",
+    tags: ["TikTok", "PPC"],
+  },
+  {
+    slug: "meta-hirdeteskezeles",
+    title: "Meta hirdetéskezelés",
+    description: "Facebook és Instagram kampányok beállítása, célzása, optimalizálása és mérése.",
+    tags: ["Meta", "Facebook", "Instagram", "PPC"],
+  },
+  {
+    slug: "foto-es-videokeszites",
+    title: "Fotó- és videókészítés",
+    description: "Professzionális fotó- és videóanyagok hirdetésekhez, weboldalhoz és social media tartalmakhoz.",
+    tags: ["Fotózás", "Videó", "Kreatív"],
+  },
+  {
+    slug: "social-media-tartalomgyartas",
+    title: "Social media tartalomgyártás",
+    description: "Rendszeres, márkaazonos tartalmak gyártása TikTokra, Instagramra és Facebookra.",
+    tags: ["Social media", "Tartalom", "TikTok", "Instagram"],
+  },
+  {
+    slug: "kreativ-optimalizalas",
+    title: "Kreatív optimalizálás",
+    description: "Meglévő hirdetési kreatívok elemzése, A/B tesztelése és teljesítményalapú javítása.",
+    tags: ["Kreatív", "Optimalizálás", "A/B teszt"],
+  },
+  {
+    slug: "weboldal-keszites",
+    title: "Weboldal készítés",
+    description: "Modern, gyors és konverzióra optimalizált weboldalak készítése vállalkozásoknak.",
+    tags: ["Weboldal", "Next.js", "Konverzió"],
   },
 ];
 
@@ -34,7 +71,7 @@ export default function SzolgaltatasokPage() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatások</p>
           <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Mit kínálunk?</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
-            Havidíjas csomagokban dolgozunk, ahol a tartalomgyártás és a hirdetéskezelés egy rendszerként működik.
+            Tartalomgyártástól a hirdetéskezelésen át a weboldalig – minden, ami a digitális jelenléthez kell.
           </p>
         </div>
       </section>
@@ -45,16 +82,25 @@ export default function SzolgaltatasokPage() {
             <a
               key={s.slug}
               href={`/szolgaltatasok/${s.slug}/`}
-              className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl transition hover:-translate-y-1 hover:bg-white/[0.07]"
+              className={`group rounded-[2rem] border p-7 shadow-xl transition hover:-translate-y-1 ${
+                s.highlight
+                  ? "border-rose-500/30 bg-rose-500/5 hover:bg-rose-500/10 lg:col-span-3"
+                  : "border-white/10 bg-white/[0.04] hover:bg-white/[0.07]"
+              }`}
             >
               <div className="flex flex-wrap gap-2 mb-5">
                 {s.tags.map((tag) => (
                   <span key={tag} className="rounded-full bg-rose-500/10 px-3 py-1 text-xs font-bold text-rose-300">{tag}</span>
                 ))}
+                {s.highlight && (
+                  <span className="rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-300">Legnépszerűbb csomag</span>
+                )}
               </div>
-              <h2 className="text-xl font-black leading-tight group-hover:text-rose-200 transition">{s.title}</h2>
+              <h2 className={`font-black leading-tight group-hover:text-rose-200 transition ${s.highlight ? "text-2xl" : "text-xl"}`}>
+                {s.title}
+              </h2>
               <p className="mt-3 text-sm leading-7 text-neutral-400">{s.description}</p>
-              <p className="mt-4 text-lg font-black text-white">{s.price}</p>
+              {s.price && <p className="mt-4 text-lg font-black text-white">{s.price}</p>}
               <div className="mt-4 flex items-center gap-2 text-sm font-bold text-rose-300 group-hover:gap-3 transition-all">
                 Részletek <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </div>
