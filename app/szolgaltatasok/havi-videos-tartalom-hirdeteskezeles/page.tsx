@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, BadgeCheck, BarChart3, Camera, Check, Clapperboard, Clock, Megaphone, PlayCircle, ShieldCheck, Sparkles, Target, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, BadgeCheck, Camera, Check, Clapperboard, Megaphone, PlayCircle, Target, TrendingUp, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -274,22 +274,6 @@ export default function BlummarketingLanding() {
               <h3 className="mt-5 text-2xl font-black">{item.title}</h3>
               <p className="mt-4 leading-7 text-neutral-300">{item.text}</p>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-neutral-900 py-24">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-3 lg:px-8">
-          {[
-            { icon: Clock, title: "Villámgyors oldal", text: "Statikus Next.js felépítés, minimális kliensoldali JavaScript és tiszta komponensek." },
-            { icon: ShieldCheck, title: "SEO alapokra építve", text: "Meta title, description, Open Graph, strukturált adatok és kulcsszavas szöveg." },
-            { icon: BarChart3, title: "Konverzióra tervezve", text: "Erős ajánlat, tiszta CTA-k, bizalomépítés és csomagszintű értékkommunikáció." },
-          ].map((item) => (
-            <div key={item.title} className="rounded-[2rem] bg-white p-7 text-neutral-950">
-              <item.icon className="h-8 w-8" aria-hidden="true" />
-              <h3 className="mt-5 text-2xl font-black">{item.title}</h3>
-              <p className="mt-3 leading-7 text-neutral-600">{item.text}</p>
-            </div>
           ))}
         </div>
       </section>
