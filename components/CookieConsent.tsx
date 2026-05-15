@@ -68,11 +68,11 @@ export default function CookieConsent() {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center px-4 bg-neutral-950/95 backdrop-blur-xl transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center px-4 bg-neutral-950/60 backdrop-blur-md transition-opacity duration-500 ${
         mounted ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 shadow-2xl">
+      <div className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-neutral-900/90 p-10 shadow-2xl backdrop-blur-sm">
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-neutral-950 shadow-lg">
