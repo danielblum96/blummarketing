@@ -348,13 +348,13 @@ export default function HomePage() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Havidíjas csomag</p>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
-                Tartalomgyártás és hirdetéskezelés egy kézben
+                Photozoom tartalomkészítés + Blummarketing hirdetéskezelés
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-300">
-                A paid social kampányok gyorsan kifáradnak, ha mindig ugyanazokat a kreatívokat futtatod. Ezért készítettünk egy havi rendszert azoknak a vállalkozásoknak, akik folyamatosan friss videókkal szeretnének hirdetni Facebookon, Instagramon és TikTokon.
+                A Blummarketing a Photozoom tartalomkészítő csapatával kooperálva kínál havi rendszert azoknak a vállalkozásoknak, akik folyamatosan friss videókkal szeretnének hirdetni Facebookon, Instagramon és TikTokon.
               </p>
               <p className="mt-4 leading-8 text-neutral-400">
-                A csomagban elkészítjük a hirdetésre szánt rövid videókat, elindítjuk a kampányokat, majd az adatok alapján megnézzük, melyik kreatív, üzenet és platform hozza a legjobb eredményt.
+                A kreatív tartalmak elkészítéséről a Photozoom csapata gondoskodik — a Blummarketing pedig a kampányok stratégiai kezeléséért, optimalizálásáért és teljesítménykövetéséért felel.
               </p>
               <p className="mt-4 leading-8 text-neutral-400">
                 Ideális, ha már hirdetsz Meta vagy TikTok felületen, de nincs elég friss, tesztelhető kreatívod ahhoz, hogy tovább növeld az eredményeket.

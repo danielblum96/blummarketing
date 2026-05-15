@@ -18,7 +18,7 @@ const services = [
   {
     slug: "havi-videos-tartalom-hirdeteskezeles",
     title: "Havi videós tartalom + hirdetéskezelés",
-    description: "Havi 10 rövid videó TikTokra és Metára, fotós kreatívok, valamint TikTok és Meta kampánykezelés – egy csomagban, fix havidíjon.",
+    description: "Havi 10 rövid videó és fotós tartalom a Photozoom csapatától, TikTok és Meta hirdetéskezelés a Blummarketingtől – összehangolt rendszerként, fix havidíjon.",
     price: "270 000 Ft / hó",
     tags: ["TikTok", "Meta", "Videó", "Hirdetéskezelés"],
     highlight: true,

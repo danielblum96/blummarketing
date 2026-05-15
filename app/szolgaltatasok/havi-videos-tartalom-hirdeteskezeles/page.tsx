@@ -31,24 +31,24 @@ const services = [
   {
     icon: Clapperboard,
     title: "10 rövid videó havonta",
-    text: "TikTokra, Reelsre és hirdetésekhez optimalizált, pörgős, figyelemfogó videós tartalmak.",
+    text: "A Photozoom csapata TikTokra, Reelsre és hirdetésekhez optimalizált, pörgős, figyelemfogó videós tartalmakat készít.",
   },
   {
     icon: Camera,
     title: "Fotós tartalomkészítés",
-    text: "Modern, márkaazonos képek posztokhoz, hirdetésekhez, weboldalhoz és kampány kreatívokhoz.",
+    text: "Modern, márkaazonos képek posztokhoz, hirdetésekhez, weboldalhoz és kampánykreatívokhoz — a Photozoom kivitelezésében.",
   },
   {
     icon: Megaphone,
     title: "TikTok és Meta hirdetéskezelés",
-    text: "Facebook, Instagram és TikTok kampányok beállítása, optimalizálása és havi teljesítménykövetése.",
+    text: "A Blummarketing kezeli a Facebook, Instagram és TikTok kampányok beállítását, optimalizálását és havi teljesítménykövetését.",
   },
 ];
 
 const benefits = [
   "Havi fix díj, kiszámítható marketingköltség",
   "Gyorsan publikálható kreatívok rövid videós platformokra",
-  "Egy kézben a tartalomgyártás és a hirdetéskezelés",
+  "Profi tartalomkészítés Photozoommal, teljesítményalapú hirdetéskezelés Blummarketinggel",
   "Fókuszban a lead, eladás és márkaismertség növelése",
   "Teljesítményalapú szemlélet, nem csak szép kreatívok",
   "Kis- és középvállalkozásokra szabott működés",
@@ -58,17 +58,17 @@ const process = [
   {
     step: "01",
     title: "Stratégiai egyeztetés",
-    text: "Megnézzük az ajánlatod, célcsoportod, konkurenseid és azt, milyen tartalom tud valóban ügyfelet hozni.",
+    text: "Megnézzük az ajánlatod, célcsoportod, konkurenseid és azt, milyen tartalom tud valóban ügyfelet hozni. A Blummarketing meghatározza a kampányirányt, a Photozoom pedig ehhez igazítva készíti elő a tartalmi koncepciókat.",
   },
   {
     step: "02",
     title: "Tartalomgyártás",
-    text: "Elkészítjük a havi videós és fotós kreatívokat TikTokra, Metára és fizetett kampányokra optimalizálva.",
+    text: "A Photozoom csapata elkészíti a havi videós és fotós kreatívokat TikTokra, Metára és fizetett kampányokra optimalizálva.",
   },
   {
     step: "03",
     title: "Hirdetéskezelés",
-    text: "Beállítjuk és optimalizáljuk a kampányokat, hogy ne csak nézettség, hanem mérhető eredmény is legyen.",
+    text: "A Blummarketing beállítja és optimalizálja a kampányokat, hogy ne csak nézettség, hanem mérhető eredmény is legyen.",
   },
 ];
 
@@ -131,7 +131,10 @@ export default function BlummarketingLanding() {
               Tartalom, ami nem csak jól néz ki — hanem ügyfeleket is hoz.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              A Blummarketing havidíjas videós és fotós tartalomkészítést ad vállalkozásoknak TikTokra, Facebookra és Instagramra — profi hirdetéskezeléssel egy csomagban.
+              A Blummarketing a Photozoom tartalomkészítő csapatával kooperálva kínál havidíjas videós és fotós tartalomgyártást vállalkozásoknak TikTokra, Facebookra és Instagramra — profi hirdetéskezeléssel egy csomagban.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-400">
+              A kreatív tartalmak elkészítéséről a <span className="text-white font-semibold">Photozoom csapata</span> gondoskodik, míg a <span className="text-white font-semibold">Blummarketing</span> a TikTok, Facebook és Instagram hirdetések stratégiai kezeléséért, optimalizálásáért és teljesítménykövetéséért felel.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#kapcsolat" className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:scale-[1.02] hover:bg-neutral-200">
@@ -198,7 +201,7 @@ export default function BlummarketingLanding() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatások</p>
           <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Minden, ami a havi láthatósághoz kell.</h2>
           <p className="mt-5 text-lg leading-8 text-neutral-300">
-            A tartalomgyártást és a paid social kampányokat egy rendszerként kezeljük, hogy a kreatívok gyorsan tesztelhetők, mérhetők és skálázhatók legyenek.
+            A tartalomgyártást és a paid social kampányokat egy rendszerként kezeljük. A Photozoom csapata elkészíti a vizuálisan erős, platformokra optimalizált kreatívokat, a Blummarketing pedig gondoskodik arról, hogy ezek a tartalmak hirdetésekben is mérhető eredményt hozzanak.
           </p>
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -311,9 +314,9 @@ export default function BlummarketingLanding() {
           <div className="grid gap-0 lg:grid-cols-[1fr_0.85fr]">
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Kérj konzultációt, és nézzük meg, milyen kreatívok hoznának eredményt nálad.</h2>
+              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Kérj konzultációt, és nézzük meg, milyen kreatívok és kampányok hoznának eredményt nálad.</h2>
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                Írj pár mondatot a vállalkozásodról, és összeállítjuk, hogyan indulhat a havi tartalomgyártás és hirdetéskezelés.
+                Írj pár mondatot a vállalkozásodról, és összeállítjuk, hogyan indulhat a havi rendszer: a Photozoom által készített videós-fotós tartalmakkal és a Blummarketing által kezelt TikTok-, Facebook- és Instagram-hirdetésekkel.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href="mailto:hello@blummarketing.hu?subject=Konzult%C3%A1ci%C3%B3%20-%20Blummarketing" className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-7 py-4 font-bold text-white transition hover:bg-neutral-800">
