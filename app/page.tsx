@@ -23,6 +23,9 @@ export const metadata = {
     locale: "hu_HU",
     siteName: "Blummarketing",
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const auditPoints = [

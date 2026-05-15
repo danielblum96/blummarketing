@@ -1,20 +1,19 @@
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { blogPosts } from "./posts";
 
 export const metadata = {
   title: "Blog | Blummarketing",
   description: "Tippek, útmutatók és esettanulmányok TikTok és Meta hirdetéskezeléshez, tartalomgyártáshoz és digitális marketinghez.",
+  alternates: {
+    canonical: "/blog/",
+  },
 };
 
-const articles = [
-  {
-    slug: "meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal",
-    title: "Meta üzleti portfólió, Hirdetéskezelő és Facebook-oldal: mi micsoda?",
-    description: "Megmutatjuk mi a különbség az üzleti portfólió, hirdetési fiók és Facebook-oldal között.",
-    tags: ["Meta", "Hirdetéskezelő", "Facebook"],
-  },
-];
+const tagMap: Record<string, string[]> = {
+  "meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal": ["Meta", "Hirdetéskezelő", "Facebook"],
+};
 
 export default function BlogPage() {
   return (
@@ -33,21 +32,21 @@ export default function BlogPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {articles.map((article) => (
+          {blogPosts.map((post) => (
             <a
-              key={article.slug}
-              href={`/blog/${article.slug}/`}
+              key={post.slug}
+              href={`/blog/${post.slug}/`}
               className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl transition hover:-translate-y-1 hover:bg-white/[0.07]"
             >
               <div className="flex flex-wrap gap-2 mb-5">
-                {article.tags.map((tag) => (
+                {(tagMap[post.slug] ?? []).map((tag) => (
                   <span key={tag} className="rounded-full bg-rose-500/10 px-3 py-1 text-xs font-bold text-rose-300">{tag}</span>
                 ))}
               </div>
               <h2 className="text-xl font-black leading-tight group-hover:text-rose-200 transition">
-                {article.title}
+                {post.title}
               </h2>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">{article.description}</p>
+              <p className="mt-3 text-sm leading-7 text-neutral-400">{post.description}</p>
               <div className="mt-4 flex items-center gap-2 text-sm font-bold text-rose-300 group-hover:gap-3 transition-all">
                 Elolvasom <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </div>
