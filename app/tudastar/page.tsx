@@ -108,10 +108,11 @@ const categories: Category[] = [
     articles: [
       {
         href: "/tudastar/fogalomtar/",
-        title: "PPC fogalomtár",
-        description: "A legfontosabb hirdetési és marketingszakmai fogalmak érthetően – hamarosan.",
-        tags: ["Fogalomtár"],
-        soon: true,
+        title: "PPC fogalomtár: a legfontosabb hirdetési fogalmak érthetően",
+        description: "PPC, CPC, ROAS, CTR, konverzió, remarketing, lookalike, attribúció, UTM – 30+ fogalom magyarázata példákkal, kampányosoknak és vállalkozóknak.",
+        tags: ["Fogalomtár", "PPC", "Alapfogalmak"],
+        date: "2025. február 1.",
+        readTime: "20 perc",
       },
     ],
   },
