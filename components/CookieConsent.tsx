@@ -197,7 +197,7 @@ export default function CookieConsent() {
         {/* Footer link */}
         <p className="mt-6 text-center text-xs text-neutral-600">
           Az adatkezelésről bővebben:{" "}
-          <a href="#" className="underline hover:text-neutral-400 transition">
+          <a href="/adatkezeles/" className="underline hover:text-neutral-400 transition">
             Adatkezelési tájékoztató
           </a>
         </p>
