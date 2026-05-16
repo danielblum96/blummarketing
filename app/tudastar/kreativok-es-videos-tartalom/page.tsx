@@ -532,7 +532,7 @@ CTA`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szükséged van hirdetési kreatívokra, amelyek nem csak jól néznek ki, hanem teljesítenek is?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Segítünk olyan képi, videós és UGC jellegű kreatívokat készíteni, amelyek illeszkednek a kampánystratégiához, tesztelhetők, mérhetők, és valódi üzleti célokat támogatnak.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

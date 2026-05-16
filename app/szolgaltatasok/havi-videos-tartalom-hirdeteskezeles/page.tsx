@@ -188,7 +188,7 @@ export default function BlummarketingLanding() {
                     <Target className="h-6 w-6" aria-hidden="true" />
                     <p className="font-black">Cél: több figyelem, több érdeklődő, több eladás.</p>
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-neutral-300">
+                  <p className="mt-3 text-sm leading-6 text-neutral-700">
                     Nem külön posztokat gyártunk, hanem kampányrendszert építünk a tartalmaid köré.
                   </p>
                 </div>
@@ -246,9 +246,9 @@ export default function BlummarketingLanding() {
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white to-neutral-200 p-8 text-neutral-950 shadow-2xl">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-300">Blummarketing Growth</p>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-600">Blummarketing Growth</p>
                 <h3 className="mt-3 text-4xl font-black">270 000 Ft / hó</h3>
-                <p className="mt-2 text-sm text-neutral-300">+ külön hirdetési költés</p>
+                <p className="mt-2 text-sm text-neutral-600">+ külön hirdetési költés</p>
               </div>
               <a href="#kapcsolat" className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-3 font-bold text-white transition hover:bg-neutral-800">Érdekel</a>
             </div>
@@ -301,7 +301,7 @@ export default function BlummarketingLanding() {
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Kérj konzultációt, és nézzük meg, milyen kreatívok és kampányok hoznának eredményt nálad.</h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Írj pár mondatot a vállalkozásodról, és megnézzük, hogyan indulhat el a havi rendszer: Photozoom tartalomgyártással és Blummarketing hirdetéskezeléssel.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

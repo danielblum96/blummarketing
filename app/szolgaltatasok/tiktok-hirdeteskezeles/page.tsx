@@ -299,15 +299,15 @@ export default function TikTokHirdeteskezelesPage() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Miért fontos</p>
               <h2 className="text-4xl font-black mb-5">TikTokon nem elég hirdetni — figyelmet kell nyerni.</h2>
-              <p className="text-lg leading-8 text-neutral-300 mb-4">
+              <p className="text-lg leading-8 text-neutral-700 mb-4">
                 A TikTok más logika szerint működik, mint a klasszikus hirdetési felületek. Nem elég egy szép kreatív, egy általános szöveg és egy célzás — a felhasználó másodpercek alatt dönt, és csak arra figyel, ami azonnal megfogja.
               </p>
-              <p className="text-neutral-300 leading-8">
+              <p className="text-neutral-700 leading-8">
                 A jó TikTok hirdetés nem „reklámnak tűnő reklám" — hanem olyan tartalom, ami illeszkedik a platformhoz, mégis üzleti célt szolgál.
               </p>
             </div>
             <div>
-              <p className="text-sm font-bold text-neutral-300 mb-4">Ezért a TikTok hirdetésnél különösen fontos:</p>
+              <p className="text-sm font-bold text-neutral-700 mb-4">Ezért a TikTok hirdetésnél különösen fontos:</p>
               <div className="space-y-2">
                 {[
                   "Az első 1–2 másodperc",
@@ -401,7 +401,7 @@ export default function TikTokHirdeteskezelesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Csomagok</p>
           <h2 className="text-4xl font-black mb-4">Válaszd ki, milyen szinten akarsz növekedni TikTokon.</h2>
-          <p className="max-w-2xl text-lg leading-8 text-neutral-300 mb-12">
+          <p className="max-w-2xl text-lg leading-8 text-neutral-700 mb-12">
             Nem minden vállalkozásnak ugyanaz kell — ezért három szint közül választhatsz.
           </p>
           <div className="grid gap-6 lg:grid-cols-3">
@@ -418,10 +418,10 @@ export default function TikTokHirdeteskezelesPage() {
                   {pkg.highlight && (
                     <span className="mb-3 inline-block rounded-full bg-rose-500 px-3 py-1 text-xs font-black text-white">Legjobb választás</span>
                   )}
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">{pkg.name}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-600 mb-1">{pkg.name}</p>
                   <p className="text-3xl font-black mb-1">{pkg.price}</p>
-                  <p className="text-sm text-neutral-300 mb-3">+ külön hirdetési költés</p>
-                  <p className="text-sm leading-7 text-neutral-300">{pkg.desc}</p>
+                  <p className="text-sm text-neutral-600 mb-3">+ külön hirdetési költés</p>
+                  <p className="text-sm leading-7 text-neutral-700">{pkg.desc}</p>
                 </div>
                 <ul className="space-y-2 flex-1">
                   {pkg.items.map((item) => (
@@ -432,10 +432,10 @@ export default function TikTokHirdeteskezelesPage() {
                   ))}
                 </ul>
                 <div className="rounded-2xl bg-neutral-950/5 p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">Ideális, ha</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-600 mb-1">Ideális, ha</p>
                   <p className="text-sm leading-7 text-neutral-700">{pkg.ideal}</p>
                 </div>
-                <p className="text-xs leading-6 text-neutral-300 italic">{pkg.note}</p>
+                <p className="text-xs leading-6 text-neutral-600 italic">{pkg.note}</p>
                 <a
                   href={`mailto:hello@blummarketing.hu?subject=${encodeURIComponent(`Érdeklődés – ${pkg.name} csomag`)}`}
                   className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition ${
@@ -469,9 +469,9 @@ export default function TikTokHirdeteskezelesPage() {
                 ].map((row) => (
                   <tr key={row.name}>
                     <td className="py-4 font-semibold text-neutral-950">{row.name}</td>
-                    <td className="py-4 text-neutral-300">{row.price}</td>
-                    <td className="py-4 text-neutral-300">{row.who}</td>
-                    <td className="py-4 text-neutral-300">{row.focus}</td>
+                    <td className="py-4 text-neutral-700">{row.price}</td>
+                    <td className="py-4 text-neutral-700">{row.who}</td>
+                    <td className="py-4 text-neutral-700">{row.focus}</td>
                   </tr>
                 ))}
               </tbody>
@@ -550,9 +550,9 @@ export default function TikTokHirdeteskezelesPage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((item) => (
               <div key={item.step} className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-7">
-                <p className="text-sm font-black text-neutral-300">{item.step}</p>
+                <p className="text-sm font-black text-neutral-600">{item.step}</p>
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-300">{item.text}</p>
+                <p className="mt-3 text-sm leading-7 text-neutral-700">{item.text}</p>
               </div>
             ))}
           </div>
@@ -641,7 +641,7 @@ export default function TikTokHirdeteskezelesPage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Nézzük meg, hogyan tudna több figyelmet és eredményt hozni a TikTok hirdetésed.
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Írj pár mondatot a vállalkozásodról, az ajánlatodról és arról, futtattál-e már TikTok hirdetéseket.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

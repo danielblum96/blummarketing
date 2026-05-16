@@ -651,7 +651,7 @@ Kampány 4: Visszatérő vásárlók`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szeretnéd, hogy a TikTok hirdetéseid profi rendszerben működjenek?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 A TikTokon nem elég egyszerűen jelen lenni. Fontos, hogy a hirdetési fiók, a mérés, a kampánystruktúra és a kreatív stratégia is jól legyen felépítve.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

@@ -198,10 +198,10 @@ export default function HomePage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Mit nézünk meg egy kampányauditban?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Nem érzésre mondjuk meg, mi a baj. Azokat a pontokat nézzük át, ahol gyakran elfolyik a hirdetési pénz.
               </p>
-              <p className="mt-3 text-base leading-7 text-neutral-300">Egy audit során többek között ezeket vizsgáljuk:</p>
+              <p className="mt-3 text-base leading-7 text-neutral-700">Egy audit során többek között ezeket vizsgáljuk:</p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {auditPoints.map((point) => (
@@ -258,11 +258,11 @@ export default function HomePage() {
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             <div className="rounded-[2rem] bg-white p-8 text-neutral-950">
               <p className="text-lg font-black leading-7">A kampányokat nem különálló hirdetésként kezeljük, hanem teljes ügyfélszerzési útvonalként.</p>
-              <p className="mt-4 leading-7 text-neutral-300">Megnézzük, mire kattintanak az emberek, hova érkeznek, mit csinálnak az oldalon, megtörténik-e a konverzió.</p>
+              <p className="mt-4 leading-7 text-neutral-700">Megnézzük, mire kattintanak az emberek, hova érkeznek, mit csinálnak az oldalon, megtörténik-e a konverzió.</p>
             </div>
             <div className="rounded-[2rem] bg-white p-8 text-neutral-950">
               <p className="text-lg font-black leading-7">Mert nem a lájkokból fizeted a számlákat.</p>
-              <p className="mt-4 leading-7 text-neutral-300">A végső kérdés mindig az: hoz-e ez leadet, vásárlást vagy bevételt?</p>
+              <p className="mt-4 leading-7 text-neutral-700">A végső kérdés mindig az: hoz-e ez leadet, vásárlást vagy bevételt?</p>
             </div>
             <div className="rounded-[2rem] bg-rose-600 p-8 text-white">
               <p className="text-lg font-black leading-7">A cél nem több adat, hanem jobb döntés.</p>
@@ -301,16 +301,16 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Hogyan kezdünk</p>
             <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Mit kapsz az első 30 napban?</h2>
-            <p className="mt-5 text-lg leading-8 text-neutral-300">
+            <p className="mt-5 text-lg leading-8 text-neutral-700">
               Az első hónap célja, hogy kiderüljön, mi működik — és hol kell azonnal beavatkozni.
             </p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {firstMonthSteps.map((item) => (
               <div key={item.step} className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-7">
-                <p className="text-sm font-black text-neutral-300">{item.step}</p>
+                <p className="text-sm font-black text-neutral-600">{item.step}</p>
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
-                <p className="mt-3 leading-7 text-neutral-300 text-sm">{item.text}</p>
+                <p className="mt-3 leading-7 text-neutral-700 text-sm">{item.text}</p>
               </div>
             ))}
           </div>
@@ -431,7 +431,7 @@ export default function HomePage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Nézzük meg, mit mutatnak a számaid
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Ha hirdetsz, de nem látod pontosan, mi hoz ügyfelet, érdemes átnézni a rendszert. Megnézzük, mit mérsz, hol vesznek el az érdeklődők, és melyik kampányod hoz valódi eredményt.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

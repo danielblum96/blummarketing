@@ -498,7 +498,7 @@ ajánlatkérés`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szeretnéd tudni, hogy a marketingadataidra lehet-e döntést építeni?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-300">
+              <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Ha futnak kampányaid, de nem vagy biztos benne, hogy pontosan mérsz, érdemes átnézni a rendszert.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
