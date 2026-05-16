@@ -78,10 +78,10 @@ export default function RolamPage() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-400">Rólam</p>
               <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl leading-[1.08]">
-                Marketing, ami valódi<br className="hidden sm:block" /> üzleti eredményekre<br className="hidden sm:block" /> dolgozik.
+                Szia, Blum Dániel vagyok!
               </h1>
               <p className="mt-6 text-lg text-neutral-400 leading-relaxed max-w-xl">
-                Blum Dániel vagyok. 2017-ben, még egyetem mellett kezdtem el autodidakta módon foglalkozni a marketinggel.
+                2017-ben, még egyetem mellett kezdtem el autodidakta módon foglalkozni a marketinggel.
                 Ma hazai KKV-k ügyfélszerző rendszereivel foglalkozom – PPC hirdetésekkel, email automatizmusokkal és jól konvertáló landing oldalakkal.
               </p>
 
