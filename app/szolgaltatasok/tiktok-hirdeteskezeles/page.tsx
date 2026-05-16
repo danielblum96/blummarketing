@@ -261,33 +261,105 @@ export default function TikTokHirdeteskezelesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
-            ← Vissza a szolgáltatásokhoz
-          </a>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">TikTok hirdetéskezelés</p>
-          <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
-            TikTok hirdetések, amik nem csak megtekintéseket hoznak — hanem érdeklődőket és vásárlókat.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-            A Blummarketing stratégiai szemlélettel kezeli a TikTok hirdetéseidet: kampánystruktúra, kreatívtesztelés, videós hirdetési irányok, mérés, optimalizálás és havi riport egy rendszerben.
-          </p>
-          <p className="mt-3 max-w-xl text-base leading-8 text-neutral-300">
-            A cél nem az, hogy „legyen pár videó, amit megtolunk". A cél, hogy a TikTokból valódi ügyfélszerző csatorna legyen.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="mailto:hello@blummarketing.hu?subject=Ajánlatkérés – TikTok hirdetéskezelés"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
-            >
-              Kérek ajánlatot TikTok hirdetéskezelésre
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-            <a
-              href="#csomagok"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
-            >
-              Megnézem a csomagokat
-            </a>
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-center lg:gap-16">
+            {/* Left: text */}
+            <div>
+              <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
+                ← Vissza a szolgáltatásokhoz
+              </a>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">TikTok hirdetéskezelés</p>
+              <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+                TikTok hirdetések, amik nem csak megtekintéseket hoznak — hanem érdeklődőket és vásárlókat.
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-neutral-300">
+                A Blummarketing stratégiai szemlélettel kezeli a TikTok hirdetéseidet: kampánystruktúra, kreatívtesztelés, videós hirdetési irányok, mérés, optimalizálás és havi riport egy rendszerben.
+              </p>
+              <p className="mt-3 text-base leading-8 text-neutral-300">
+                A cél nem az, hogy „legyen pár videó, amit megtolunk". A cél, hogy a TikTokból valódi ügyfélszerző csatorna legyen.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="mailto:hello@blummarketing.hu?subject=Ajánlatkérés – TikTok hirdetéskezelés"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
+                >
+                  Kérek ajánlatot TikTok hirdetéskezelésre
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </a>
+                <a
+                  href="#csomagok"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
+                >
+                  Megnézem a csomagokat
+                </a>
+              </div>
+            </div>
+
+            {/* Right: TikTok phone visual */}
+            <div className="relative hidden lg:flex justify-center items-center py-8">
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-rose-500/10 via-violet-500/5 to-transparent blur-3xl" aria-hidden="true" />
+              {/* Phone frame */}
+              <div className="relative w-[190px]">
+                <div className="relative rounded-[2.4rem] border-2 border-white/15 bg-neutral-950 p-2 shadow-2xl">
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 h-4 w-14 rounded-full bg-neutral-900 z-10" />
+                  <div className="rounded-[2rem] overflow-hidden bg-neutral-900" style={{ aspectRatio: "9/19" }}>
+                    <div className="relative h-full bg-gradient-to-b from-neutral-800 to-neutral-950 flex flex-col">
+                      {/* TikTok top nav */}
+                      <div className="flex items-center justify-center pt-8 pb-2 gap-3">
+                        <span className="text-[9px] text-neutral-500">Követett</span>
+                        <span className="text-[9px] text-neutral-600">|</span>
+                        <span className="text-[9px] font-black text-white border-b border-white pb-0.5">Neked</span>
+                      </div>
+                      {/* Video area */}
+                      <div className="flex-1 flex items-center justify-center relative">
+                        <div className="h-12 w-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l8 5-8 5V3z" fill="white" fillOpacity="0.85"/></svg>
+                        </div>
+                        <div className="absolute bottom-2 left-2.5">
+                          <span className="text-[7px] text-white/60 border border-white/20 px-1.5 py-0.5 rounded">Szponzorált</span>
+                        </div>
+                        {/* Right sidebar */}
+                        <div className="absolute right-2 bottom-8 flex flex-col items-center gap-3">
+                          {[
+                            { icon: "♥", val: "12k" },
+                            { icon: "💬", val: "284" },
+                            { icon: "↗", val: "1.8k" },
+                          ].map((a) => (
+                            <div key={a.icon} className="flex flex-col items-center">
+                              <div className="h-6 w-6 rounded-full bg-white/10 flex items-center justify-center text-[10px]">{a.icon}</div>
+                              <span className="text-[7px] text-white/60 mt-0.5">{a.val}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      {/* Bottom metrics */}
+                      <div className="grid grid-cols-3 gap-0.5 px-2 pb-2 pt-2 border-t border-white/[0.06]">
+                        {[
+                          { v: "1.2M", l: "Elérés" },
+                          { v: "8.7%", l: "VTR" },
+                          { v: "480 Ft", l: "CPM" },
+                        ].map((m) => (
+                          <div key={m.l} className="text-center">
+                            <p className="text-[9px] font-black text-rose-400">{m.v}</p>
+                            <p className="text-[7px] text-neutral-500">{m.l}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Floating cards */}
+                <div className="absolute -right-20 top-10 rounded-xl border border-white/10 bg-neutral-900/95 px-3 py-2.5 shadow-xl backdrop-blur-sm w-[105px]">
+                  <p className="text-[9px] text-neutral-500 mb-0.5">CPL</p>
+                  <p className="text-base font-black text-rose-400">1 840 Ft</p>
+                  <p className="text-[9px] text-emerald-400">↓ átlag alatt</p>
+                </div>
+                <div className="absolute -left-20 bottom-16 rounded-xl border border-white/10 bg-neutral-900/95 px-3 py-2.5 shadow-xl backdrop-blur-sm w-[105px]">
+                  <p className="text-[9px] text-neutral-500 mb-0.5">30 nap alatt</p>
+                  <p className="text-base font-black text-white">1,2M</p>
+                  <p className="text-[9px] text-neutral-400">megjelenés</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

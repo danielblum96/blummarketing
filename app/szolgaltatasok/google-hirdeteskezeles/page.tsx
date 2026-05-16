@@ -59,28 +59,92 @@ export default function GoogleHirdeteskezelesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
-            ← Vissza a szolgáltatásokhoz
-          </a>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatás</p>
-          <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Google hirdetéskezelés</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
-            Google Ads kampányok stratégiai tervezése, beállítása és folyamatos optimalizálása – Search, Performance Max és Shopping. Csak akkor hirdetünk, ha a mérés rendben van.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="/#kapcsolat"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
-            >
-              Ajánlatkérés
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-            <a
-              href="/tudastar/google-ads/"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
-            >
-              Google Ads útmutató
-            </a>
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-center lg:gap-16">
+            {/* Left: text */}
+            <div>
+              <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
+                ← Vissza a szolgáltatásokhoz
+              </a>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatás</p>
+              <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Google hirdetéskezelés</h1>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
+                Google Ads kampányok stratégiai tervezése, beállítása és folyamatos optimalizálása – Search, Performance Max és Shopping. Csak akkor hirdetünk, ha a mérés rendben van.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="/#kapcsolat"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
+                >
+                  Ajánlatkérés
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </a>
+                <a
+                  href="/tudastar/google-ads/"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
+                >
+                  Google Ads útmutató
+                </a>
+              </div>
+            </div>
+
+            {/* Right: Google SERP visual */}
+            <div className="relative hidden lg:block">
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-emerald-500/10 via-blue-500/5 to-transparent blur-3xl" aria-hidden="true" />
+              <div className="relative rounded-[1.5rem] border border-white/10 bg-neutral-900/90 backdrop-blur-sm shadow-2xl overflow-hidden">
+                {/* Browser bar */}
+                <div className="flex items-center gap-3 px-4 py-3 border-b border-white/[0.06] bg-white/[0.02]">
+                  <div className="flex gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-rose-400/50" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400/50" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/50" />
+                  </div>
+                  <div className="flex-1 rounded-full bg-white/[0.06] border border-white/[0.08] px-3 py-1.5 flex items-center gap-2">
+                    <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="5" cy="5" r="3.5" stroke="#737373" strokeWidth="1.3"/><path d="M8 8l2 2" stroke="#737373" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                    <span className="text-xs text-neutral-400">épületgépész Budapest</span>
+                  </div>
+                </div>
+                {/* Results */}
+                <div className="p-4 space-y-2.5">
+                  {/* Ad 1 – highlighted */}
+                  <div className="rounded-xl border border-emerald-500/25 bg-emerald-500/[0.06] p-3.5">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="text-[9px] font-bold border border-emerald-500/50 text-emerald-400 px-1.5 py-0.5 rounded">Hirdetés</span>
+                      <span className="text-[11px] text-neutral-500">www.ugyfelod.hu › szolgaltatasok</span>
+                    </div>
+                    <p className="text-sm font-bold text-blue-400 leading-snug">Épületgépész Budapest | Ingyenes Felmérés</p>
+                    <p className="text-xs text-neutral-400 mt-1 leading-relaxed">Gyors és megbízható épületgépészeti megoldások. Kérjen ingyenes helyszíni felmérést még ma!</p>
+                  </div>
+                  {/* Ad 2 – muted */}
+                  <div className="rounded-xl bg-white/[0.02] p-3.5 opacity-40">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="text-[9px] font-bold border border-neutral-700 text-neutral-600 px-1.5 py-0.5 rounded">Hirdetés</span>
+                      <span className="text-[11px] text-neutral-600">www.konkurens.hu</span>
+                    </div>
+                    <p className="text-sm font-semibold text-neutral-500 leading-snug">Épületgépészeti Szolgáltatások Bp.</p>
+                    <p className="text-xs text-neutral-600 mt-1">Gyors megoldások Budapest területén...</p>
+                  </div>
+                  {/* Organic – very muted */}
+                  <div className="rounded-xl bg-white/[0.02] p-3.5 opacity-20">
+                    <p className="text-[11px] text-neutral-600 mb-1">www.masik-ceg.hu</p>
+                    <p className="text-sm font-semibold text-neutral-500 leading-snug">Épületgépészet | Tervezés és kivitelezés</p>
+                    <p className="text-xs text-neutral-600 mt-1">Komplex épületgépészeti megoldások...</p>
+                  </div>
+                </div>
+                {/* Metrics bar */}
+                <div className="border-t border-white/[0.06] px-4 py-3 bg-white/[0.01] grid grid-cols-3 gap-2">
+                  {[
+                    { label: "CTR", value: "5.2%" },
+                    { label: "Min. mutató", value: "8/10" },
+                    { label: "Lead ár", value: "3 900 Ft" },
+                  ].map((m) => (
+                    <div key={m.label} className="text-center">
+                      <p className="text-[9px] text-neutral-500 uppercase tracking-wider mb-0.5">{m.label}</p>
+                      <p className="text-sm font-black text-emerald-400">{m.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

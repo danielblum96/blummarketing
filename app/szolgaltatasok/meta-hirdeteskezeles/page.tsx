@@ -250,33 +250,99 @@ export default function MetaHirdeteskezelesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
-            ← Vissza a szolgáltatásokhoz
-          </a>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Meta hirdetéskezelés</p>
-          <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
-            Facebook és Instagram hirdetések, amik nem csak kattintásokat hoznak — hanem érdeklődőket és vásárlókat.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-            A Blummarketing stratégiai szemlélettel kezeli a Meta hirdetéseidet: kampánystruktúra, kreatívtesztelés, remarketing, mérés, optimalizálás és havi riport egy rendszerben.
-          </p>
-          <p className="mt-3 max-w-xl text-base leading-8 text-neutral-300">
-            A cél nem az, hogy „fusson valami". A cél, hogy a hirdetési büdzsédből ügyfél legyen.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="mailto:hello@blummarketing.hu?subject=Ajánlatkérés – Meta hirdetéskezelés"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
-            >
-              Kérek ajánlatot Meta hirdetéskezelésre
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-            <a
-              href="#csomagok"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
-            >
-              Megnézem a csomagokat
-            </a>
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-center lg:gap-16">
+            {/* Left: text */}
+            <div>
+              <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
+                ← Vissza a szolgáltatásokhoz
+              </a>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Meta hirdetéskezelés</p>
+              <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+                Facebook és Instagram hirdetések, amik nem csak kattintásokat hoznak — hanem érdeklődőket és vásárlókat.
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-neutral-300">
+                A Blummarketing stratégiai szemlélettel kezeli a Meta hirdetéseidet: kampánystruktúra, kreatívtesztelés, remarketing, mérés, optimalizálás és havi riport egy rendszerben.
+              </p>
+              <p className="mt-3 text-base leading-8 text-neutral-300">
+                A cél nem az, hogy „fusson valami". A cél, hogy a hirdetési büdzsédből ügyfél legyen.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="mailto:hello@blummarketing.hu?subject=Ajánlatkérés – Meta hirdetéskezelés"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
+                >
+                  Kérek ajánlatot Meta hirdetéskezelésre
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </a>
+                <a
+                  href="#csomagok"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
+                >
+                  Megnézem a csomagokat
+                </a>
+              </div>
+            </div>
+
+            {/* Right: Meta Ads dashboard visual */}
+            <div className="relative hidden lg:block">
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-blue-500/10 via-rose-500/5 to-transparent blur-3xl" aria-hidden="true" />
+              <div className="relative rounded-[1.5rem] border border-white/10 bg-neutral-900/90 backdrop-blur-sm shadow-2xl overflow-hidden">
+                {/* Header */}
+                <div className="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] bg-white/[0.02]">
+                  <div className="flex items-center gap-2.5">
+                    <div className="h-7 w-7 rounded-full bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
+                      <span className="text-xs font-black text-blue-400">M</span>
+                    </div>
+                    <span className="text-sm font-semibold text-neutral-300">Meta Ads Manager</span>
+                  </div>
+                  <span className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 inline-block" />Aktív
+                  </span>
+                </div>
+                <div className="p-4 space-y-3">
+                  {/* ROAS big */}
+                  <div className="rounded-xl border border-blue-500/20 bg-blue-500/[0.07] p-4">
+                    <p className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">ROAS</p>
+                    <p className="text-3xl font-black text-white leading-none">9×</p>
+                    <div className="flex items-center gap-1.5 mt-2">
+                      <span className="text-xs font-bold text-emerald-400">↑ +23%</span>
+                      <span className="text-xs text-neutral-500">vs. előző hónap</span>
+                    </div>
+                  </div>
+                  {/* 2 metrics */}
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3">
+                      <p className="text-[10px] text-neutral-500 mb-1">CPL</p>
+                      <p className="text-lg font-black text-white">1 840 Ft</p>
+                      <p className="text-xs font-semibold text-emerald-400 mt-0.5">↓ −52%</p>
+                    </div>
+                    <div className="rounded-xl border border-white/[0.08] bg-white/[0.04] p-3">
+                      <p className="text-[10px] text-neutral-500 mb-1">Konverziók</p>
+                      <p className="text-lg font-black text-white">+34%</p>
+                      <p className="text-xs font-semibold text-emerald-400 mt-0.5">↑ 60 nap alatt</p>
+                    </div>
+                  </div>
+                  {/* Mini funnel */}
+                  <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3 space-y-2.5">
+                    {[
+                      { label: "Elérés", value: "45 200", pct: "100%" },
+                      { label: "Kattintás", value: "2 710", pct: "40%" },
+                      { label: "Konverzió", value: "312", pct: "14%" },
+                    ].map((row) => (
+                      <div key={row.label}>
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-[10px] text-neutral-500">{row.label}</span>
+                          <span className="text-[10px] font-bold text-neutral-300">{row.value}</span>
+                        </div>
+                        <div className="h-1.5 rounded-full bg-white/[0.06]">
+                          <div className="h-full rounded-full bg-blue-500/50" style={{ width: row.pct }} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

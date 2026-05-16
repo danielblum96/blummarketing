@@ -222,33 +222,93 @@ export default function WeboldalKeszitesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
-            ← Vissza a szolgáltatásokhoz
-          </a>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Weboldal készítés</p>
-          <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
-            Weboldal, ami nem csak jól néz ki — hanem ügyfeleket, ajánlatkéréseket és bevételt hoz.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-            Nem sablonos névjegykártyákat készítünk. Üzleti weboldalakat, landing oldalakat, WordPress oldalakat, webshopokat és egyedi fejlesztéseket építünk — konverziós logikával és mérhető üzleti céllal.
-          </p>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-300">
-            WordPress oldal, WooCommerce webshop vagy egyedi fejlesztés — a cél minden esetben ugyanaz: a weboldalad hozzon ügyfelet.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="mailto:hello@blummarketing.hu?subject=Ajánlatkérés – weboldal készítés"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
-            >
-              Kérek ajánlatot weboldalra
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-            <a
-              href="#csomagok"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
-            >
-              Megnézem a lehetőségeket
-            </a>
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-center lg:gap-16">
+            {/* Left: text */}
+            <div>
+              <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
+                ← Vissza a szolgáltatásokhoz
+              </a>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Weboldal készítés</p>
+              <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+                Weboldal, ami nem csak jól néz ki — hanem ügyfeleket, ajánlatkéréseket és bevételt hoz.
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-neutral-300">
+                Nem sablonos névjegykártyákat készítünk. Üzleti weboldalakat, landing oldalakat, WordPress oldalakat, webshopokat és egyedi fejlesztéseket építünk — konverziós logikával és mérhető üzleti céllal.
+              </p>
+              <p className="mt-4 text-base leading-8 text-neutral-300">
+                WordPress oldal, WooCommerce webshop vagy egyedi fejlesztés — a cél minden esetben ugyanaz: a weboldalad hozzon ügyfelet.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="mailto:hello@blummarketing.hu?subject=Ajánlatkérés – weboldal készítés"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200"
+                >
+                  Kérek ajánlatot weboldalra
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </a>
+                <a
+                  href="#csomagok"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10"
+                >
+                  Megnézem a lehetőségeket
+                </a>
+              </div>
+            </div>
+
+            {/* Right: browser mockup visual */}
+            <div className="relative hidden lg:block">
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-violet-500/10 via-blue-500/5 to-transparent blur-3xl" aria-hidden="true" />
+              <div className="relative rounded-[1.5rem] border border-white/10 bg-neutral-900/90 backdrop-blur-sm shadow-2xl overflow-hidden">
+                {/* Browser chrome */}
+                <div className="flex items-center gap-3 px-4 py-3 bg-white/[0.02] border-b border-white/[0.06]">
+                  <div className="flex gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-rose-400/50" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400/50" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/50" />
+                  </div>
+                  <div className="flex-1 rounded-full bg-white/[0.06] border border-white/[0.08] px-3 py-1.5 flex items-center gap-2">
+                    <span className="text-[10px] text-emerald-400 font-bold">🔒</span>
+                    <span className="text-xs text-neutral-400">ugyfelod.hu</span>
+                  </div>
+                </div>
+                <div className="p-4 space-y-3">
+                  {/* Website skeleton */}
+                  <div className="rounded-xl border border-white/[0.06] bg-white/[0.03] p-4">
+                    <div className="h-3 w-3/5 rounded-full bg-white/20 mb-2.5" />
+                    <div className="h-2 w-full rounded-full bg-white/[0.08] mb-1.5" />
+                    <div className="h-2 w-4/5 rounded-full bg-white/[0.08] mb-4" />
+                    <div className="flex gap-2">
+                      <div className="h-7 w-24 rounded-full bg-white/25" />
+                      <div className="h-7 w-20 rounded-full bg-white/[0.06] border border-white/10" />
+                    </div>
+                  </div>
+                  {/* Performance metrics */}
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/[0.07] p-2.5 text-center">
+                      <p className="text-base font-black text-emerald-400">98</p>
+                      <p className="text-[9px] text-neutral-500 mt-0.5">PageSpeed</p>
+                    </div>
+                    <div className="rounded-xl border border-blue-500/20 bg-blue-500/[0.07] p-2.5 text-center">
+                      <p className="text-base font-black text-blue-400">0.8s</p>
+                      <p className="text-[9px] text-neutral-500 mt-0.5">Betöltés</p>
+                    </div>
+                    <div className="rounded-xl border border-violet-500/20 bg-violet-500/[0.07] p-2.5 text-center">
+                      <p className="text-base font-black text-violet-400">4.2%</p>
+                      <p className="text-[9px] text-neutral-500 mt-0.5">Konverzió</p>
+                    </div>
+                  </div>
+                  {/* Checklist */}
+                  <div className="space-y-1.5">
+                    {["Mobilra optimalizálva", "SEO alap beállítások", "Konverziós elemek beépítve"].map((item) => (
+                      <div key={item} className="flex items-center gap-2.5 rounded-lg border border-white/[0.05] bg-white/[0.02] px-3 py-2">
+                        <span className="text-xs font-black text-emerald-400">✓</span>
+                        <span className="text-xs text-neutral-300">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
