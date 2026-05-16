@@ -19,9 +19,9 @@ export const metadata = {
 /* ─── Adatok ─────────────────────────────────────── */
 
 const stats = [
+  { value: "300M+", label: "Ft kezelt hirdetési büdzsé" },
   { value: "9×", label: "Átlagosan elért ROAS" },
   { value: "−52%", label: "Lead ár csökkentés" },
-  { value: "1,2M", label: "Elérés 30 nap alatt" },
   { value: "2017", label: "óta aktív kampányok" },
 ];
 
