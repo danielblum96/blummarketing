@@ -1,40 +1,46 @@
-// IntentSpectrum.tsx
-// Google Ads page: cold audience vs warm/searching audience spectrum
-
 export default function IntentSpectrum() {
   return (
-    <svg
-      viewBox="0 0 480 140"
-      width="100%"
-      aria-label="Google Ads: hideg vs. meleg közönség spektrum — keresési szándék alapján"
-      role="img"
-    >
+    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+      {/* Labels row */}
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <p className="text-xs font-black uppercase tracking-widest text-neutral-500">Hideg közönség</p>
+          <p className="text-[11px] text-neutral-600 mt-1">Social, Display, YouTube</p>
+        </div>
+        <div className="text-right">
+          <p className="text-xs font-black uppercase tracking-widest text-blue-400">Aktív keresők</p>
+          <p className="text-[11px] text-blue-400/60 mt-1">Google Search Ads</p>
+        </div>
+      </div>
+
       {/* Gradient bar */}
-      <defs>
-        <linearGradient id="intentGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"   stopColor="#525252" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.7" />
-        </linearGradient>
-      </defs>
+      <div className="relative h-8 rounded-full overflow-hidden bg-gradient-to-r from-neutral-800 via-blue-500/30 to-blue-500/70">
+        {/* Search intent marker */}
+        <div className="absolute right-[12%] top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-blue-400 shadow-[0_0_16px_rgba(96,165,250,0.5)] flex items-center justify-center">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <circle cx="5" cy="5" r="3" stroke="white" strokeWidth="1.5"/>
+            <path d="M7.5 7.5l2 2" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
 
-      {/* Main bar */}
-      <rect x="30" y="52" width="420" height="36" rx="18" fill="url(#intentGrad)" />
+      {/* Bottom labels */}
+      <div className="flex justify-between items-center mt-3">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-neutral-600" />
+          <span className="text-[11px] text-neutral-600">Érdeklődés még nem látható</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] text-blue-400">Vásárlási szándék már megvan</span>
+          <span className="h-2 w-2 rounded-full bg-blue-400" />
+        </div>
+      </div>
 
-      {/* Left label: hideg */}
-      <text x="30"  y="42" fill="#a3a3a3" fontSize="11" fontWeight="700" fontFamily="sans-serif">Hideg közönség</text>
-      <text x="30"  y="108" fill="#525252" fontSize="9"  fontFamily="sans-serif">Social, Display</text>
-
-      {/* Right label: meleg */}
-      <text x="450" y="42"  fill="#60a5fa" fontSize="11" fontWeight="700" fontFamily="sans-serif" textAnchor="end">Aktív keresők</text>
-      <text x="450" y="108" fill="#60a5fa" fontSize="9"  fontFamily="sans-serif" textAnchor="end">Google Search</text>
-
-      {/* Marker dot — search intent peak */}
-      <circle cx="380" cy="70" r="12" fill="#60a5fa" opacity="0.85" />
-      <text x="380" y="74" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="800" fontFamily="sans-serif">🔍</text>
-
-      {/* Annotation */}
-      <line x1="380" y1="86" x2="380" y2="118" stroke="#60a5fa" strokeWidth="1" strokeDasharray="3 2" />
-      <text x="380" y="130" textAnchor="middle" fill="#60a5fa" fontSize="10" fontFamily="sans-serif">Vásárlási szándék</text>
-    </svg>
+      {/* Explanation */}
+      <p className="mt-5 text-xs text-neutral-500 leading-relaxed border-t border-white/[0.06] pt-4">
+        A Google Search Ads ereje abban van, hogy nem te döntöd el, kinek jelenik meg — a felhasználó maga keresi a megoldást.
+        Ez az egyik legmagasabb vásárlási szándékot jelző csatorna.
+      </p>
+    </div>
   );
 }

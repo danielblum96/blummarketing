@@ -1,68 +1,63 @@
-// AuditBeforeAfter.tsx
-// Before → After comparison: messy tracking → clean reporting
-// Used in the homepage audit section
+const beforeItems = [
+  "Honnan jönnek valójában az ügyfelek?",
+  "Melyik kampány hoz leadet?",
+  "Mennyibe kerül egy ajánlatkérés?",
+  "Mi konvertál és mi égeti a büdzsét?",
+];
+
+const afterItems = [
+  { label: "Lead ára", value: "1 840 Ft", up: true },
+  { label: "ROAS", value: "4.1×", up: true },
+  { label: "CTR", value: "5.2%", up: true },
+  { label: "Konverziók", value: "+34%", up: true },
+];
 
 export default function AuditBeforeAfter() {
   return (
-    <svg
-      viewBox="0 0 480 160"
-      width="100%"
-      aria-label="Audit: rendezetlen mérés → tiszta riport"
-      role="img"
-    >
-      {/* ── LEFT box: Before (chaos) ── */}
-      <rect x="10" y="10" width="180" height="140" rx="14" fill="rgba(239,68,68,0.07)" stroke="#525252" strokeWidth="1.5" />
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_48px_1fr] sm:items-center">
+      {/* Before */}
+      <div className="rounded-2xl border border-rose-500/20 bg-rose-500/[0.06] p-5">
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-rose-400 mb-4">Előtte</p>
+        <div className="space-y-3">
+          {beforeItems.map((q) => (
+            <div key={q} className="flex items-start gap-2.5">
+              <span className="mt-0.5 shrink-0 h-5 w-5 rounded-full bg-rose-500/15 flex items-center justify-center">
+                <span className="text-[11px] font-black text-rose-400">?</span>
+              </span>
+              <span className="text-xs leading-snug text-neutral-500">{q}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {/* "Előtte" label */}
-      <text x="100" y="34" textAnchor="middle" fill="#a3a3a3" fontSize="10" fontWeight="700" fontFamily="sans-serif" letterSpacing="2">ELŐTTE</text>
+      {/* Arrow */}
+      <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-1.5">
+          <span className="text-[9px] font-black uppercase tracking-widest text-neutral-600">Audit</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M10 4l6 6-6 6" className="sm:hidden" stroke="#525252" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M4 10h12M10 4l6 6-6 6" stroke="#525252" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+      </div>
 
-      {/* Chaotic lines – simulate messy data */}
-      {[
-        "M30,55 L80,70 L100,50 L140,80 L170,58",
-        "M30,90 L60,110 L90,85 L120,105 L170,90",
-        "M30,120 L55,130 L90,115 L140,135 L170,120",
-      ].map((d, i) => (
-        <path key={i} d={d} fill="none" stroke="#fb7185" strokeWidth="1.5" strokeLinejoin="round" opacity={0.6} />
-      ))}
-
-      {/* Question marks */}
-      <text x="40"  y="78"  fill="#525252" fontSize="14" fontFamily="sans-serif">?</text>
-      <text x="120" y="95"  fill="#525252" fontSize="14" fontFamily="sans-serif">?</text>
-      <text x="80"  y="130" fill="#525252" fontSize="14" fontFamily="sans-serif">?</text>
-
-      {/* ── ARROW ── */}
-      <line x1="200" y1="80" x2="272" y2="80" stroke="#a3a3a3" strokeWidth="2" />
-      <polygon points="272,74 284,80 272,86" fill="#a3a3a3" />
-      <text x="240" y="72" textAnchor="middle" fill="#a3a3a3" fontSize="9" fontFamily="sans-serif">Audit</text>
-
-      {/* ── RIGHT box: After (clean) ── */}
-      <rect x="290" y="10" width="180" height="140" rx="14" fill="rgba(52,211,153,0.07)" stroke="#34d399" strokeWidth="1.5" />
-
-      {/* "Utána" label */}
-      <text x="380" y="34" textAnchor="middle" fill="#34d399" fontSize="10" fontWeight="700" fontFamily="sans-serif" letterSpacing="2">UTÁNA</text>
-
-      {/* Clean upward bar chart */}
-      {[
-        { x: 315, h: 40, label: "Lead" },
-        { x: 345, h: 60, label: "ROAS" },
-        { x: 375, h: 80, label: "CPL"  },
-        { x: 405, h: 55, label: "Conv" },
-        { x: 435, h: 90, label: "Rev"  },
-      ].map((bar) => (
-        <g key={bar.label}>
-          <rect
-            x={bar.x}
-            y={145 - bar.h}
-            width={20}
-            height={bar.h}
-            rx="4"
-            fill="rgba(52,211,153,0.35)"
-            stroke="#34d399"
-            strokeWidth="1"
-          />
-          <text x={bar.x + 10} y={152} textAnchor="middle" fill="#525252" fontSize="8" fontFamily="sans-serif">{bar.label}</text>
-        </g>
-      ))}
-    </svg>
+      {/* After */}
+      <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.06] p-5">
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-4">Utána</p>
+        <div className="space-y-3">
+          {afterItems.map((m) => (
+            <div key={m.label} className="flex items-center justify-between gap-3">
+              <span className="text-xs text-neutral-500">{m.label}</span>
+              <div className="flex items-center gap-1.5">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M6 10V2M2 6l4-4 4 4" stroke="#34d399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="text-sm font-black text-emerald-400">{m.value}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

@@ -1,102 +1,59 @@
-// MetaPortfolioHierarchy.tsx
-// Üzleti portfólió → Hirdetési fiók → Kampány → Hirdetéssorozat → Hirdetés
-// Vertical tree with connecting lines
-
 const LEVELS = [
-  { label: "Üzleti portfólió",   sublabel: "tulajdonosi szint",        color: "#60a5fa", depth: 0 },
-  { label: "Hirdetési fiók",     sublabel: "kampányok, adatok, pixel", color: "#a78bfa", depth: 1 },
-  { label: "Kampány",            sublabel: "cél: elérés, lead, sales", color: "#fb7185", depth: 2 },
-  { label: "Hirdetéssorozat",    sublabel: "célközönség, elhelyezés",  color: "#fbbf24", depth: 3 },
-  { label: "Hirdetés",           sublabel: "kép, videó, szöveg, CTA",  color: "#34d399", depth: 4 },
+  {
+    num: "1",
+    label: "Üzleti portfólió",
+    sub: "A Meta admin-központja — itt kezeled az összes eszközt és jogosultságot",
+    color: { text: "text-blue-400", bar: "bg-blue-400", border: "border-blue-500/25", bg: "bg-blue-500/[0.07]" },
+  },
+  {
+    num: "2",
+    label: "Hirdetési fiók",
+    sub: "Kampányok, pixelek, konverziók, elköltött összeg — a tényleges hirdetési felület",
+    color: { text: "text-violet-400", bar: "bg-violet-400", border: "border-violet-500/25", bg: "bg-violet-500/[0.07]" },
+  },
+  {
+    num: "3",
+    label: "Kampány",
+    sub: "Cél meghatározása: értékesítés, lead, elérés, forgalom, alkalmazás",
+    color: { text: "text-rose-400", bar: "bg-rose-400", border: "border-rose-500/25", bg: "bg-rose-500/[0.07]" },
+  },
+  {
+    num: "4",
+    label: "Hirdetéssorozat",
+    sub: "Célközönség, elhelyezések, optimalizálási esemény, büdzsé, ütemezés",
+    color: { text: "text-amber-400", bar: "bg-amber-400", border: "border-amber-500/25", bg: "bg-amber-500/[0.07]" },
+  },
+  {
+    num: "5",
+    label: "Hirdetés",
+    sub: "Kreatív: kép, videó, carousel, szöveg, CTA gomb, céloldal URL",
+    color: { text: "text-emerald-400", bar: "bg-emerald-400", border: "border-emerald-500/25", bg: "bg-emerald-500/[0.07]" },
+  },
 ];
 
 export default function MetaPortfolioHierarchy() {
-  const boxH = 46;
-  const boxW = 240;
-  const indent = 28;
-  const rowGap = 20;
-  const totalH = LEVELS.length * (boxH + rowGap) - rowGap;
-  const viewH = totalH + 20;
-
   return (
-    <svg
-      viewBox={`0 0 480 ${viewH}`}
-      width="100%"
-      aria-label="Meta portfólió hierarchia: Üzleti portfólió, Hirdetési fiók, Kampány, Hirdetéssorozat, Hirdetés"
-      role="img"
-    >
-      {LEVELS.map((level, i) => {
-        const x = 10 + level.depth * indent;
-        const y = 10 + i * (boxH + rowGap);
-        const midY = y + boxH / 2;
+    <div className="relative space-y-2 py-2">
+      {/* Vertical connecting line */}
+      <div className="absolute left-5 top-6 bottom-6 w-px bg-white/[0.06]" aria-hidden="true" />
 
-        // Draw vertical connector from previous item if depth >= prev depth (i.e. child)
-        const prev = LEVELS[i - 1];
-        const lineX = x + 10;
-        const prevY = y - rowGap;
+      {LEVELS.map((level, i) => (
+        <div key={level.label} className="relative flex items-start gap-4">
+          {/* Number circle */}
+          <div className={`relative z-10 shrink-0 h-10 w-10 rounded-full border ${level.color.border} ${level.color.bg} flex items-center justify-center`}>
+            <span className={`text-xs font-black ${level.color.text}`}>{level.num}</span>
+          </div>
 
-        return (
-          <g key={level.label}>
-            {/* Connector from parent */}
-            {i > 0 && (
-              <path
-                d={`M ${lineX} ${prevY} L ${lineX} ${y}`}
-                stroke="#525252"
-                strokeWidth="1.5"
-                strokeDasharray="3 3"
-                fill="none"
-              />
-            )}
-
-            {/* Box */}
-            <rect
-              x={x}
-              y={y}
-              width={boxW}
-              height={boxH}
-              rx="10"
-              fill="rgba(255,255,255,0.04)"
-              stroke={level.color}
-              strokeWidth="1.5"
-            />
-
-            {/* Label */}
-            <text
-              x={x + 14}
-              y={y + 18}
-              fill={level.color}
-              fontSize="13"
-              fontWeight="800"
-              fontFamily="sans-serif"
-            >
-              {level.label}
-            </text>
-
-            {/* Sublabel */}
-            <text
-              x={x + 14}
-              y={y + 33}
-              fill="#a3a3a3"
-              fontSize="10"
-              fontFamily="sans-serif"
-            >
-              {level.sublabel}
-            </text>
-
-            {/* Depth badge */}
-            <text
-              x={x + boxW - 10}
-              y={y + boxH / 2 + 5}
-              textAnchor="end"
-              fill="#525252"
-              fontSize="11"
-              fontFamily="sans-serif"
-            >
-              {`${i + 1}. szint`}
-            </text>
-          </g>
-        );
-      })}
-    </svg>
+          {/* Content card */}
+          <div className={`flex-1 rounded-2xl border ${level.color.border} ${level.color.bg} px-5 py-3.5`}>
+            <div className="flex items-center gap-2 mb-0.5">
+              <span className={`h-1.5 w-1.5 rounded-full shrink-0 ${level.color.bar}`} />
+              <p className={`text-sm font-black ${level.color.text}`}>{level.label}</p>
+            </div>
+            <p className="text-xs text-neutral-500 leading-relaxed">{level.sub}</p>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

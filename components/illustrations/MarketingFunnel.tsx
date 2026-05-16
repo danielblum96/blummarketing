@@ -1,91 +1,62 @@
-// MarketingFunnel.tsx – reusable 3-level funnel
-// color prop: "meta" (blue) | "tiktok" (rose/red)
-
 interface MarketingFunnelProps {
   variant?: "meta" | "tiktok";
 }
 
-const META_COLORS = {
-  top:    { fill: "rgba(96,165,250,0.18)",  stroke: "#60a5fa", text: "#60a5fa" },
-  mid:    { fill: "rgba(96,165,250,0.28)",  stroke: "#60a5fa", text: "#60a5fa" },
-  bot:    { fill: "rgba(96,165,250,0.40)",  stroke: "#60a5fa", text: "#ffffff" },
-};
-
-const TIKTOK_COLORS = {
-  top:    { fill: "rgba(251,113,133,0.18)", stroke: "#fb7185", text: "#fb7185" },
-  mid:    { fill: "rgba(251,113,133,0.28)", stroke: "#fb7185", text: "#fb7185" },
-  bot:    { fill: "rgba(251,113,133,0.40)", stroke: "#fb7185", text: "#ffffff" },
-};
-
 export default function MarketingFunnel({ variant = "meta" }: MarketingFunnelProps) {
-  const c = variant === "meta" ? META_COLORS : TIKTOK_COLORS;
+  const isMeta = variant === "meta";
+  const accent = isMeta
+    ? { text: "text-blue-400", border: "border-blue-500/25", dot: "bg-blue-400" }
+    : { text: "text-rose-400", border: "border-rose-500/25", dot: "bg-rose-400" };
 
-  // Funnel layers: top wide → bottom narrow, centered in 400×280 viewBox
-  // Each layer is a trapezoid path
-  const layers = [
+  const levels = [
     {
-      label: "Elérés / Ismertség",
-      sublabel: "Hideg célközönség",
-      ...c.top,
-      // wide trapezoid
-      path: "M20,20 L380,20 L320,93 L80,93 Z",
-      textY: 62,
+      num: "1",
+      label: "Elérés & ismertség",
+      sub: "Minél több ember látja a hirdetést a célcsoportból",
+      stat: "100%",
+      bg: isMeta ? "bg-blue-500/[0.06]" : "bg-rose-500/[0.06]",
     },
     {
-      label: "Érdeklődés / Forgalom",
-      sublabel: "Érdeklődők, weboldal-látogatók",
-      ...c.mid,
-      path: "M80,100 L320,100 L270,173 L130,173 Z",
-      textY: 142,
+      num: "2",
+      label: "Érdeklődés & forgalom",
+      sub: "Kattintás, weboldal-látogatás, videómegtekintés",
+      stat: "~20–40%",
+      bg: isMeta ? "bg-blue-500/[0.10]" : "bg-rose-500/[0.10]",
     },
     {
+      num: "3",
       label: "Konverzió",
-      sublabel: "Lead, vásárlás, ajánlatkérés",
-      ...c.bot,
-      path: "M130,180 L270,180 L240,253 L160,253 Z",
-      textY: 222,
+      sub: "Lead, ajánlatkérés, vásárlás — mérhető üzleti eredmény",
+      stat: "~2–15%",
+      bg: isMeta ? "bg-blue-500/[0.18]" : "bg-rose-500/[0.18]",
     },
   ];
 
+  const widths = ["w-full", "w-[82%]", "w-[62%]"];
+
   return (
-    <svg
-      viewBox="0 0 400 270"
-      width="100%"
-      aria-label="Marketing tölcsér – Elérés, Érdeklődés, Konverzió"
-      role="img"
-    >
-      {layers.map((layer) => (
-        <g key={layer.label}>
-          <path
-            d={layer.path}
-            fill={layer.fill}
-            stroke={layer.stroke}
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-          <text
-            x="200"
-            y={layer.textY - 8}
-            textAnchor="middle"
-            fill={layer.text}
-            fontSize="13"
-            fontWeight="800"
-            fontFamily="sans-serif"
-          >
-            {layer.label}
-          </text>
-          <text
-            x="200"
-            y={layer.textY + 9}
-            textAnchor="middle"
-            fill="#a3a3a3"
-            fontSize="10"
-            fontFamily="sans-serif"
-          >
-            {layer.sublabel}
-          </text>
-        </g>
+    <div className="py-2 space-y-1.5">
+      {levels.map((level, i) => (
+        <div key={level.label} className="flex flex-col items-center">
+          <div className={`${widths[i]} ${level.bg} border ${accent.border} rounded-2xl px-5 py-4 flex items-center gap-4`}>
+            <div className={`shrink-0 h-8 w-8 rounded-xl ${accent.dot} bg-opacity-15 flex items-center justify-center`}>
+              <span className={`text-xs font-black ${accent.text}`}>{level.num}</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className={`text-sm font-black ${accent.text} leading-tight`}>{level.label}</p>
+              <p className="text-xs text-neutral-500 mt-0.5 leading-snug">{level.sub}</p>
+            </div>
+            <span className={`shrink-0 text-sm font-black ${accent.text} opacity-60`}>{level.stat}</span>
+          </div>
+          {i < levels.length - 1 && (
+            <div className="py-0.5">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M8 2v12M4 10l4 4 4-4" stroke={isMeta ? "#60a5fa" : "#fb7185"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          )}
+        </div>
       ))}
-    </svg>
+    </div>
   );
 }

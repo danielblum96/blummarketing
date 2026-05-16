@@ -1,6 +1,3 @@
-// ProcessFlow.tsx – generic horizontal numbered flow (up to 6 steps)
-// Used on weboldal-keszites page and potentially others
-
 interface Step {
   num: string;
   label: string;
@@ -8,92 +5,45 @@ interface Step {
 
 interface ProcessFlowProps {
   steps: Step[];
-  color?: string;
 }
 
-export default function ProcessFlow({ steps, color = "#fb7185" }: ProcessFlowProps) {
-  const count = steps.length;
-  const boxW = 70;
-  const boxH = 52;
-  const gapX = 24;
-  const totalW = count * boxW + (count - 1) * gapX;
-  const viewW = totalW + 20;
-  const midY = 36;
-
+export default function ProcessFlow({ steps }: ProcessFlowProps) {
   return (
-    <svg
-      viewBox={`0 0 ${viewW} 92`}
-      width="100%"
-      role="img"
-      aria-label={`Folyamat ${count} lépésben`}
-    >
-      {steps.map((step, i) => {
-        const x = 10 + i * (boxW + gapX);
-        const cx = x + boxW / 2;
+    <>
+      {/* Desktop: horizontal */}
+      <div className="hidden sm:flex items-start justify-between gap-0 relative pb-2">
+        {/* Connecting line */}
+        <div
+          className="absolute h-px bg-gradient-to-r from-rose-500/20 via-rose-400/40 to-rose-500/20"
+          style={{ top: "19px", left: `${(1 / steps.length / 2) * 100}%`, right: `${(1 / steps.length / 2) * 100}%` }}
+          aria-hidden="true"
+        />
+        {steps.map((step) => (
+          <div key={step.num} className="relative flex flex-col items-center" style={{ width: `${100 / steps.length}%` }}>
+            <div className="relative z-10 h-10 w-10 rounded-full border border-rose-400/40 bg-neutral-900 flex items-center justify-center">
+              <span className="text-xs font-black text-rose-400">{step.num}</span>
+            </div>
+            <p className="mt-3 text-center text-[11px] font-semibold text-neutral-500 leading-snug px-1">
+              {step.label}
+            </p>
+          </div>
+        ))}
+      </div>
 
-        return (
-          <g key={step.num}>
-            {/* Arrow connector */}
-            {i < count - 1 && (
-              <g>
-                <line
-                  x1={x + boxW}
-                  y1={midY}
-                  x2={x + boxW + gapX}
-                  y2={midY}
-                  stroke="#525252"
-                  strokeWidth="1.5"
-                />
-                <polygon
-                  points={`${x + boxW + gapX - 1},${midY - 4} ${x + boxW + gapX + 6},${midY} ${x + boxW + gapX - 1},${midY + 4}`}
-                  fill="#525252"
-                />
-              </g>
-            )}
-
-            {/* Box */}
-            <rect
-              x={x}
-              y={midY - boxH / 2}
-              width={boxW}
-              height={boxH}
-              rx="10"
-              fill="rgba(255,255,255,0.04)"
-              stroke={color}
-              strokeWidth="1.5"
-            />
-
-            {/* Step num */}
-            <text
-              x={cx}
-              y={midY - 6}
-              textAnchor="middle"
-              fill={color}
-              fontSize="11"
-              fontWeight="800"
-              fontFamily="sans-serif"
-            >
-              {step.num}
-            </text>
-
-            {/* Label — wrap via foreignObject */}
-            <foreignObject x={x + 4} y={midY + 2} width={boxW - 8} height={34}>
-              <div
-                style={{
-                  textAlign: "center",
-                  color: "#a3a3a3",
-                  fontSize: "8.5px",
-                  lineHeight: "1.3",
-                  fontFamily: "sans-serif",
-                  fontWeight: 600,
-                }}
-              >
-                {step.label}
-              </div>
-            </foreignObject>
-          </g>
-        );
-      })}
-    </svg>
+      {/* Mobile: vertical list */}
+      <div className="sm:hidden relative space-y-2 pl-12">
+        <div className="absolute left-5 top-5 bottom-5 w-px bg-white/[0.08]" aria-hidden="true" />
+        {steps.map((step) => (
+          <div key={step.num} className="relative flex items-center gap-3">
+            <div className="absolute -left-7 z-10 h-8 w-8 rounded-full border border-rose-400/40 bg-neutral-900 flex items-center justify-center">
+              <span className="text-[10px] font-black text-rose-400">{step.num}</span>
+            </div>
+            <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 w-full">
+              <p className="text-sm font-semibold text-neutral-400">{step.label}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

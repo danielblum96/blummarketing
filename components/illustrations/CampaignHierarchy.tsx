@@ -1,69 +1,70 @@
-// CampaignHierarchy.tsx – tree diagram showing campaign structure
-// Used on Google Ads page: Fiók → Kampány → Hirdetéscsoport → Kulcsszavak + Hirdetések
+const NODES = [
+  {
+    label: "Hirdetési fiók",
+    sub: "Fizetési adatok, jogosultságok, pixelek",
+    color: { text: "text-rose-400", border: "border-rose-500/30", bg: "bg-rose-500/[0.07]", dot: "bg-rose-400" },
+    indent: 0,
+  },
+  {
+    label: "Kampány",
+    sub: "Cél (lead, vásárlás, elérés), büdzsé, típus",
+    color: { text: "text-blue-400", border: "border-blue-500/30", bg: "bg-blue-500/[0.07]", dot: "bg-blue-400" },
+    indent: 1,
+  },
+  {
+    label: "Hirdetéscsoport",
+    sub: "Célzás, elhelyezések, ajánlattétel",
+    color: { text: "text-emerald-400", border: "border-emerald-500/30", bg: "bg-emerald-500/[0.07]", dot: "bg-emerald-400" },
+    indent: 2,
+  },
+  {
+    label: "Kulcsszavak / Közönségek",
+    sub: "Keresési szavak, remarketing listák, lookalike",
+    color: { text: "text-amber-400", border: "border-amber-500/30", bg: "bg-amber-500/[0.07]", dot: "bg-amber-400" },
+    indent: 3,
+  },
+  {
+    label: "Hirdetések",
+    sub: "Szöveg, képek, videók, CTA, céloldal URL",
+    color: { text: "text-violet-400", border: "border-violet-500/30", bg: "bg-violet-500/[0.07]", dot: "bg-violet-400" },
+    indent: 3,
+  },
+];
+
+const INDENT_PX = [0, 20, 40, 60, 60] as const;
 
 export default function CampaignHierarchy() {
-  // Layout in a 480×220 viewBox
-  // Boxes: cx, cy, label, sublabel, color
-  const nodes = [
-    { x: 240, y: 30,  w: 130, h: 36, label: "Hirdetési fiók",      color: "#fb7185" },
-    { x: 240, y: 100, w: 130, h: 36, label: "Kampány",              color: "#60a5fa" },
-    { x: 240, y: 170, w: 130, h: 36, label: "Hirdetéscsoport",      color: "#34d399" },
-    { x: 100, y: 240, w: 120, h: 36, label: "Kulcsszavak",          color: "#fbbf24" },
-    { x: 380, y: 240, w: 120, h: 36, label: "Hirdetések",           color: "#fbbf24" },
-  ];
-
-  // Connector lines (from bottom-center of parent to top-center of child)
-  const lines = [
-    { x1: 240, y1: 48,  x2: 240, y2: 100 },
-    { x1: 240, y1: 118, x2: 240, y2: 170 },
-    { x1: 240, y1: 188, x2: 100, y2: 240 },
-    { x1: 240, y1: 188, x2: 380, y2: 240 },
-  ];
-
   return (
-    <svg
-      viewBox="0 0 480 286"
-      width="100%"
-      aria-label="Google Ads kampánystruktúra: Fiók → Kampány → Hirdetéscsoport → Kulcsszavak és Hirdetések"
-      role="img"
-    >
-      {/* Connector lines */}
-      {lines.map((l, i) => (
-        <line
-          key={i}
-          x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2}
-          stroke="#525252"
-          strokeWidth="1.5"
-          strokeDasharray="4 3"
-        />
-      ))}
+    <div className="space-y-2 py-2">
+      {NODES.map((node, i) => {
+        const ml = INDENT_PX[node.indent];
+        const isLast = i === NODES.length - 1;
+        const isSiblingStart = i === 3; // two nodes at depth 3
 
-      {/* Nodes */}
-      {nodes.map((n) => (
-        <g key={n.label}>
-          <rect
-            x={n.x - n.w / 2}
-            y={n.y - n.h / 2}
-            width={n.w}
-            height={n.h}
-            rx="10"
-            fill="rgba(255,255,255,0.04)"
-            stroke={n.color}
-            strokeWidth="1.5"
-          />
-          <text
-            x={n.x}
-            y={n.y + 5}
-            textAnchor="middle"
-            fill={n.color}
-            fontSize="12"
-            fontWeight="700"
-            fontFamily="sans-serif"
-          >
-            {n.label}
-          </text>
-        </g>
-      ))}
-    </svg>
+        return (
+          <div key={node.label} className="relative" style={{ marginLeft: ml }}>
+            {/* Vertical connector line */}
+            {i > 0 && (
+              <div
+                className="absolute top-0 -left-4 w-px bg-white/10"
+                style={{ height: isSiblingStart ? "50%" : "100%", top: "-8px" }}
+              />
+            )}
+            {/* Horizontal connector */}
+            {i > 0 && (
+              <div className="absolute top-5 -left-4 w-4 h-px bg-white/10" />
+            )}
+
+            <div className={`flex items-center gap-3 rounded-xl border ${node.color.border} ${node.color.bg} px-4 py-3`}>
+              <span className={`shrink-0 h-2 w-2 rounded-full ${node.color.dot}`} />
+              <div className="min-w-0">
+                <p className={`text-sm font-black ${node.color.text} leading-tight`}>{node.label}</p>
+                <p className="text-xs text-neutral-500 mt-0.5">{node.sub}</p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
