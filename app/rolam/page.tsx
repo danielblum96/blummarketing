@@ -145,13 +145,16 @@ export default function RolamPage() {
           <div className="relative max-w-2xl">
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-rose-400 mb-6">Hogyan dolgozom</p>
             <p className="text-neutral-400 leading-relaxed mb-5">
-              Barátságos, gyakorlatias és üzletileg gondolkodó partnerként dolgozom. Fontos számomra, hogy átlássam a teljes ügyfélszerzési folyamatot: a hirdetéstől a landing oldalon át egészen az utánkövetésig. Az igazán jó eredmények ugyanis gyakran nem egyetlen kampányon múlnak, hanem azon, hogy a rendszer elemei mennyire dolgoznak össze.
+              Gyakorlatias, üzleti szemléletű partnerként dolgozom, aki nemcsak a kampányt nézi, hanem a teljes ügyfélszerzési rendszert. A hirdetés csak az első lépés. Az eredmény azon múlik, mi történik utána: mennyire erős az ajánlat, mennyire meggyőző a landing oldal, mennyire pontos az utánkövetés, és mennyire tudatosan épül fel az út az első kattintástól a vásárlásig.
+            </p>
+            <p className="text-neutral-400 leading-relaxed mb-5">
+              Számomra a marketing akkor működik igazán, amikor ezek az elemek összeérnek, és nem különálló eszközökként, hanem egy jól felépített rendszerként támogatják a vállalkozás növekedését.
             </p>
             <p className="text-neutral-400 leading-relaxed mb-3">
-              Komolyan veszem a szakmámat, igényem van a folyamatos fejlődésre, és minden projektnél ugyanaz vezérel:
+              Komolyan veszem a szakmámat, folyamatosan fejlődöm, és minden projektnél ugyanaz vezérel:
             </p>
             <p className="text-xl font-bold text-white leading-relaxed mb-8">
-              olyan marketingrendszert építeni, amely nemcsak jól néz ki, hanem mérhetően hozzájárul a vállalkozás növekedéséhez.
+              olyan marketingrendszert építeni, amely érthető, mérhető, és valódi üzleti eredményeket hoz.
             </p>
             <a
               href="/#kapcsolat"
