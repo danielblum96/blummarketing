@@ -355,7 +355,7 @@ export default function FogalomtarPage() {
           <P>A hirdetés első figyelemfogó eleme. Videónál általában az első 1–3 másodperc. Feladata, hogy megállítsa a görgetést.</P>
           <UL items={[
             `„Nem az a baj, hogy kevés a kattintásod. Lehet, hogy rossz dolgot mérsz."`,
-            `„Futsz hirdetéseket, de nem látod, mi térül meg?"`,
+            `„Hirdetsz, de nem látod, melyik kampány térül meg?"`,
             `„Három jel, hogy a kreatívod már kifáradt."`,
           ]} />
           <P>Ha a hook gyenge, a videó többi része lehet, hogy el sem jut a nézőhöz.</P>

@@ -205,7 +205,7 @@ export default function KreativokEsVideosTartalom() {
         <H3>Hook példák</H3>
         <div className="my-6 grid gap-3 sm:grid-cols-2">
           {[
-            { label: "Szolgáltató", text: `„Futsz hirdetéseket, de nem tudod, melyik hoz ügyfelet?"` },
+            { label: "Szolgáltató", text: `„Hirdetsz, de nem tudod, melyik kampány hoz ügyfelet?"` },
             { label: "Webshop", text: `„Ezt a hibát sokan elkövetik futócipő választásnál."` },
             { label: "Fogászat", text: `„Félsz a fogászattól? Akkor ezt érdemes tudnod."` },
             { label: "Marketing", text: `„Nem az a baj, hogy kevés a kattintásod. Lehet, hogy rossz dolgot mérsz."` },
@@ -475,7 +475,7 @@ CTA`}</CodeBlock>
 
         <HR />
 
-        <H2>Frequent kreatívhibák PPC kampányokban</H2>
+        <H2>Gyakori kreatívhibák PPC kampányokban</H2>
         <ul className="mb-6 grid gap-3 sm:grid-cols-2">
           {[
             { n: "1.", title: "Gyenge hook", desc: "A videó lassan indul, a néző továbbgörget." },

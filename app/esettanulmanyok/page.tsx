@@ -100,7 +100,7 @@ const cases = [
       "Az ügyfél havi rendszerességgel futtatott lead generáló kampányokat Meta-on. A beérkező érdeklődők száma elfogadható volt, de az értékesítő csapat jelzése egyértelmű: a leadek nagy része nem illik az ideális ügyfélprofilba, és sok időt vesz el a minősítésük. A probléma nem a mennyiség, hanem a minőség volt.",
     approach: [
       "Célközönség szegmentálás: a legjobban konvertáló ügyfélprofilból visszafelé dolgozva",
-      "Instant form átírás: minősítő kérdések beépítése, hogy csak komoly érdeklődők töltséék ki",
+      "Instant form átírás: minősítő kérdések beépítése, hogy csak komoly érdeklődők töltsék ki",
       "Üzenetváltás: nem az ingyenességre, hanem a megoldandó problémára fókuszálva",
       "Remarketing réteg: weboldalon jártak + videót megnézők külön kezelése",
     ],
