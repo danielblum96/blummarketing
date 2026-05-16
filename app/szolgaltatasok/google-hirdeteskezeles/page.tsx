@@ -44,7 +44,7 @@ const forWhom = [
 ];
 
 const whyUs = [
-  "Csak azt állítjuk be, ami valóban szükséges – nem fújtuk fel a kampányszerkezetet",
+  "Csak azt állítjuk be, ami tényleg szükséges – nem fújjuk fel a kampányszerkezetet",
   "Konverziókövetés nélkül nem kezdünk el hirdetni",
   "Átlátható havi riport – értjük is, amit mutatunk",
   "Nem adunk el olyat, amitől nem várható eredmény",
@@ -136,7 +136,7 @@ export default function GoogleHirdeteskezelesPage() {
         <div className="rounded-[2rem] bg-gradient-to-br from-rose-500/10 to-blue-500/10 border border-white/10 p-10 lg:p-16 text-center">
           <h2 className="text-3xl font-black sm:text-4xl mb-4">Megmutatjuk, mit lehet kihozni a Google Ads-ből</h2>
           <p className="text-neutral-300 max-w-xl mx-auto mb-8 leading-8">
-            Kérj ingyenes kampányauditot, vagy indulj nulláról egy tiszta stratégiával. Először megnézzük, érdemes-e egyáltalán Google-on hirdetni a te esetedben.
+            Kérj kampányauditot, vagy indulj nulláról egy tiszta stratégiával. Először megnézzük, érdemes-e Google-on hirdetni a te esetedben.
           </p>
           <a
             href="mailto:hello@blummarketing.hu?subject=Google hirdetéskezelés ajánlatkérés"

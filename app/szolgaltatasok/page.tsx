@@ -79,7 +79,7 @@ export default function SzolgaltatasokPage() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatások</p>
           <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Mit kínálunk?</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
-            Tartalomgyártástól a hirdetéskezelésen át a weboldalig – minden, ami a digitális jelenléthez kell.
+            Hirdetéskezelés, tartalomgyártás és weboldal — egy kézből.
           </p>
         </div>
       </section>

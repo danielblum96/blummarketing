@@ -130,13 +130,13 @@ const packages = [
       "Havi riport",
     ],
     ideal: "Most indítanád el tudatosan a TikTok hirdetéseidet, van egy fő ajánlatod, és szeretnéd tesztelni, hogyan működhet nálad a TikTok.",
-    note: "Ez a csomag jó indulás, de nem mély növekedési rendszer. Ha már folyamatos kreatívtesztelést, remarketinget, leadeket vagy vásárlásokat szeretnél, érdemes a Growth csomagban gondolkodni.",
+    note: "Ez a csomag jó indulás, de nem teljes növekedési rendszer. Ha folyamatos kreatívtesztelést, remarketinget és leadeket szeretnél, a Growth csomag a következő lépés.",
     highlight: false,
   },
   {
     name: "TikTok Growth",
     price: "290 000 Ft / hó-tól",
-    desc: "A legtöbb vállalkozás számára ez az ideális választás: elég komplex ahhoz, hogy valódi üzleti eredményeket hozzon, de még nem prémium szintű költség.",
+    desc: "A legtöbb vállalkozásnak ezt ajánljuk: elég komplex ahhoz, hogy valódi üzleti eredményeket hozzon, de még nem prémium szintű ár.",
     items: [
       "Teljes TikTok kampánykezelés",
       "Stratégiai kampánytervezés",
@@ -151,13 +151,13 @@ const packages = [
       "Következő havi növekedési javaslatok",
     ],
     ideal: "Már van működő ajánlatod és weboldalad, szeretnél több érdeklődőt vagy vásárlót, és kiszámíthatóbb TikTok-alapú ügyfélszerzésben gondolkodsz.",
-    note: "Ezt ajánljuk a legtöbb cégnek. Ez az a szint, ahol már nem csak futnak a TikTok hirdetések, hanem rendszert építünk a figyelem és az ügyfélszerzés köré.",
+    note: "Ezen a szinten már nem csak futnak a hirdetések — rendszert építünk a figyelem és az ügyfélszerzés köré.",
     highlight: true,
   },
   {
     name: "TikTok Market Leader",
     price: "990 000 Ft / hó-tól",
-    desc: "Ez nem egyszerű hirdetéskezelés. Ez egy teljes TikTok növekedési rendszer azoknak a cégeknek, akik komolyan figyelmet, piacot és ügyfélszerzési előnyt akarnak építeni.",
+    desc: "Teljes TikTok növekedési rendszer azoknak a cégeknek, akik komolyan figyelmet, piacot és ügyfélszerzési előnyt akarnak építeni.",
     items: [
       "Komplex TikTok kampánystratégia",
       "Több ajánlat párhuzamos hirdetése",
@@ -180,13 +180,13 @@ const packages = [
       "Ajánlatpozicionálási tanácsadás",
     ],
     ideal: "Nagyobb TikTok hirdetési büdzsével dolgozol, több ajánlatot futtatsz, és nem csak kampánykezelőt keresel — stratégiai növekedési partnert szeretnél.",
-    note: "Ez a csomag azoknak való, akik komolyan veszik a TikTok-alapú növekedést, és olyan rendszert akarnak építeni, amely hosszú távon is skálázható.",
+    note: "Ez a csomag azoknak való, akik komoly büdzsével és komoly TikTok-alapú növekedési célokkal dolgoznak.",
     highlight: false,
   },
 ];
 
 const processSteps = [
-  { step: "01", title: "Konzultáció", text: "Megértjük a vállalkozásod, az ajánlatod, a célcsoportod és azt, hogy milyen eredményt vársz a TikTok hirdetésektől." },
+  { step: "01", title: "Konzultáció", text: "Megnézzük a vállalkozásod, az ajánlatod, a célcsoportot és azt, milyen eredményt vársz a TikTok hirdetésektől." },
   { step: "02", title: "Fiók- és mérési ellenőrzés", text: "Átnézzük a TikTok hirdetési fiókot, a TikTok Pixelt, a konverziós eseményeket, a weboldalt vagy webshopot, és jelezzük, ha valami akadályozza a jó teljesítményt." },
   { step: "03", title: "Kampánystratégia", text: "Meghatározzuk a kampánycélokat, célközönségeket, ajánlati irányokat, hookokat, kreatívteszteket és a kezdő kampánystruktúrát." },
   { step: "04", title: "Kampányindítás", text: "Beállítjuk a hirdetéseket, elindítjuk a kampányokat, majd figyeljük az első adatok alapján, hogyan reagál a célcsoport és mely videós irányok mozdulnak meg." },
@@ -265,13 +265,13 @@ export default function TikTokHirdeteskezelesPage() {
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">TikTok hirdetéskezelés</p>
           <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight sm:text-6xl">
-            TikTok hirdetések, amik nem csak megtekintéseket hoznak — hanem figyelmet, érdeklődőket és mérhető növekedést.
+            TikTok hirdetések, amik nem csak megtekintéseket hoznak — hanem érdeklődőket és vásárlókat.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
             A Blummarketing stratégiai szemlélettel kezeli a TikTok hirdetéseidet: kampánystruktúra, kreatívtesztelés, videós hirdetési irányok, mérés, optimalizálás és havi riport egy rendszerben.
           </p>
           <p className="mt-3 max-w-xl text-base leading-8 text-neutral-500">
-            Nem az a cél, hogy „legyen pár videó, amit megtolunk hirdetésben". Az a cél, hogy a TikTokból valódi ügyfélszerző csatorna legyen.
+            A cél nem az, hogy „legyen pár videó, amit megtolunk". A cél, hogy a TikTokból valódi ügyfélszerző csatorna legyen.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -333,9 +333,9 @@ export default function TikTokHirdeteskezelesPage() {
       {/* ── What we offer ── */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Mit kapsz tőlünk</p>
-        <h2 className="text-3xl font-black mb-4">Komplett TikTok hirdetéskezelést — kreatív és üzleti szemlélettel.</h2>
+        <h2 className="text-3xl font-black mb-4">Komplett TikTok hirdetéskezelés — kreatív és üzleti szemlélettel.</h2>
         <p className="max-w-2xl text-neutral-400 leading-8 mb-12">
-          A TikTok hirdetéskezelés nem csak kampányindítás. Nálunk a teljes folyamat része a stratégia, a videós kreatívgondolkodás, a mérés, a tesztelés és az optimalizálás.
+          A TikTok hirdetéskezelés nem csak kampányindítás. A stratégia, a videós kreatívok, a mérés, a tesztelés és az optimalizálás mind beletartozik.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {whatWeOffer.map((item) => (
@@ -398,7 +398,7 @@ export default function TikTokHirdeteskezelesPage() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Csomagok</p>
           <h2 className="text-4xl font-black mb-4">Válaszd ki, milyen szinten akarsz növekedni TikTokon.</h2>
           <p className="max-w-2xl text-lg leading-8 text-neutral-600 mb-12">
-            Nem minden vállalkozásnak ugyanarra van szüksége. Ezért három szintet hoztunk létre.
+            Nem minden vállalkozásnak ugyanaz kell — ezért három szint közül választhatsz.
           </p>
           <div className="grid gap-6 lg:grid-cols-3">
             {packages.map((pkg) => (
@@ -575,8 +575,8 @@ export default function TikTokHirdeteskezelesPage() {
             ))}
           </div>
           <p className="text-neutral-400 leading-8 max-w-2xl">
-            Egy profi TikTok hirdetéskezelés ezeket a pontokat rendszerszinten nézi.{" "}
-            <span className="text-white font-semibold">Mi nem csak a TikTok Ads Managerben dolgozunk — a teljes figyelemszerzési és ügyfélszerzési útvonalat figyeljük.</span>
+            Egy jól felépített TikTok hirdetéskezelés ezeket a pontokat rendszerszinten nézi.{" "}
+            <span className="text-white font-semibold">Mi nem csak a TikTok Ads Managerben dolgozunk — a teljes ügyfélszerzési útvonalat figyeljük.</span>
           </p>
         </div>
       </section>

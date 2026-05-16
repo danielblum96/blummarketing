@@ -163,10 +163,10 @@ export default function HomePage() {
               Ne költs többet hirdetésre, amíg nem látod, mi térül meg
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              Google, Meta és TikTok kampányokat kezelünk olyan vállalkozásoknak, akik nem csak kattintásokat akarnak látni, hanem érdeklődőket, vásárlásokat és ajánlatkéréseket.
+              Google, Meta és TikTok kampányokat kezelünk vállalkozásoknak, akik nem csak kattintásokat akarnak látni, hanem érdeklődőket, vásárlásokat és ajánlatkéréseket.
             </p>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-neutral-400">
-              Rendet teszünk a mérésben, teszteljük a kreatívokat, és megmutatjuk, melyik kampányod dolgozik valóban a cégedért.
+              Rendet teszünk a mérésben, teszteljük a kreatívokat, és megmutatjuk, melyik kampányod hoz valódi eredményt.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="/#kapcsolat" className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:scale-[1.02] hover:bg-neutral-200">
@@ -224,7 +224,7 @@ export default function HomePage() {
               Sok cég futtat hirdetéseket Google-ben, Facebookon, Instagramon vagy TikTokon, de közben nincs pontos válasz a legfontosabb kérdésekre.
             </p>
             <p className="mt-6 text-lg leading-8 text-neutral-300">
-              Ilyenkor nem feltétlenül több hirdetésre van szükség, hanem tisztább képre: mi hoz ügyfelet, mi viszi a pénzt, és hol kell belenyúlni a rendszerbe.
+              Ilyenkor nem több hirdetés kell, hanem tisztább kép: mi hoz ügyfelet, mi viszi a pénzt, és hol kell változtatni.
             </p>
           </div>
           <div className="space-y-3">
@@ -294,7 +294,7 @@ export default function HomePage() {
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Hogyan kezdünk</p>
             <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Mit kapsz az első 30 napban?</h2>
             <p className="mt-5 text-lg leading-8 text-neutral-600">
-              Az első hónap célja, hogy tisztán lássuk, miből lehet eredményt építeni — és hol kell azonnal javítani.
+              Az első hónap célja, hogy kiderüljön, mi működik — és hol kell azonnal beavatkozni.
             </p>
           </div>
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -353,13 +353,13 @@ export default function HomePage() {
                 Photozoom tartalomkészítés + Blummarketing hirdetéskezelés
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-300">
-                A Blummarketing a Photozoom tartalomkészítő csapatával kooperálva kínál havi rendszert azoknak a vállalkozásoknak, akik folyamatosan friss videókkal szeretnének hirdetni Facebookon, Instagramon és TikTokon.
+                A Blummarketing a Photozoom tartalomkészítő csapatával együttműködve kínál havi rendszert azoknak a vállalkozásoknak, akik rendszeresen friss videókkal szeretnének hirdetni Facebookon, Instagramon és TikTokon.
               </p>
               <p className="mt-4 leading-8 text-neutral-400">
                 A kreatív tartalmak elkészítéséről a Photozoom csapata gondoskodik — a Blummarketing pedig a kampányok stratégiai kezeléséért, optimalizálásáért és teljesítménykövetéséért felel.
               </p>
               <p className="mt-4 leading-8 text-neutral-400">
-                Ideális, ha már hirdetsz Meta vagy TikTok felületen, de nincs elég friss, tesztelhető kreatívod ahhoz, hogy tovább növeld az eredményeket.
+                Ideális, ha már hirdetsz Meta vagy TikTok felületen, de nincs elég friss kreatívod a növekedéshez.
               </p>
               <a href="/szolgaltatasok/havi-videos-tartalom-hirdeteskezeles/" className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-bold text-white backdrop-blur transition hover:bg-white/10">
                 Megnézem a Growth csomagot
@@ -424,7 +424,7 @@ export default function HomePage() {
                 Nézzük meg, mit mutatnak a számaid
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                Ha hirdetsz, de nem vagy biztos benne, hogy a kampányaid tényleg ügyfeleket hoznak, érdemes átnézni a rendszert. Megnézzük, mit mérsz most, hol lehetnek hibák, melyik kampányod dolgozik jól, és hol érdemes javítani.
+                Ha hirdetsz, de nem látod pontosan, mi hoz ügyfelet, érdemes átnézni a rendszert. Megnézzük, mit mérsz, hol vesznek el az érdeklődők, és melyik kampányod hoz valódi eredményt.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a

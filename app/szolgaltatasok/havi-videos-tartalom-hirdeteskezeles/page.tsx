@@ -33,7 +33,7 @@ const services = [
   {
     icon: Clapperboard,
     title: "10 rövid videó havonta",
-    text: "A Photozoom csapata TikTokra, Reelsre és hirdetésekhez optimalizált, pörgős, figyelemfogó videós tartalmakat készít.",
+    text: "A Photozoom csapata TikTokra, Reelsre és hirdetésekre optimalizált videós tartalmakat készít.",
   },
   {
     icon: Camera,
@@ -50,10 +50,10 @@ const services = [
 const benefits = [
   "Havi fix díj, kiszámítható marketingköltség",
   "Gyorsan publikálható kreatívok rövid videós platformokra",
-  "Profi tartalomkészítés Photozoommal, teljesítményalapú hirdetéskezelés Blummarketinggel",
-  "Fókuszban a lead, eladás és márkaismertség növelése",
-  "Teljesítményalapú szemlélet, nem csak szép kreatívok",
-  "Kis- és középvállalkozásokra szabott működés",
+  "Tartalomkészítés Photozoommal, hirdetéskezelés Blummarketinggel",
+  "Fókuszban a lead, eladás és márkaismertség",
+  "Teljesítményalapú szemlélet — nem csak szép kreatívok",
+  "Kis- és középvállalkozásokra szabott",
 ];
 
 const process = [
@@ -133,7 +133,7 @@ export default function BlummarketingLanding() {
               Tartalom, ami nem csak jól néz ki — hanem ügyfeleket is hoz.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              A Blummarketing a Photozoom tartalomkészítő csapatával kooperálva kínál havidíjas videós és fotós tartalomgyártást vállalkozásoknak TikTokra, Facebookra és Instagramra — profi hirdetéskezeléssel egy csomagban.
+              A Blummarketing a Photozoom tartalomkészítő csapatával együttműködve kínál havidíjas videós és fotós tartalomgyártást vállalkozásoknak TikTokra, Facebookra és Instagramra — hirdetéskezeléssel egy csomagban.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-400">
               A kreatív tartalmak elkészítéséről a <span className="text-white font-semibold">Photozoom csapata</span> gondoskodik, míg a <span className="text-white font-semibold">Blummarketing</span> a TikTok, Facebook és Instagram hirdetések stratégiai kezeléséért, optimalizálásáért és teljesítménykövetéséért felel.
@@ -203,7 +203,7 @@ export default function BlummarketingLanding() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatások</p>
           <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Minden, ami a havi láthatósághoz kell.</h2>
           <p className="mt-5 text-lg leading-8 text-neutral-300">
-            A tartalomgyártást és a paid social kampányokat egy rendszerként kezeljük. A Photozoom csapata elkészíti a vizuálisan erős, platformokra optimalizált kreatívokat, a Blummarketing pedig gondoskodik arról, hogy ezek a tartalmak hirdetésekben is mérhető eredményt hozzanak.
+            A tartalomgyártást és a paid social kampányokat egy rendszerként kezeljük. A Photozoom csapata elkészíti a platformokra optimalizált kreatívokat, a Blummarketing pedig gondoskodik arról, hogy ezek hirdetésekben is mérhető eredményt hozzanak.
           </p>
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
@@ -221,7 +221,7 @@ export default function BlummarketingLanding() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Miért működik?</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Nem elég jelen lenni. Rendszeresen kell nyerni a figyelmet.</h2>
+            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Jelen lenni nem elég. A figyelmet folyamatosan ki kell érdemelni.</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {benefits.map((benefit) => (
@@ -238,9 +238,9 @@ export default function BlummarketingLanding() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Csomag</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Egy havi rendszer, ami folyamatosan termeli a kreatívokat.</h2>
+            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Havi rendszer, ami folyamatosan termel kreatívokat.</h2>
             <p className="mt-5 text-lg leading-8 text-neutral-300">
-              Ideális akkor, ha stabil, profi social media jelenlétet akarsz, miközben a hirdetéseidhez is mindig friss kreatív készül.
+              Ideális akkor, ha stabil social media jelenlétet akarsz, miközben a hirdetéseidhez is mindig friss kreatív készül.
             </p>
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white to-neutral-200 p-8 text-neutral-950 shadow-2xl">
@@ -302,7 +302,7 @@ export default function BlummarketingLanding() {
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Kérj konzultációt, és nézzük meg, milyen kreatívok és kampányok hoznának eredményt nálad.</h2>
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                Írj pár mondatot a vállalkozásodról, és összeállítjuk, hogyan indulhat a havi rendszer: a Photozoom által készített videós-fotós tartalmakkal és a Blummarketing által kezelt TikTok-, Facebook- és Instagram-hirdetésekkel.
+                Írj pár mondatot a vállalkozásodról, és megnézzük, hogyan indulhat el a havi rendszer: Photozoom tartalomgyártással és Blummarketing hirdetéskezeléssel.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href="mailto:hello@blummarketing.hu?subject=Konzult%C3%A1ci%C3%B3%20-%20Blummarketing" className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-7 py-4 font-bold text-white transition hover:bg-neutral-800">
@@ -316,11 +316,11 @@ export default function BlummarketingLanding() {
             </div>
             <div className="bg-neutral-950 p-8 text-white sm:p-12 lg:p-16">
               <TrendingUp className="h-10 w-10 text-emerald-300" aria-hidden="true" />
-              <h3 className="mt-6 text-3xl font-black">Mit kapsz az első egyeztetésen?</h3>
+              <h3 className="mt-6 text-3xl font-black">Az első egyeztetésen megnézzük:</h3>
               <ul className="mt-6 space-y-4 text-neutral-300">
-                <li className="flex gap-3"><Check className="h-5 w-5 text-emerald-300" aria-hidden="true" /> Tartalom- és hirdetési lehetőségek feltérképezése</li>
-                <li className="flex gap-3"><Check className="h-5 w-5 text-emerald-300" aria-hidden="true" /> Javaslat TikTok és Meta kampányirányra</li>
-                <li className="flex gap-3"><Check className="h-5 w-5 text-emerald-300" aria-hidden="true" /> Következő lépések a havi rendszerhez</li>
+                <li className="flex gap-3"><Check className="h-5 w-5 text-emerald-300" aria-hidden="true" /> Milyen tartalom- és hirdetési irány lenne számodra releváns</li>
+                <li className="flex gap-3"><Check className="h-5 w-5 text-emerald-300" aria-hidden="true" /> Melyik TikTok és Meta kampánytípus illene a céljaidhoz</li>
+                <li className="flex gap-3"><Check className="h-5 w-5 text-emerald-300" aria-hidden="true" /> Hogyan indulhat el a havi rendszer</li>
               </ul>
             </div>
           </div>

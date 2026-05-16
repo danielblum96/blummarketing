@@ -63,7 +63,7 @@ const processSteps = [
   {
     step: "01",
     title: "Konzultáció és üzleti célok",
-    text: "Megértjük, mit szeretnél eladni, kinek szól az ajánlatod, hol tart most a vállalkozásod, és milyen szerepet kell betöltenie az új weboldalnak.",
+    text: "Megnézzük, mit szeretnél eladni, kinek szól az ajánlatod, és milyen szerepet kell betöltenie az új weboldalnak.",
   },
   {
     step: "02",
@@ -96,7 +96,7 @@ const packages = [
   {
     name: "Web Start",
     price: "990 000 Ft-tól",
-    desc: "Belépő szintű, de profi üzleti WordPress weboldal szolgáltatóknak és kisebb vállalkozásoknak.",
+    desc: "Üzleti WordPress weboldal szolgáltatóknak és kisebb vállalkozásoknak.",
     items: [
       "WordPress alapú weboldal",
       "Egyedi struktúra",
@@ -107,7 +107,7 @@ const packages = [
       "Analitika bekötés",
       "Átadás előtti tesztelés",
     ],
-    ideal: "Szeretnél egy megbízható, profi weboldalt, ami végre méltó szinten mutatja be a vállalkozásod.",
+    ideal: "Szeretnél egy megbízható weboldalt, ami méltó szinten mutatja be a vállalkozásod.",
   },
   {
     name: "Sales Pro",
@@ -131,7 +131,7 @@ const packages = [
   {
     name: "Webshop Growth",
     price: "1 990 000 Ft-tól",
-    desc: "Professzionális webshop azoknak, akik nem csak listázni akarják a termékeket, hanem tudatosan értékesíteni.",
+    desc: "Webshop azoknak, akik nem csak listázni akarják a termékeket, hanem értékesíteni.",
     items: [
       "WooCommerce webshop",
       "Termékoldal struktúra",
@@ -229,10 +229,10 @@ export default function WeboldalKeszitesPage() {
             Weboldal, ami nem csak jól néz ki — hanem ügyfeleket, ajánlatkéréseket és bevételt hoz.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-            Nem sablonos „online névjegykártyákat" készítünk. Olyan üzleti weboldalakat, landing oldalakat, WordPress oldalakat, webshopokat és egyedi fejlesztéseket építünk, amelyek mögött stratégia, konverziós logika és mérhető üzleti cél van.
+            Nem sablonos névjegykártyákat készítünk. Üzleti weboldalakat, landing oldalakat, WordPress oldalakat, webshopokat és egyedi fejlesztéseket építünk — konverziós logikával és mérhető üzleti céllal.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-400">
-            Legyen szó egy gyorsan skálázható WordPress oldalról, egy komolyabb WooCommerce webshopról, vagy teljesen egyedi fejlesztésű webes rendszerről — nálunk a cél ugyanaz: a weboldalad dolgozzon helyetted.
+            WordPress oldal, WooCommerce webshop vagy egyedi fejlesztés — a cél minden esetben ugyanaz: a weboldalad hozzon ügyfelet.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -265,9 +265,9 @@ export default function WeboldalKeszitesPage() {
                 Ha lassú, elavult, zavaros vagy nem derül ki belőle egyértelműen, miért téged válasszanak, akkor nem csak látogatókat veszítesz — hanem pénzt is.
               </p>
               <p className="mt-4 text-base leading-8 text-neutral-500">
-                Mi olyan oldalakat készítünk, amelyek egyszerre profin néznek ki, gyorsan betöltődnek, mobilon is tökéletesen működnek, érthetően kommunikálják az ajánlatod, keresőbarát alapokra épülnek és konverzióra vannak tervezve.
+                Mi olyan oldalakat készítünk, amelyek gyorsan betöltődnek, mobilon is jól működnek, érthetően kommunikálják az ajánlatod, és konverzióra vannak tervezve.
               </p>
-              <p className="mt-6 text-lg font-black text-neutral-950">Nem csak fejlesztünk. Üzleti szempontból gondolkodunk.</p>
+              <p className="mt-6 text-lg font-black text-neutral-950">Nem csak fejlesztünk — üzleti szempontból gondolkodunk.</p>
             </div>
             <div className="space-y-4">
               {[
@@ -397,7 +397,7 @@ export default function WeboldalKeszitesPage() {
             A weboldal nem sablontermék, ezért az ár mindig attól függ, milyen üzleti célt kell kiszolgálnia az oldalnak.
           </p>
           <p className="max-w-xl text-base leading-8 text-neutral-500 mb-12">
-            Nálunk nem az a kérdés, hogy „hány aloldal lesz?", hanem az, hogy mekkora üzleti értéket kell létrehoznia a weboldalnak?
+            Nálunk nem az a kérdés, hogy „hány aloldal lesz?" — hanem az, hogy milyen üzleti eredményt kell hoznia a weboldalnak.
           </p>
           <div className="grid gap-6 md:grid-cols-2">
             {packages.map((pkg) => (
@@ -472,7 +472,7 @@ export default function WeboldalKeszitesPage() {
                 ))}
               </ul>
               <p className="mt-5 text-sm leading-7 text-neutral-500">
-                A magasabb ár ilyenkor nem öncélú. Azért kerül többe, mert több üzleti gondolkodást, mélyebb tervezést, jobb felhasználói élményt és nagyobb felelősségű kivitelezést igényel.
+                A magasabb ár nem öncélú. Több üzleti gondolkodást, mélyebb tervezést és összetettebb kivitelezést igényel.
               </p>
             </div>
           </div>
@@ -484,7 +484,7 @@ export default function WeboldalKeszitesPage() {
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Miért velünk</p>
         <h2 className="text-3xl font-black mb-3">Nem fejlesztői szemmel kezdjük. Üzleti szemmel.</h2>
         <p className="max-w-2xl text-neutral-400 leading-8 mb-12">
-          Egy weboldalnál nem az a legfontosabb kérdés, hogy milyen technológiával készül — hanem az, hogy mit kell elérnie.
+          Egy weboldalnál nem az a döntő kérdés, hogy milyen technológiával készül — hanem az, hogy mit kell elérnie.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {valuePoints.map((vp) => (
@@ -522,7 +522,7 @@ export default function WeboldalKeszitesPage() {
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 lg:p-14">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-4">Amit érdemes tudni</p>
           <h2 className="text-3xl font-black mb-5">Egy gyenge weboldal csendben viszi el a pénzed</h2>
-          <p className="text-neutral-400 leading-8 mb-8 max-w-2xl">Nem mindig látványos, amikor egy weboldal rosszul teljesít.</p>
+          <p className="text-neutral-400 leading-8 mb-8 max-w-2xl">Sokszor nem látványos, amikor egy weboldal rosszul teljesít.</p>
           <ul className="space-y-3 mb-8">
             {[
               "Nem kapsz elég ajánlatkérést",
@@ -538,7 +538,7 @@ export default function WeboldalKeszitesPage() {
             ))}
           </ul>
           <p className="text-neutral-400 leading-8 max-w-2xl">
-            Ez nem feltétlenül azért van, mert rossz az ajánlatod. Lehet, hogy egyszerűen a weboldalad nem ad elég bizalmat, nem elég egyértelmű, és nem vezeti végig a látogatót a döntésen.{" "}
+            Ez nem mindig az ajánlat hibája. Sokszor a weboldal nem ad elég bizalmat, nem egyértelmű az üzenet, és nem vezeti végig a látogatót a döntésen.{" "}
             <span className="text-white font-semibold">Ezen változtatunk.</span>
           </p>
         </div>
@@ -571,7 +571,7 @@ export default function WeboldalKeszitesPage() {
               ))}
             </ul>
             <p className="text-sm leading-7 text-neutral-500">
-              Mi olyan vállalkozásokkal dolgozunk jól, akik értik, hogy egy profi weboldal nem egyszerű kiadás, hanem digitális értékesítési alap.
+              Mi olyan vállalkozásokkal dolgozunk jól, akik értik, hogy egy jó weboldal befektetés — nem egyszerű kiadás.
             </p>
           </div>
         </div>
@@ -598,10 +598,10 @@ export default function WeboldalKeszitesPage() {
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
-                Készítsünk olyan weboldalt, ami végre méltó szinten képviseli a vállalkozásod.
+                Készítsünk weboldalt, ami méltó szinten képviseli a vállalkozásod.
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                Írj pár mondatot arról, milyen oldalt szeretnél, milyen szolgáltatást vagy terméket értékesítesz, és hol tart most a vállalkozásod online jelenléte.
+                Írj pár mondatot arról, milyen oldalt szeretnél és milyen terméket vagy szolgáltatást értékesítesz — megnézzük, mi a legjobb megoldás.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a

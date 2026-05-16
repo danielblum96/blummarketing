@@ -120,14 +120,14 @@ const packages = [
       "Havi riport",
     ],
     ideal: "Most indítanád el tudatosan a Meta hirdetéseidet, van egy fő ajánlatod, és szeretnél kilépni a boostolt posztok világából.",
-    note: "Ez a csomag jó indulás, de nem mély növekedési rendszer. Ha már folyamatos leadeket vagy vásárlásokat szeretnél, érdemes a Growth csomagban gondolkodni.",
+    note: "Ez a csomag jó indulás, de nem teljes növekedési rendszer. Ha folyamatos leadeket vagy vásárlásokat szeretnél, a Growth csomag a következő lépés.",
     highlight: false,
   },
   {
     name: "Meta Growth",
     price: "290 000 Ft / hó-tól",
     tag: "Legjobb választás növekedéshez",
-    desc: "A legtöbb vállalkozás számára ez az ideális választás: elég komplex ahhoz, hogy valódi üzleti eredményeket hozzon, de még nem enterprise szintű költség.",
+    desc: "A legtöbb vállalkozásnak ezt ajánljuk: elég komplex ahhoz, hogy valódi üzleti eredményeket hozzon, de még nem enterprise szintű ár.",
     items: [
       "Teljes Meta kampánykezelés",
       "Stratégiai kampánytervezés",
@@ -142,14 +142,14 @@ const packages = [
       "Következő havi növekedési javaslatok",
     ],
     ideal: "Már van működő ajánlatod és weboldalad, szeretnél több érdeklődőt vagy vásárlót, és kiszámíthatóbb ügyfélszerzésben gondolkodsz.",
-    note: "Ezt ajánljuk a legtöbb cégnek. Ez az a szint, ahol már nem csak futnak a hirdetések, hanem rendszert építünk az ügyfélszerzés köré.",
+    note: "Ezen a szinten már nem csak futnak a hirdetések — rendszert építünk az ügyfélszerzés köré.",
     highlight: true,
   },
   {
     name: "Meta Market Leader",
     price: "990 000 Ft / hó-tól",
     tag: "Teljes növekedési hadművelet",
-    desc: "Ez nem egyszerű hirdetéskezelés. Ez egy teljes növekedési rendszer azoknak a cégeknek, akik komolyan piacot akarnak nyerni Facebookon és Instagramon.",
+    desc: "Teljes növekedési rendszer azoknak a cégeknek, akik komolyan piacot akarnak nyerni Facebookon és Instagramon.",
     items: [
       "Komplex Meta kampánystratégia",
       "Több ajánlat párhuzamos hirdetése",
@@ -170,13 +170,13 @@ const packages = [
       "Ajánlatpozicionálási tanácsadás",
     ],
     ideal: "Nagyobb hirdetési büdzsével dolgozol, több ajánlatot futtatsz, és nem csak kampánykezelőt keresel — stratégiai növekedési partnert szeretnél.",
-    note: "Ez a csomag azoknak való, akik komolyan veszik az online növekedést, és olyan rendszert akarnak építeni, amely hosszú távon is skálázható.",
+    note: "Ez a csomag azoknak való, akik komoly büdzsével és komoly növekedési célokkal dolgoznak.",
     highlight: false,
   },
 ];
 
 const processSteps = [
-  { step: "01", title: "Konzultáció", text: "Megértjük a vállalkozásod, az ajánlatod, a célcsoportod és azt, hogy milyen eredményt vársz a hirdetésektől." },
+  { step: "01", title: "Konzultáció", text: "Megnézzük a vállalkozásod, az ajánlatod, a célcsoportot és azt, milyen eredményt vársz a hirdetésektől." },
   { step: "02", title: "Fiók- és mérési ellenőrzés", text: "Átnézzük a Meta hirdetési fiókot, a Pixelt, a konverziós eseményeket, a weboldalt vagy webshopot, és jelezzük, ha valami akadályozza a jó teljesítményt." },
   { step: "03", title: "Kampánystratégia", text: "Meghatározzuk a kampánycélokat, célközönségeket, ajánlati irányokat, kreatívteszteket és a kezdő kampánystruktúrát." },
   { step: "04", title: "Kampányindítás", text: "Beállítjuk a hirdetéseket, elindítjuk a kampányokat, majd figyeljük az első adatok alapján, hogyan reagál a piac." },
@@ -254,13 +254,13 @@ export default function MetaHirdeteskezelesPage() {
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Meta hirdetéskezelés</p>
           <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight sm:text-6xl">
-            Facebook és Instagram hirdetések, amik nem csak kattintásokat hoznak — hanem érdeklődőket, vásárlókat és mérhető növekedést.
+            Facebook és Instagram hirdetések, amik nem csak kattintásokat hoznak — hanem érdeklődőket és vásárlókat.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
             A Blummarketing stratégiai szemlélettel kezeli a Meta hirdetéseidet: kampánystruktúra, kreatívtesztelés, remarketing, mérés, optimalizálás és havi riport egy rendszerben.
           </p>
           <p className="mt-3 max-w-xl text-base leading-8 text-neutral-500">
-            Nem az a cél, hogy „fusson valami kampány". Az a cél, hogy a hirdetési büdzséd üzleti eredménnyé alakuljon.
+            A cél nem az, hogy „fusson valami". A cél, hogy a hirdetési büdzsédből ügyfél legyen.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -290,7 +290,7 @@ export default function MetaHirdeteskezelesPage() {
               <p className="text-lg leading-8 text-neutral-600 mb-4">
                 Sok vállalkozás költ Facebook és Instagram hirdetésekre, mégsem lát valódi megtérülést. Nem azért, mert a Meta nem működik — hanem mert a kampány mögött nincs rendszer.
               </p>
-              <p className="text-neutral-500 leading-8">Mi ezeket nem utólag magyarázzuk meg. Már az elején úgy építjük fel a kampányokat, hogy legyen mit mérni, legyen mit javítani, és legyen mire skálázni.</p>
+              <p className="text-neutral-500 leading-8">Ezeket nem utólag magyarázzuk meg. Már az elején úgy építjük fel a kampányokat, hogy legyen mit mérni, legyen mit javítani, és legyen mire skálázni.</p>
             </div>
             <div>
               <p className="text-sm font-bold text-neutral-500 mb-4">Gyakori problémák:</p>
@@ -320,9 +320,9 @@ export default function MetaHirdeteskezelesPage() {
       {/* ── What we offer ── */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Mit kapsz tőlünk</p>
-        <h2 className="text-3xl font-black mb-4">Komplett Meta hirdetéskezelést — üzleti szemlélettel.</h2>
+        <h2 className="text-3xl font-black mb-4">Komplett Meta hirdetéskezelés — üzleti szemlélettel.</h2>
         <p className="max-w-2xl text-neutral-400 leading-8 mb-12">
-          A hirdetéskezelés nem csak kampánybeállítás. Nálunk a teljes folyamat része a stratégia, a mérés, a kreatív gondolkodás és a folyamatos optimalizálás.
+          A hirdetéskezelés nem csak kampánybeállítás. A stratégia, a mérés, a kreatívok és az optimalizálás mind beletartozik.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {whatWeOffer.map((item) => (
@@ -387,7 +387,7 @@ export default function MetaHirdeteskezelesPage() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Csomagok</p>
           <h2 className="text-4xl font-black mb-4">Válaszd ki, milyen szinten akarsz növekedni.</h2>
           <p className="max-w-2xl text-lg leading-8 text-neutral-600 mb-12">
-            Nem minden vállalkozásnak ugyanarra van szüksége. Ezért három szintet hoztunk létre.
+            Nem minden vállalkozásnak ugyanaz kell — ezért három szint közül választhatsz.
           </p>
           <div className="grid gap-6 lg:grid-cols-3">
             {packages.map((pkg) => (
@@ -510,7 +510,7 @@ export default function MetaHirdeteskezelesPage() {
         </div>
         <div className="mt-8 rounded-[2rem] border border-rose-500/15 bg-rose-500/5 p-8">
           <h3 className="text-xl font-black mb-4">Mennyi pénzt érdemes hirdetésre költeni?</h3>
-          <p className="text-neutral-400 leading-8 mb-5">A pontos hirdetési büdzsé az üzleti céltól, a piactól, az ajánlat árától és a versenytől függ.</p>
+          <p className="text-neutral-400 leading-8 mb-5">A pontos hirdetési büdzsé az üzleti céltól, a piactól, az ajánlat árától és a versenytől függ. Néhány tájékoztató szám:</p>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               { label: "Kisebb induló kampányok", range: "150 000–300 000 Ft / hó" },
@@ -563,7 +563,7 @@ export default function MetaHirdeteskezelesPage() {
             ))}
           </div>
           <p className="text-neutral-400 leading-8 max-w-2xl">
-            Egy profi hirdetéskezelés ezeket a pontokat rendszerszinten nézi. <span className="text-white font-semibold">Mi nem csak a kampánykezelőben dolgozunk — a teljes ügyfélszerzési útvonalat figyeljük.</span>
+            Egy jól felépített hirdetéskezelés ezeket a pontokat rendszerszinten nézi. <span className="text-white font-semibold">Mi nem csak az Ads Managerben dolgozunk — a teljes ügyfélszerzési útvonalat figyeljük.</span>
           </p>
         </div>
       </section>
