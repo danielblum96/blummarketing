@@ -265,7 +265,7 @@ export default function TikTokHirdeteskezelesPage() {
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">TikTok hirdetéskezelés</p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight sm:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
             TikTok hirdetések, amik nem csak megtekintéseket hoznak — hanem érdeklődőket és vásárlókat.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
@@ -638,7 +638,7 @@ export default function TikTokHirdeteskezelesPage() {
           <div className="grid gap-0 lg:grid-cols-[1fr_0.85fr]">
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Nézzük meg, hogyan tudna több figyelmet és eredményt hozni a TikTok hirdetésed.
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">

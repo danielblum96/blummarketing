@@ -27,7 +27,7 @@ export default function Page() {
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatás</p>
-          <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Social media tartalomgyártás</h1>
+          <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Social media tartalomgyártás</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">Rendszeres, márkaazonos tartalmak gyártása TikTokra, Instagramra és Facebookra.</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a href="/#kapcsolat" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:bg-neutral-200">

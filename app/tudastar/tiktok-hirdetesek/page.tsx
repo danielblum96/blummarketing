@@ -38,7 +38,7 @@ export default function TiktokHirdetesekPage() {
             ← Vissza a tudástárba
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">TikTok hirdetések</p>
-          <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">TikTok hirdetések</h1>
+          <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">TikTok hirdetések</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
             Útmutatók TikTok Business Centerről, Ads Managerről, kampánystruktúráról, Pixelről és Events API-ról.
           </p>

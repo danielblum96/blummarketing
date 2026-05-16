@@ -226,7 +226,7 @@ export default function WeboldalKeszitesPage() {
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Weboldal készítés</p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight sm:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
             Weboldal, ami nem csak jól néz ki — hanem ügyfeleket, ajánlatkéréseket és bevételt hoz.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
@@ -259,7 +259,7 @@ export default function WeboldalKeszitesPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Miért számít</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 A weboldalad sokszor az első benyomás rólad.
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">
@@ -608,7 +608,7 @@ export default function WeboldalKeszitesPage() {
           <div className="grid gap-0 lg:grid-cols-[1fr_0.85fr]">
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Készítsünk weboldalt, ami méltó szinten képviseli a vállalkozásod.
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">

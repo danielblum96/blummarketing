@@ -162,7 +162,7 @@ export default function HomePage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
             {/* Bal oszlop – szöveg */}
             <div>
-              <h1 className="text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-6xl leading-[1.08]">
+              <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl leading-[1.08]">
                 Ne költs többet hirdetésre, amíg nem látod, mi térül meg
               </h1>
               <p className="mt-7 text-lg leading-8 text-neutral-300 sm:text-xl">
@@ -195,7 +195,7 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kampányaudit</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Mit nézünk meg egy kampányauditban?
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">
@@ -225,7 +225,7 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Ismerős helyzet?</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
               Hirdetsz, de nem látod tisztán, mi hozza az ügyfeleket?
             </h2>
             <p className="mt-5 text-lg leading-8 text-neutral-300">
@@ -251,7 +251,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Hogyan gondolkodunk</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
               Megmutatjuk, hol folyik el a hirdetési pénzed
             </h2>
           </div>
@@ -276,7 +276,7 @@ export default function HomePage() {
       <section id="szolgaltatasok" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Miben segítünk?</p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Hirdetéskezelés, kreatív és tartalom</h2>
+          <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Hirdetéskezelés, kreatív és tartalom</h2>
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
@@ -300,7 +300,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Hogyan kezdünk</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Mit kapsz az első 30 napban?</h2>
+            <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Mit kapsz az első 30 napban?</h2>
             <p className="mt-5 text-lg leading-8 text-neutral-700">
               Az első hónap célja, hogy kiderüljön, mi működik — és hol kell azonnal beavatkozni.
             </p>
@@ -322,7 +322,7 @@ export default function HomePage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Amit auditban látunk</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
               Egy gyakori hiba, amit audit során látunk
             </h2>
             <p className="mt-5 text-lg leading-8 text-neutral-300">
@@ -357,7 +357,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16 items-center">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Havidíjas csomag</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Photozoom tartalomkészítés + Blummarketing hirdetéskezelés
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-300">
@@ -394,7 +394,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Önellenőrzés</p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Neked való a Blummarketing?</h2>
+          <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Neked való a Blummarketing?</h2>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-emerald-500/20 bg-emerald-500/5 p-8">
@@ -428,7 +428,7 @@ export default function HomePage() {
           <div className="grid gap-0 lg:grid-cols-[1fr_0.85fr]">
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Nézzük meg, mit mutatnak a számaid
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">

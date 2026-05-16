@@ -129,7 +129,7 @@ export default function BlummarketingLanding() {
               <Zap className="h-4 w-4" aria-hidden="true" />
               Havi 10 videó + TikTok és Meta hirdetéskezelés
             </div>
-            <h1 className="max-w-4xl text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
               Tartalom, ami nem csak jól néz ki — hanem ügyfeleket is hoz.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
@@ -201,7 +201,7 @@ export default function BlummarketingLanding() {
       <section id="szolgaltatasok" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatások</p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Minden, ami a havi láthatósághoz kell.</h2>
+          <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Minden, ami a havi láthatósághoz kell.</h2>
           <p className="mt-5 text-lg leading-8 text-neutral-300">
             A tartalomgyártást és a paid social kampányokat egy rendszerként kezeljük. A Photozoom csapata elkészíti a platformokra optimalizált kreatívokat, a Blummarketing pedig gondoskodik arról, hogy ezek hirdetésekben is mérhető eredményt hozzanak.
           </p>
@@ -221,7 +221,7 @@ export default function BlummarketingLanding() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Miért működik?</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Jelen lenni nem elég. A figyelmet folyamatosan ki kell érdemelni.</h2>
+            <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Jelen lenni nem elég. A figyelmet folyamatosan ki kell érdemelni.</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {benefits.map((benefit) => (
@@ -238,7 +238,7 @@ export default function BlummarketingLanding() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Csomag</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Havi rendszer, ami folyamatosan termel kreatívokat.</h2>
+            <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Havi rendszer, ami folyamatosan termel kreatívokat.</h2>
             <p className="mt-5 text-lg leading-8 text-neutral-300">
               Ideális akkor, ha stabil social media jelenlétet akarsz, miközben a hirdetéseidhez is mindig friss kreatív készül.
             </p>
@@ -267,7 +267,7 @@ export default function BlummarketingLanding() {
       <section id="folyamat" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Folyamat</p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Gyors indulás, átlátható működés.</h2>
+          <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Gyors indulás, átlátható működés.</h2>
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {process.map((item) => (
@@ -283,7 +283,7 @@ export default function BlummarketingLanding() {
       <section className="mx-auto max-w-4xl px-6 py-24 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">GYIK</p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Gyakori kérdések</h2>
+          <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Gyakori kérdések</h2>
         </div>
         <div className="mt-12 space-y-4">
           {faqs.map((faq) => (
@@ -300,7 +300,7 @@ export default function BlummarketingLanding() {
           <div className="grid gap-0 lg:grid-cols-[1fr_0.85fr]">
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Kérj konzultációt, és nézzük meg, milyen kreatívok és kampányok hoznának eredményt nálad.</h2>
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">Kérj konzultációt, és nézzük meg, milyen kreatívok és kampányok hoznának eredményt nálad.</h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">
                 Írj pár mondatot a vállalkozásodról, és megnézzük, hogyan indulhat el a havi rendszer: Photozoom tartalomgyártással és Blummarketing hirdetéskezeléssel.
               </p>

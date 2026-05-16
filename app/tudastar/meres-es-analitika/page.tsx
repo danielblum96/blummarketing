@@ -164,7 +164,7 @@ export default function MeresEsAnalitika() {
               <span key={tag} className="rounded-full bg-rose-500/10 px-3 py-1 text-xs font-bold text-rose-300">{tag}</span>
             ))}
           </div>
-          <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl leading-tight">
+          <h1 className="text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl leading-tight">
             Online marketing mérés: ha rossz adatból döntesz, rossz irányba költöd a pénzt
           </h1>
           <p className="mt-6 text-xl leading-8 text-neutral-300">
@@ -495,7 +495,7 @@ ajánlatkérés`}</CodeBlock>
           <div className="grid gap-0 lg:grid-cols-[1fr_0.85fr]">
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Mérési audit</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Szeretnéd tudni, hogy a marketingadataidra lehet-e döntést építeni?
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-700">

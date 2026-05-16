@@ -87,7 +87,7 @@ export default function AdatkezelesPage() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300 mb-4">
             Jogi dokumentum
           </p>
-          <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
+          <h1 className="text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
             Adatkezelési tájékoztató
           </h1>
           <div className="mt-5 flex flex-wrap gap-x-8 gap-y-1 text-sm text-neutral-500">

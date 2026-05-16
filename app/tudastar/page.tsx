@@ -128,7 +128,7 @@ export default function TudasTarPage() {
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Tudástár</p>
-          <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Marketing tudástár</h1>
+          <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Marketing tudástár</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
             Gyakorlati cikkek és pillér útmutatók Google Ads-ről, Meta és TikTok hirdetésekről, mérésről és kreatívokról – vállalkozásoknak érthetően.
           </p>

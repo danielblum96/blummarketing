@@ -168,7 +168,7 @@ export default function EsettanulmanyokPage() {
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-400">Esettanulmányok</p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl leading-[1.08]">
+          <h1 className="mt-4 max-w-3xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl leading-[1.08]">
             Valós kampányok,<br className="hidden sm:block" /> valós számok.
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-300">

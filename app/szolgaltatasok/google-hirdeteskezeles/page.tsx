@@ -63,7 +63,7 @@ export default function GoogleHirdeteskezelesPage() {
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatás</p>
-          <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Google hirdetéskezelés</h1>
+          <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Google hirdetéskezelés</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
             Google Ads kampányok stratégiai tervezése, beállítása és folyamatos optimalizálása – Search, Performance Max és Shopping. Csak akkor hirdetünk, ha a mérés rendben van.
           </p>

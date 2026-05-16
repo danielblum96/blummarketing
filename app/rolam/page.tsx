@@ -35,7 +35,7 @@ export default function RolamPage() {
             {/* Left: text */}
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-400">Rólam</p>
-              <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl leading-[1.08]">
+              <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl leading-[1.08]">
                 Szia, Blum Dániel vagyok!
               </h1>
               <p className="mt-6 text-lg text-neutral-300 leading-relaxed max-w-xl">
