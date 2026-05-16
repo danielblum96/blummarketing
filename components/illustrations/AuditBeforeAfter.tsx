@@ -7,7 +7,7 @@ const beforeItems = [
 
 const afterItems = [
   { label: "Lead ára", value: "1 840 Ft", up: true },
-  { label: "ROAS", value: "4.1×", up: true },
+  { label: "ROAS", value: "9×", up: true },
   { label: "CTR", value: "5.2%", up: true },
   { label: "Konverziók", value: "+34%", up: true },
 ];
