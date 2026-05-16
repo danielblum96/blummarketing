@@ -84,14 +84,14 @@ export default function RolamPage() {
         {/* P2 + P3 */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 mb-5">Ami igazán érdekel</p>
+            <p className="text-xs font-black uppercase tracking-[0.15em] text-blue-400 mb-5">Ami igazán érdekel</p>
             <p className="text-neutral-400 leading-relaxed">
               A marketingben mindig az érdekelt igazán, hogyan lehet egy jó ötletből mérhető érdeklődést, az érdeklődésből ügyfeleket, az ügyfelekből pedig kiszámítható növekedést építeni.
             </p>
           </div>
 
           <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-400 mb-5">KKV partnerek</p>
+            <p className="text-xs font-black uppercase tracking-[0.15em] text-emerald-400 mb-5">KKV partnerek</p>
             <p className="text-neutral-400 leading-relaxed">
               Több hazai KKV-val dolgozom együtt, és különösen büszke vagyok arra, hogy jó néhány vállalkozás mellett már a kezdetektől jelen lehettem. Láttam, ahogy az első kampányokból, ajánlatokból és ügyfélszerző rendszerekből stabil, egyre nagyobb cégek nőttek ki. Számomra ez a marketing egyik legizgalmasabb része: amikor a számok mögött valódi vállalkozások, valódi döntések és valódi növekedés áll.
             </p>
@@ -100,7 +100,7 @@ export default function RolamPage() {
 
         {/* P4 – mérés */}
         <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-5">Teljesítménymérés</p>
+          <p className="text-xs font-black uppercase tracking-[0.15em] text-neutral-500 mb-5">Teljesítménymérés</p>
           <p className="text-neutral-400 leading-relaxed max-w-3xl">
             A kampányok teljesítményét üzleti érték alapján vizsgálom. A kattintások, megjelenések és konverziós arányok fontos visszajelzések, de igazán akkor számítanak, ha több érdeklődőt, hatékonyabb ügyfélszerzést és nagyobb bevételt eredményeznek.
           </p>
@@ -110,7 +110,7 @@ export default function RolamPage() {
         <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-5">Folyamatos tanulás</p>
+              <p className="text-xs font-black uppercase tracking-[0.15em] text-neutral-500 mb-5">Folyamatos tanulás</p>
               <p className="text-neutral-400 leading-relaxed">
                 Folyamatosan tanulok hazai és nemzetközi szakemberektől, stratégáktól és copywriterektől. Olyan gondolkodók hatottak rám, mint Dan Kennedy, Russell Brunson, Eugene Schwartz, Gary Halbert, Frank Kern vagy Robert Cialdini. A célom az, hogy a működő marketingelveket a magyar KKV-k valós problémáira, lehetőségeire és piacaira ültessem át.
               </p>
@@ -130,7 +130,7 @@ export default function RolamPage() {
 
         {/* P6 – amiben hiszek */}
         <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-rose-400 mb-5">Amiben hiszek</p>
+          <p className="text-xs font-black uppercase tracking-[0.15em] text-rose-400 mb-5">Amiben hiszek</p>
           <p className="text-neutral-400 leading-relaxed max-w-3xl">
             Hiszek a tiszta stratégiában, az erős ajánlatokban, a pontos mérésben és a folyamatos optimalizálásban. Egy eredményes kampány mögött nemcsak technikai beállítások állnak, hanem mélyebb megértés is: tudni kell, kinek kommunikálunk, milyen problémára kínálunk megoldást, milyen üzenetre reagál a célközönség, és hogyan lehet mindebből stabil ügyfélszerző rendszert építeni.
           </p>
@@ -143,7 +143,7 @@ export default function RolamPage() {
         <div className="relative rounded-[2rem] overflow-hidden border border-rose-500/20 bg-rose-500/[0.04] p-10 lg:p-14">
           <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-rose-500/5 blur-3xl" aria-hidden="true" />
           <div className="relative max-w-2xl">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-rose-400 mb-6">Hogyan dolgozom</p>
+            <p className="text-xs font-black uppercase tracking-[0.15em] text-rose-400 mb-6">Hogyan dolgozom</p>
             <p className="text-neutral-400 leading-relaxed mb-5">
               Gyakorlatias, üzleti szemléletű partnerként dolgozom, aki nemcsak a kampányt nézi, hanem a teljes ügyfélszerzési rendszert. A hirdetés csak az első lépés. Az eredmény azon múlik, mi történik utána: mennyire erős az ajánlat, mennyire meggyőző a landing oldal, mennyire pontos az utánkövetés, és mennyire tudatosan épül fel az út az első kattintástól a vásárlásig.
             </p>
