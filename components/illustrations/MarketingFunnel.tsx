@@ -78,7 +78,7 @@ export default function MarketingFunnel({ variant = "meta" }: MarketingFunnelPro
               </div>
 
               {/* Description */}
-              <p className="text-sm text-neutral-500 leading-relaxed mt-auto">{level.desc}</p>
+              <p className="text-sm text-neutral-300 leading-relaxed mt-auto">{level.desc}</p>
             </div>
 
             {/* Arrow */}
@@ -118,7 +118,7 @@ export default function MarketingFunnel({ variant = "meta" }: MarketingFunnelPro
                 </div>
                 <p className="text-base font-black text-white leading-tight">{level.label}</p>
                 <p className="text-xs font-bold mt-0.5" style={{ color: colorFaint }}>{level.sublabel}</p>
-                <p className="text-xs text-neutral-500 mt-2 leading-snug">{level.desc}</p>
+                <p className="text-xs text-neutral-300 mt-2 leading-snug">{level.desc}</p>
               </div>
               {i < LEVELS.length - 1 && (
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" aria-hidden="true">

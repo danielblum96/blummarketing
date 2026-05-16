@@ -23,7 +23,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
             <div className="relative z-10 h-10 w-10 rounded-full border border-rose-400/40 bg-neutral-900 flex items-center justify-center">
               <span className="text-xs font-black text-rose-400">{step.num}</span>
             </div>
-            <p className="mt-3 text-center text-[11px] font-semibold text-neutral-500 leading-snug px-1">
+            <p className="mt-3 text-center text-[11px] font-semibold text-neutral-300 leading-snug px-1">
               {step.label}
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function ProcessFlow({ steps }: ProcessFlowProps) {
               <span className="text-[10px] font-black text-rose-400">{step.num}</span>
             </div>
             <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 w-full">
-              <p className="text-sm font-semibold text-neutral-400">{step.label}</p>
+              <p className="text-sm font-semibold text-neutral-300">{step.label}</p>
             </div>
           </div>
         ))}

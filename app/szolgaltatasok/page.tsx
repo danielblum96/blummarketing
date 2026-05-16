@@ -107,7 +107,7 @@ export default function SzolgaltatasokPage() {
               <h2 className={`font-black leading-tight group-hover:text-rose-200 transition ${s.highlight ? "text-2xl" : "text-xl"}`}>
                 {s.title}
               </h2>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">{s.description}</p>
+              <p className="mt-3 text-sm leading-7 text-neutral-300">{s.description}</p>
               {s.price && <p className="mt-4 text-lg font-black text-white">{s.price}</p>}
               <div className="mt-4 flex items-center gap-2 text-sm font-bold text-rose-300 group-hover:gap-3 transition-all">
                 Részletek <ArrowRight className="h-4 w-4" aria-hidden="true" />

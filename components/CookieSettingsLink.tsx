@@ -11,7 +11,7 @@ export default function CookieSettingsLink() {
   return (
     <button
       onClick={handleClick}
-      className="text-neutral-500 hover:text-neutral-300 transition text-sm"
+      className="text-neutral-300 hover:text-neutral-300 transition text-sm"
     >
       Cookie beállítások
     </button>

@@ -36,7 +36,7 @@ export default function DataFlowDiagram() {
             <span className={`shrink-0 h-2.5 w-2.5 rounded-full mt-1.5 sm:mt-0 ${step.color.dot}`} />
             <div>
               <p className={`text-sm font-black ${step.color.text} leading-tight`}>{step.label}</p>
-              <p className="text-xs text-neutral-500 mt-0.5">{step.sub}</p>
+              <p className="text-xs text-neutral-300 mt-0.5">{step.sub}</p>
             </div>
           </div>
 
@@ -44,11 +44,11 @@ export default function DataFlowDiagram() {
           {i < STEPS.length - 1 && (
             <div className="flex items-center justify-center w-8 shrink-0 sm:w-full sm:h-8 sm:py-1">
               {/* Mobile: right arrow */}
-              <svg className="sm:hidden h-4 w-4 text-neutral-600" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <svg className="sm:hidden h-4 w-4 text-neutral-300" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {/* Desktop: down arrow */}
-              <svg className="hidden sm:block h-4 w-4 text-neutral-600" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <svg className="hidden sm:block h-4 w-4 text-neutral-300" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>

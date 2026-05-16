@@ -142,7 +142,7 @@ export default function TudasTarPage() {
             <div className="mb-6 flex items-end justify-between gap-4">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-rose-400 mb-1">{cat.label}</p>
-                <p className="text-sm text-neutral-500">{cat.description}</p>
+                <p className="text-sm text-neutral-300">{cat.description}</p>
               </div>
               <div className="h-px flex-1 bg-white/10" />
             </div>
@@ -157,12 +157,12 @@ export default function TudasTarPage() {
                   >
                     <div className="flex flex-wrap gap-2 mb-5">
                       {article.tags.map((tag) => (
-                        <span key={tag} className="rounded-full bg-neutral-800 px-3 py-1 text-xs font-bold text-neutral-500">{tag}</span>
+                        <span key={tag} className="rounded-full bg-neutral-800 px-3 py-1 text-xs font-bold text-neutral-300">{tag}</span>
                       ))}
-                      <span className="rounded-full bg-neutral-800 px-3 py-1 text-xs font-bold text-neutral-500">Hamarosan</span>
+                      <span className="rounded-full bg-neutral-800 px-3 py-1 text-xs font-bold text-neutral-300">Hamarosan</span>
                     </div>
-                    <h2 className="text-lg font-black leading-tight text-neutral-500">{article.title}</h2>
-                    <p className="mt-3 text-sm leading-7 text-neutral-600">{article.description}</p>
+                    <h2 className="text-lg font-black leading-tight text-neutral-300">{article.title}</h2>
+                    <p className="mt-3 text-sm leading-7 text-neutral-300">{article.description}</p>
                   </div>
                 ) : (
                   <a
@@ -178,9 +178,9 @@ export default function TudasTarPage() {
                     <h2 className="text-lg font-black leading-tight group-hover:text-rose-200 transition">
                       {article.title}
                     </h2>
-                    <p className="mt-3 text-sm leading-7 text-neutral-400">{article.description}</p>
+                    <p className="mt-3 text-sm leading-7 text-neutral-300">{article.description}</p>
                     {(article.date || article.readTime) && (
-                      <div className="mt-5 flex items-center gap-3 text-xs text-neutral-500">
+                      <div className="mt-5 flex items-center gap-3 text-xs text-neutral-300">
                         {article.date && <span>{article.date}</span>}
                         {article.date && article.readTime && <span>·</span>}
                         {article.readTime && <span>{article.readTime}</span>}

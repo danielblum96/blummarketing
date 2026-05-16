@@ -133,7 +133,7 @@ export default function TiktokHirdetesekArticle() {
         <Navbar />
 
         <div className="mx-auto max-w-4xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/tudastar/tiktok-hirdetesek/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/tudastar/tiktok-hirdetesek/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza: TikTok hirdetések
           </a>
           <div className="flex flex-wrap gap-2 mb-6">
@@ -147,7 +147,7 @@ export default function TiktokHirdetesekArticle() {
           <p className="mt-6 text-xl leading-8 text-neutral-300">
             TikTok Business Center, Ads Manager, hirdetési fiók, Pixel és Events API – lépésről lépésre rendbe tesszük a TikTok hirdetési rendszer legfontosabb elemeit.
           </p>
-          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-500">
+          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-300">
             <span>Blummarketing</span>
             <span>·</span>
             <span>2025. február 1.</span>
@@ -637,7 +637,7 @@ Kampány 4: Visszatérő vásárlók`}</CodeBlock>
           <p className="mt-4 text-lg leading-8 text-rose-200 font-semibold">
             A stabil és skálázható TikTok hirdetési rendszer alapja a saját céges Business Center, a saját hirdetési fiók, a helyesen beállított TikTok-fiók, a pontos Pixel-mérés, lehetőség szerint az Events API, a rendezett jogosultságok és a jól átgondolt kampánystruktúra.
           </p>
-          <p className="mt-3 text-neutral-400">Ha ezek rendben vannak, a kampányok sokkal átláthatóbban, mérhetőbben és hatékonyabban kezelhetők.</p>
+          <p className="mt-3 text-neutral-300">Ha ezek rendben vannak, a kampányok sokkal átláthatóbban, mérhetőbben és hatékonyabban kezelhetők.</p>
         </div>
 
       </article>
@@ -651,7 +651,7 @@ Kampány 4: Visszatérő vásárlók`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szeretnéd, hogy a TikTok hirdetéseid profi rendszerben működjenek?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 A TikTokon nem elég egyszerűen jelen lenni. Fontos, hogy a hirdetési fiók, a mérés, a kampánystruktúra és a kreatív stratégia is jól legyen felépítve.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

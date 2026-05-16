@@ -34,7 +34,7 @@ export default function MetaHirdetesekPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a tudástárba
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Meta hirdetések</p>
@@ -59,8 +59,8 @@ export default function MetaHirdetesekPage() {
                 ))}
               </div>
               <h2 className="text-xl font-black leading-tight group-hover:text-rose-200 transition">{article.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-neutral-400">{article.description}</p>
-              <div className="mt-6 flex items-center justify-between text-xs text-neutral-500">
+              <p className="mt-3 text-sm leading-7 text-neutral-300">{article.description}</p>
+              <div className="mt-6 flex items-center justify-between text-xs text-neutral-300">
                 <span>{article.date}</span>
                 <span>{article.readTime}</span>
               </div>

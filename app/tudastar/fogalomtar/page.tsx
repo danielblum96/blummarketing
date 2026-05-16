@@ -162,7 +162,7 @@ export default function FogalomtarPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-4xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a Tudástárba
           </a>
           <div className="flex flex-wrap gap-2 mb-6">
@@ -176,7 +176,7 @@ export default function FogalomtarPage() {
           <p className="mt-6 text-xl leading-8 text-neutral-300">
             CPC, CPM, CTR, CPA, CPL, ROAS, remarketing, konverzió, attribúció, kampánystruktúra, pixel. Elsőre bonyolultnak tűnhetnek, de valójában mind ugyanarra a kérdésre segítenek választ adni: a hirdetésed hoz üzleti eredményt, vagy csak viszi a pénzt?
           </p>
-          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-500">
+          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-300">
             <span>Blummarketing</span>
             <span>·</span>
             <span>2025. január 1.</span>
@@ -518,7 +518,7 @@ vásárol`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szeretnéd látni, mit mutatnak a kampányaid?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Ha futnak hirdetéseid, de nem vagy biztos benne, hogy pontosan érted a számokat, érdemes átnézni a rendszert.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

@@ -59,7 +59,7 @@ export default function CampaignHierarchy() {
               <span className={`shrink-0 h-2 w-2 rounded-full ${node.color.dot}`} />
               <div className="min-w-0">
                 <p className={`text-sm font-black ${node.color.text} leading-tight`}>{node.label}</p>
-                <p className="text-xs text-neutral-500 mt-0.5">{node.sub}</p>
+                <p className="text-xs text-neutral-300 mt-0.5">{node.sub}</p>
               </div>
             </div>
           </div>

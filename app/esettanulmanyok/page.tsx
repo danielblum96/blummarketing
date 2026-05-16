@@ -140,11 +140,11 @@ function MetricRow({
   const { r, g, b } = color;
   return (
     <div className="flex items-center justify-between gap-4 py-3.5 border-b border-white/[0.06] last:border-0">
-      <span className="text-sm text-neutral-500">{metric.label}</span>
+      <span className="text-sm text-neutral-300">{metric.label}</span>
       <div className="flex items-center gap-3 shrink-0">
         {metric.before !== "–" && metric.before !== "0" && (
           <>
-            <span className="text-sm text-neutral-600 line-through">{metric.before}</span>
+            <span className="text-sm text-neutral-300 line-through">{metric.before}</span>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 7h10M7 3l4 4-4 4" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -171,7 +171,7 @@ export default function EsettanulmanyokPage() {
           <h1 className="mt-4 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl leading-[1.08]">
             Valós kampányok,<br className="hidden sm:block" /> valós számok.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-400">
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-300">
             Nem elvont ígéretek – konkrét helyzetek, konkrét megközelítések és mérhető eredmények.
             Az ügyfelek kérésére névtelenül, de a számok valósak.
           </p>
@@ -184,7 +184,7 @@ export default function EsettanulmanyokPage() {
                 className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4"
               >
                 <p className="text-3xl font-black text-white">{s.value}</p>
-                <p className="mt-1 text-sm text-neutral-500">{s.label}</p>
+                <p className="mt-1 text-sm text-neutral-300">{s.label}</p>
               </div>
             ))}
           </div>
@@ -198,7 +198,7 @@ export default function EsettanulmanyokPage() {
             <circle cx="8" cy="8" r="6.5" stroke="#525252" strokeWidth="1.2"/>
             <path d="M8 7v4M8 5.5v.5" stroke="#525252" strokeWidth="1.4" strokeLinecap="round"/>
           </svg>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-sm text-neutral-300 leading-relaxed">
             Az esettanulmányokban szereplő ügyfelek nevét és iparágát az ő kérésükre általánosítottuk.
             A bemutatott számok valós kampányeredmények.
           </p>
@@ -219,12 +219,12 @@ export default function EsettanulmanyokPage() {
                 className="px-8 py-5 flex flex-wrap items-center gap-3 border-b border-white/[0.06]"
                 style={{ background: `rgba(${r},${g},${b},0.04)` }}
               >
-                <span className="text-[11px] font-black tracking-[0.18em] text-neutral-600">{c.id}</span>
+                <span className="text-[11px] font-black tracking-[0.18em] text-neutral-300">{c.id}</span>
                 <PlatformBadge label={c.platform} color={c.platformColor} />
-                <span className="text-xs text-neutral-600">·</span>
-                <span className="text-xs font-semibold text-neutral-500">{c.industry}</span>
-                <span className="text-xs text-neutral-600">·</span>
-                <span className="text-xs font-semibold text-neutral-600">{c.duration}</span>
+                <span className="text-xs text-neutral-300">·</span>
+                <span className="text-xs font-semibold text-neutral-300">{c.industry}</span>
+                <span className="text-xs text-neutral-300">·</span>
+                <span className="text-xs font-semibold text-neutral-300">{c.duration}</span>
               </div>
 
               {/* Card body */}
@@ -245,7 +245,7 @@ export default function EsettanulmanyokPage() {
                       >
                         A helyzet
                       </p>
-                      <p className="text-neutral-400 leading-relaxed text-sm lg:text-base">
+                      <p className="text-neutral-300 leading-relaxed text-sm lg:text-base">
                         {c.situation}
                       </p>
                     </div>
@@ -270,7 +270,7 @@ export default function EsettanulmanyokPage() {
                             >
                               {i + 1}
                             </span>
-                            <span className="text-sm text-neutral-400 leading-relaxed">{step}</span>
+                            <span className="text-sm text-neutral-300 leading-relaxed">{step}</span>
                           </li>
                         ))}
                       </ul>
@@ -291,7 +291,7 @@ export default function EsettanulmanyokPage() {
                     >
                       Eredmények
                     </p>
-                    <p className="text-[11px] text-neutral-600 mb-4">{c.duration} alatt</p>
+                    <p className="text-[11px] text-neutral-300 mb-4">{c.duration} alatt</p>
                     <div>
                       {c.metrics.map((m) => (
                         <MetricRow key={m.label} metric={m} color={c.platformColor} />
@@ -310,11 +310,11 @@ export default function EsettanulmanyokPage() {
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-8 lg:p-12">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-4">Amit minden eset közös</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-300 mb-4">Amit minden eset közös</p>
               <h2 className="text-2xl font-black mb-5 leading-snug lg:text-3xl">
                 Nem a kampány az első lépés – hanem a megértés.
               </h2>
-              <p className="text-neutral-400 leading-relaxed text-sm lg:text-base">
+              <p className="text-neutral-300 leading-relaxed text-sm lg:text-base">
                 Minden együttműködés egy auditon kezdődik. Megnézem, hol tartasz most, mi működik és mi nem,
                 mi mérhető és mi hiányzik a rendszerből. Csak ezután javaslok bármit – hogy az ne
                 egy általános megoldás legyen, hanem egy a te helyzetedre szabott stratégia.
@@ -331,7 +331,7 @@ export default function EsettanulmanyokPage() {
                   key={step.num}
                   className="rounded-xl border border-white/10 bg-white/[0.03] p-4 flex items-start gap-3"
                 >
-                  <span className="text-xs font-black text-neutral-600 mt-0.5 shrink-0">{step.num}</span>
+                  <span className="text-xs font-black text-neutral-300 mt-0.5 shrink-0">{step.num}</span>
                   <span className="text-sm font-semibold text-neutral-300 leading-snug">{step.text}</span>
                 </div>
               ))}
@@ -349,7 +349,7 @@ export default function EsettanulmanyokPage() {
             <h2 className="text-2xl font-black mb-4 lg:text-3xl">
               Szeretnéd, hogy a te vállalkozásod is<br className="hidden sm:block" /> itt szerepeljen?
             </h2>
-            <p className="text-neutral-400 max-w-lg mx-auto mb-8 leading-relaxed">
+            <p className="text-neutral-300 max-w-lg mx-auto mb-8 leading-relaxed">
               Egy rövid egyeztetésen megnézzük, hol tartasz most, mi akadályoz az eredményekben,
               és mit lehetne tenni. Kötelezettség nélkül.
             </p>

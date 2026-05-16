@@ -4,8 +4,8 @@ export default function IntentSpectrum() {
       {/* Labels row */}
       <div className="flex justify-between items-start mb-4">
         <div>
-          <p className="text-xs font-black uppercase tracking-widest text-neutral-500">Hideg közönség</p>
-          <p className="text-[11px] text-neutral-600 mt-1">Social, Display, YouTube</p>
+          <p className="text-xs font-black uppercase tracking-widest text-neutral-300">Hideg közönség</p>
+          <p className="text-[11px] text-neutral-300 mt-1">Social, Display, YouTube</p>
         </div>
         <div className="text-right">
           <p className="text-xs font-black uppercase tracking-widest text-blue-400">Aktív keresők</p>
@@ -28,7 +28,7 @@ export default function IntentSpectrum() {
       <div className="flex justify-between items-center mt-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-neutral-600" />
-          <span className="text-[11px] text-neutral-600">Érdeklődés még nem látható</span>
+          <span className="text-[11px] text-neutral-300">Érdeklődés még nem látható</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-[11px] text-blue-400">Vásárlási szándék már megvan</span>
@@ -37,7 +37,7 @@ export default function IntentSpectrum() {
       </div>
 
       {/* Explanation */}
-      <p className="mt-5 text-xs text-neutral-500 leading-relaxed border-t border-white/[0.06] pt-4">
+      <p className="mt-5 text-xs text-neutral-300 leading-relaxed border-t border-white/[0.06] pt-4">
         A Google Search Ads ereje abban van, hogy nem te döntöd el, kinek jelenik meg — a felhasználó maga keresi a megoldást.
         Ez az egyik legmagasabb vásárlási szándékot jelző csatorna.
       </p>

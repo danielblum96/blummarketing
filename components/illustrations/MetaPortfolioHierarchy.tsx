@@ -50,7 +50,7 @@ export default function MetaPortfolioHierarchy() {
               <span className={`h-1.5 w-1.5 rounded-full shrink-0 ${level.color.bar}`} />
               <p className={`text-sm font-black ${level.color.text}`}>{level.label}</p>
             </div>
-            <p className="text-xs text-neutral-500 leading-relaxed">{level.sub}</p>
+            <p className="text-xs text-neutral-300 leading-relaxed">{level.sub}</p>
           </div>
         </div>
       ))}

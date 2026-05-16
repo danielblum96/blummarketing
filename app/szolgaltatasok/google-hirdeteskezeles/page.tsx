@@ -59,7 +59,7 @@ export default function GoogleHirdeteskezelesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Szolgáltatás</p>
@@ -89,7 +89,7 @@ export default function GoogleHirdeteskezelesPage() {
       <section className="mx-auto max-w-7xl px-6 pt-20 pb-4 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Miért erős a Google Ads</p>
         <h2 className="text-3xl font-black mb-3">Nem hideg közönséget ér el — aktívan kereső embereket</h2>
-        <p className="text-neutral-400 leading-7 mb-8 max-w-2xl">Meta és TikTok hirdetéseknél a platform dönti el, kinek mutatja a hirdetést. Google Ads-nél a felhasználó maga keres rád — ez az egyik legnagyobb különbség.</p>
+        <p className="text-neutral-300 leading-7 mb-8 max-w-2xl">Meta és TikTok hirdetéseknél a platform dönti el, kinek mutatja a hirdetést. Google Ads-nél a felhasználó maga keres rád — ez az egyik legnagyobb különbség.</p>
         <IntentSpectrum />
       </section>
 
@@ -113,7 +113,7 @@ export default function GoogleHirdeteskezelesPage() {
       <section className="mx-auto max-w-7xl px-6 pb-4 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Kampányfelépítés</p>
         <h2 className="text-3xl font-black mb-3">Hogyan épül fel egy Google Ads fiók?</h2>
-        <p className="text-neutral-400 leading-7 mb-8 max-w-2xl">Egy rendezett fiókban minden szintnek megvan a szerepe — ez az alap ahhoz, hogy utólag is átlátható legyen, mi működik és mi nem.</p>
+        <p className="text-neutral-300 leading-7 mb-8 max-w-2xl">Egy rendezett fiókban minden szintnek megvan a szerepe — ez az alap ahhoz, hogy utólag is átlátható legyen, mi működik és mi nem.</p>
         <CampaignHierarchy />
       </section>
 
@@ -125,7 +125,7 @@ export default function GoogleHirdeteskezelesPage() {
           {forWhom.map((item) => (
             <div key={item.title} className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="text-lg font-black mb-3">{item.title}</h3>
-              <p className="text-sm leading-7 text-neutral-400">{item.desc}</p>
+              <p className="text-sm leading-7 text-neutral-300">{item.desc}</p>
             </div>
           ))}
         </div>

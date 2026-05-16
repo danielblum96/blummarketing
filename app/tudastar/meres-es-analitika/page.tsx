@@ -156,7 +156,7 @@ export default function MeresEsAnalitika() {
         <Navbar />
 
         <div className="mx-auto max-w-4xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a Tudástárba
           </a>
           <div className="flex flex-wrap gap-2 mb-6">
@@ -170,7 +170,7 @@ export default function MeresEsAnalitika() {
           <p className="mt-6 text-xl leading-8 text-neutral-300">
             A marketingben nem az a kérdés, hányan kattintottak. Hanem az, hogy melyik kampány hozott bevételt, melyik hozott leadet, melyik csak forgalmat, és melyik vitte a pénzt.
           </p>
-          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-500">
+          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-300">
             <span>Blummarketing</span>
             <span>·</span>
             <span>2025. január 1.</span>
@@ -498,7 +498,7 @@ ajánlatkérés`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szeretnéd tudni, hogy a marketingadataidra lehet-e döntést építeni?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Ha futnak kampányaid, de nem vagy biztos benne, hogy pontosan mérsz, érdemes átnézni a rendszert.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

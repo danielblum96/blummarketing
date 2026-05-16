@@ -222,7 +222,7 @@ export default function WeboldalKeszitesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Weboldal készítés</p>
@@ -232,7 +232,7 @@ export default function WeboldalKeszitesPage() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
             Nem sablonos névjegykártyákat készítünk. Üzleti weboldalakat, landing oldalakat, WordPress oldalakat, webshopokat és egyedi fejlesztéseket építünk — konverziós logikával és mérhető üzleti céllal.
           </p>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-400">
+          <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-300">
             WordPress oldal, WooCommerce webshop vagy egyedi fejlesztés — a cél minden esetben ugyanaz: a weboldalad hozzon ügyfelet.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -262,10 +262,10 @@ export default function WeboldalKeszitesPage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 A weboldalad sokszor az első benyomás rólad.
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Ha lassú, elavult, zavaros vagy nem derül ki belőle egyértelműen, miért téged válasszanak, akkor nem csak látogatókat veszítesz — hanem pénzt is.
               </p>
-              <p className="mt-4 text-base leading-8 text-neutral-500">
+              <p className="mt-4 text-base leading-8 text-neutral-300">
                 Mi olyan oldalakat készítünk, amelyek gyorsan betöltődnek, mobilon is jól működnek, érthetően kommunikálják az ajánlatod, és konverzióra vannak tervezve.
               </p>
               <p className="mt-6 text-lg font-black text-neutral-950">Nem csak fejlesztünk — üzleti szempontból gondolkodunk.</p>
@@ -318,10 +318,10 @@ export default function WeboldalKeszitesPage() {
               <div>
                 <h3 className="text-xl font-black mb-2">{type.title}</h3>
                 <p className="text-sm font-bold text-rose-300 mb-4">{type.desc}</p>
-                <p className="text-sm leading-7 text-neutral-400">{type.body}</p>
+                <p className="text-sm leading-7 text-neutral-300">{type.body}</p>
               </div>
               <div>
-                <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-3">Mikor ajánlott</p>
+                <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-3">Mikor ajánlott</p>
                 <ul className="space-y-2">
                   {type.when.map((w) => (
                     <li key={w} className="flex items-start gap-2 text-sm text-neutral-300">
@@ -343,7 +343,7 @@ export default function WeboldalKeszitesPage() {
             <div>
               <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Miért nem &ldquo;csak weboldalt&rdquo; kapsz</p>
               <h2 className="text-3xl font-black mb-5">Stratégia nélkül a szép weboldal is kevés</h2>
-              <p className="text-neutral-400 leading-8 mb-6">
+              <p className="text-neutral-300 leading-8 mb-6">
                 Sokan úgy készítenek weboldalt, hogy először jön a dizájn, aztán valahogy rákerül a szöveg. Mi fordítva gondolkodunk.
               </p>
               <p className="text-neutral-300 leading-8">
@@ -351,7 +351,7 @@ export default function WeboldalKeszitesPage() {
               </p>
             </div>
             <div>
-              <p className="text-sm font-bold text-neutral-400 mb-5">Először megértjük:</p>
+              <p className="text-sm font-bold text-neutral-300 mb-5">Először megértjük:</p>
               <ul className="space-y-3">
                 {[
                   "Mit adsz el",
@@ -367,7 +367,7 @@ export default function WeboldalKeszitesPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-neutral-400 leading-7 text-sm">
+              <p className="mt-6 text-neutral-300 leading-7 text-sm">
                 Ezután építjük fel az oldal szerkezetét, szövegét, vizuális világát és technikai működését.
               </p>
             </div>
@@ -394,10 +394,10 @@ export default function WeboldalKeszitesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Árazás</p>
           <h2 className="text-4xl font-black mb-4">Mennyibe kerül egy profi weboldal?</h2>
-          <p className="max-w-2xl text-lg leading-8 text-neutral-600 mb-4">
+          <p className="max-w-2xl text-lg leading-8 text-neutral-300 mb-4">
             A weboldal nem sablontermék, ezért az ár mindig attól függ, milyen üzleti célt kell kiszolgálnia az oldalnak.
           </p>
-          <p className="max-w-xl text-base leading-8 text-neutral-500 mb-12">
+          <p className="max-w-xl text-base leading-8 text-neutral-300 mb-12">
             Nálunk nem az a kérdés, hogy „hány aloldal lesz?" — hanem az, hogy milyen üzleti eredményt kell hoznia a weboldalnak.
           </p>
           <div className="grid gap-6 md:grid-cols-2">
@@ -411,9 +411,9 @@ export default function WeboldalKeszitesPage() {
                 }`}
               >
                 <div>
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-1">Blummarketing {pkg.name}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">Blummarketing {pkg.name}</p>
                   <p className="text-3xl font-black mb-2">{pkg.price}</p>
-                  <p className="text-sm leading-7 text-neutral-600">{pkg.desc}</p>
+                  <p className="text-sm leading-7 text-neutral-300">{pkg.desc}</p>
                 </div>
                 <ul className="space-y-2">
                   {pkg.items.map((item) => (
@@ -424,7 +424,7 @@ export default function WeboldalKeszitesPage() {
                   ))}
                 </ul>
                 <div className="rounded-2xl bg-neutral-950/5 p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-1">Ideális, ha</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">Ideális, ha</p>
                   <p className="text-sm leading-7 text-neutral-700">{pkg.ideal}</p>
                 </div>
               </div>
@@ -472,7 +472,7 @@ export default function WeboldalKeszitesPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm leading-7 text-neutral-500">
+              <p className="mt-5 text-sm leading-7 text-neutral-300">
                 A magasabb ár nem öncélú. Több üzleti gondolkodást, mélyebb tervezést és összetettebb kivitelezést igényel.
               </p>
             </div>
@@ -484,19 +484,19 @@ export default function WeboldalKeszitesPage() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Miért velünk</p>
         <h2 className="text-3xl font-black mb-3">Nem fejlesztői szemmel kezdjük. Üzleti szemmel.</h2>
-        <p className="max-w-2xl text-neutral-400 leading-8 mb-12">
+        <p className="max-w-2xl text-neutral-300 leading-8 mb-12">
           Egy weboldalnál nem az a döntő kérdés, hogy milyen technológiával készül — hanem az, hogy mit kell elérnie.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {valuePoints.map((vp) => (
             <div key={vp.title} className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="text-lg font-black mb-3">{vp.title}</h3>
-              <p className="text-sm leading-7 text-neutral-400">{vp.text}</p>
+              <p className="text-sm leading-7 text-neutral-300">{vp.text}</p>
             </div>
           ))}
           <div className="rounded-[2rem] border border-rose-500/20 bg-rose-500/5 p-7">
             <h3 className="text-lg font-black mb-3">Több ajánlatkérést?</h3>
-            <p className="text-sm leading-7 text-neutral-400">Több időpontfoglalást? Több webshop rendelést? Erősebb márkaérzetet? Jobb hirdetési megtérülést? Ezt tisztázzuk először — ezután választjuk ki a megfelelő technológiát és struktúrát.</p>
+            <p className="text-sm leading-7 text-neutral-300">Több időpontfoglalást? Több webshop rendelést? Erősebb márkaérzetet? Jobb hirdetési megtérülést? Ezt tisztázzuk először — ezután választjuk ki a megfelelő technológiát és struktúrát.</p>
           </div>
         </div>
       </section>
@@ -519,9 +519,9 @@ export default function WeboldalKeszitesPage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((item) => (
               <div key={item.step} className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-7">
-                <p className="text-sm font-black text-neutral-400">{item.step}</p>
+                <p className="text-sm font-black text-neutral-300">{item.step}</p>
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-600">{item.text}</p>
+                <p className="mt-3 text-sm leading-7 text-neutral-300">{item.text}</p>
               </div>
             ))}
           </div>
@@ -533,7 +533,7 @@ export default function WeboldalKeszitesPage() {
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 lg:p-14">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-4">Amit érdemes tudni</p>
           <h2 className="text-3xl font-black mb-5">Egy gyenge weboldal csendben viszi el a pénzed</h2>
-          <p className="text-neutral-400 leading-8 mb-8 max-w-2xl">Sokszor nem látványos, amikor egy weboldal rosszul teljesít.</p>
+          <p className="text-neutral-300 leading-8 mb-8 max-w-2xl">Sokszor nem látványos, amikor egy weboldal rosszul teljesít.</p>
           <ul className="space-y-3 mb-8">
             {[
               "Nem kapsz elég ajánlatkérést",
@@ -548,7 +548,7 @@ export default function WeboldalKeszitesPage() {
               </li>
             ))}
           </ul>
-          <p className="text-neutral-400 leading-8 max-w-2xl">
+          <p className="text-neutral-300 leading-8 max-w-2xl">
             Ez nem mindig az ajánlat hibája. Sokszor a weboldal nem ad elég bizalmat, nem egyértelmű az üzenet, és nem vezeti végig a látogatót a döntésen.{" "}
             <span className="text-white font-semibold">Ezen változtatunk.</span>
           </p>
@@ -575,13 +575,13 @@ export default function WeboldalKeszitesPage() {
             <p className="text-xl font-black text-rose-300 mb-6">Kinek nem ajánlott</p>
             <ul className="space-y-3 mb-5">
               {noPoints.map((point) => (
-                <li key={point} className="flex items-start gap-3 leading-7 text-neutral-400">
+                <li key={point} className="flex items-start gap-3 leading-7 text-neutral-300">
                   <X className="mt-0.5 h-5 w-5 shrink-0 text-rose-500" aria-hidden="true" />
                   {point}
                 </li>
               ))}
             </ul>
-            <p className="text-sm leading-7 text-neutral-500">
+            <p className="text-sm leading-7 text-neutral-300">
               Mi olyan vállalkozásokkal dolgozunk jól, akik értik, hogy egy jó weboldal befektetés — nem egyszerű kiadás.
             </p>
           </div>
@@ -611,7 +611,7 @@ export default function WeboldalKeszitesPage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Készítsünk weboldalt, ami méltó szinten képviseli a vállalkozásod.
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Írj pár mondatot arról, milyen oldalt szeretnél és milyen terméket vagy szolgáltatást értékesítesz — megnézzük, mi a legjobb megoldás.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

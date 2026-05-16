@@ -23,7 +23,7 @@ export default function FirstMonthTimeline() {
             <span className="text-xs font-black text-rose-400">{step.num}</span>
           </div>
           {/* Label */}
-          <p className="mt-3 text-center text-[11px] font-semibold text-neutral-500 leading-snug px-1">
+          <p className="mt-3 text-center text-[11px] font-semibold text-neutral-300 leading-snug px-1">
             {step.label}
           </p>
         </div>

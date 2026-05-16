@@ -58,19 +58,19 @@ function CardRoas() {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-blue-500" />
-          <span className="text-xs font-medium text-neutral-500">Meta hirdetések</span>
+          <span className="text-xs font-medium text-neutral-300">Meta hirdetések</span>
         </div>
         <LiveDot />
       </div>
       <div className="flex items-end gap-2">
         <span className="text-4xl font-black text-white leading-none">9×</span>
-        <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-500">
+        <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-300">
           ROAS
         </span>
       </div>
       <div className="mt-3 flex items-center justify-between">
         <TrendBadge value="↑ +23%" />
-        <span className="text-xs text-neutral-600">vs. előző hónap</span>
+        <span className="text-xs text-neutral-300">vs. előző hónap</span>
       </div>
     </div>
   );
@@ -82,11 +82,11 @@ function CardCtr() {
     <div className="float-b rounded-2xl border border-white/10 bg-white/[0.05] p-5 shadow-xl backdrop-blur-sm w-56">
       <div className="flex items-center gap-2 mb-4">
         <span className="h-2 w-2 rounded-full bg-amber-400" />
-        <span className="text-xs font-medium text-neutral-500">Google Ads</span>
+        <span className="text-xs font-medium text-neutral-300">Google Ads</span>
       </div>
       <div className="flex items-end gap-2">
         <span className="text-4xl font-black text-white leading-none">5.2%</span>
-        <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-500">
+        <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-300">
           CTR
         </span>
       </div>
@@ -104,17 +104,17 @@ function CardCpl() {
     <div className="float-c ml-14 rounded-2xl border border-white/10 bg-white/[0.05] p-5 shadow-xl backdrop-blur-sm w-56">
       <div className="flex items-center gap-2 mb-4">
         <span className="h-2 w-2 rounded-full bg-rose-400" />
-        <span className="text-xs font-medium text-neutral-500">TikTok kampány</span>
+        <span className="text-xs font-medium text-neutral-300">TikTok kampány</span>
       </div>
       <div className="flex items-end gap-2">
         <span className="text-4xl font-black text-white leading-none">1 840</span>
-        <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-500">
+        <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-300">
           Ft / lead
         </span>
       </div>
       <div className="mt-3 flex items-center justify-between">
         <TrendBadge value="↓ −18%" />
-        <span className="text-xs text-neutral-600">iparági átlag alatt</span>
+        <span className="text-xs text-neutral-300">iparági átlag alatt</span>
       </div>
     </div>
   );
@@ -137,7 +137,7 @@ function MobileStats() {
             <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
           </div>
           <p className="text-xl font-black text-white">{value}</p>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 mt-0.5">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-neutral-300 mt-0.5">
             {label}
           </p>
           <p className="text-[10px] text-emerald-400 font-medium mt-1.5">{trend}</p>

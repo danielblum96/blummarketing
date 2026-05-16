@@ -135,7 +135,7 @@ export default function BlummarketingLanding() {
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
               A Blummarketing a Photozoom tartalomkészítő csapatával együttműködve kínál havidíjas videós és fotós tartalomgyártást vállalkozásoknak TikTokra, Facebookra és Instagramra — hirdetéskezeléssel egy csomagban.
             </p>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-400">
+            <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-300">
               A kreatív tartalmak elkészítéséről a <span className="text-white font-semibold">Photozoom csapata</span> gondoskodik, míg a <span className="text-white font-semibold">Blummarketing</span> a TikTok, Facebook és Instagram hirdetések stratégiai kezeléséért, optimalizálásáért és teljesítménykövetéséért felel.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -151,15 +151,15 @@ export default function BlummarketingLanding() {
             <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 text-center sm:text-left">
               <div className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur">
                 <p className="text-2xl font-black">10</p>
-                <p className="mt-1 text-xs text-neutral-400">videó / hó</p>
+                <p className="mt-1 text-xs text-neutral-300">videó / hó</p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur">
                 <p className="text-2xl font-black">TikTok</p>
-                <p className="mt-1 text-xs text-neutral-400">organikus + paid</p>
+                <p className="mt-1 text-xs text-neutral-300">organikus + paid</p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur">
                 <p className="text-2xl font-black">Meta</p>
-                <p className="mt-1 text-xs text-neutral-400">FB + Instagram</p>
+                <p className="mt-1 text-xs text-neutral-300">FB + Instagram</p>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function BlummarketingLanding() {
               <div className="rounded-[1.5rem] bg-neutral-950 p-5">
                 <div className="mb-5 flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-neutral-400">Havi ajánlat</p>
+                    <p className="text-sm text-neutral-300">Havi ajánlat</p>
                     <p className="text-2xl font-black">270 000 Ft / hó</p>
                   </div>
                   <div className="rounded-full bg-emerald-400/10 px-4 py-2 text-sm font-bold text-emerald-300">Fix díj</div>
@@ -188,7 +188,7 @@ export default function BlummarketingLanding() {
                     <Target className="h-6 w-6" aria-hidden="true" />
                     <p className="font-black">Cél: több figyelem, több érdeklődő, több eladás.</p>
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-neutral-600">
+                  <p className="mt-3 text-sm leading-6 text-neutral-300">
                     Nem külön posztokat gyártunk, hanem kampányrendszert építünk a tartalmaid köré.
                   </p>
                 </div>
@@ -246,9 +246,9 @@ export default function BlummarketingLanding() {
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white to-neutral-200 p-8 text-neutral-950 shadow-2xl">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-500">Blummarketing Growth</p>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-300">Blummarketing Growth</p>
                 <h3 className="mt-3 text-4xl font-black">270 000 Ft / hó</h3>
-                <p className="mt-2 text-sm text-neutral-600">+ külön hirdetési költés</p>
+                <p className="mt-2 text-sm text-neutral-300">+ külön hirdetési költés</p>
               </div>
               <a href="#kapcsolat" className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-3 font-bold text-white transition hover:bg-neutral-800">Érdekel</a>
             </div>
@@ -272,7 +272,7 @@ export default function BlummarketingLanding() {
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {process.map((item) => (
             <article key={item.step} className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7">
-              <p className="text-sm font-black text-neutral-500">{item.step}</p>
+              <p className="text-sm font-black text-neutral-300">{item.step}</p>
               <h3 className="mt-5 text-2xl font-black">{item.title}</h3>
               <p className="mt-4 leading-7 text-neutral-300">{item.text}</p>
             </article>
@@ -301,7 +301,7 @@ export default function BlummarketingLanding() {
             <div className="p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Kezdjük el</p>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Kérj konzultációt, és nézzük meg, milyen kreatívok és kampányok hoznának eredményt nálad.</h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Írj pár mondatot a vállalkozásodról, és megnézzük, hogyan indulhat el a havi rendszer: Photozoom tartalomgyártással és Blummarketing hirdetéskezeléssel.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

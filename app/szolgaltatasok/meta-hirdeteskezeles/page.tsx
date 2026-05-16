@@ -250,7 +250,7 @@ export default function MetaHirdeteskezelesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 lg:px-8">
-          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/szolgaltatasok/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a szolgáltatásokhoz
           </a>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Meta hirdetéskezelés</p>
@@ -260,7 +260,7 @@ export default function MetaHirdeteskezelesPage() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
             A Blummarketing stratégiai szemlélettel kezeli a Meta hirdetéseidet: kampánystruktúra, kreatívtesztelés, remarketing, mérés, optimalizálás és havi riport egy rendszerben.
           </p>
-          <p className="mt-3 max-w-xl text-base leading-8 text-neutral-500">
+          <p className="mt-3 max-w-xl text-base leading-8 text-neutral-300">
             A cél nem az, hogy „fusson valami". A cél, hogy a hirdetési büdzsédből ügyfél legyen.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -288,13 +288,13 @@ export default function MetaHirdeteskezelesPage() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Miért fontos</p>
               <h2 className="text-4xl font-black mb-5">A hirdetés nem attól működik, hogy be van kapcsolva.</h2>
-              <p className="text-lg leading-8 text-neutral-600 mb-4">
+              <p className="text-lg leading-8 text-neutral-300 mb-4">
                 Sok vállalkozás költ Facebook és Instagram hirdetésekre, mégsem lát valódi megtérülést. Nem azért, mert a Meta nem működik — hanem mert a kampány mögött nincs rendszer.
               </p>
-              <p className="text-neutral-500 leading-8">Ezeket nem utólag magyarázzuk meg. Már az elején úgy építjük fel a kampányokat, hogy legyen mit mérni, legyen mit javítani, és legyen mire skálázni.</p>
+              <p className="text-neutral-300 leading-8">Ezeket nem utólag magyarázzuk meg. Már az elején úgy építjük fel a kampányokat, hogy legyen mit mérni, legyen mit javítani, és legyen mire skálázni.</p>
             </div>
             <div>
-              <p className="text-sm font-bold text-neutral-500 mb-4">Gyakori problémák:</p>
+              <p className="text-sm font-bold text-neutral-300 mb-4">Gyakori problémák:</p>
               <div className="space-y-2">
                 {[
                   "Túl általános célzás",
@@ -322,21 +322,21 @@ export default function MetaHirdeteskezelesPage() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Mit kapsz tőlünk</p>
         <h2 className="text-3xl font-black mb-4">Komplett Meta hirdetéskezelés — üzleti szemlélettel.</h2>
-        <p className="max-w-2xl text-neutral-400 leading-8 mb-12">
+        <p className="max-w-2xl text-neutral-300 leading-8 mb-12">
           A hirdetéskezelés nem csak kampánybeállítás. A stratégia, a mérés, a kreatívok és az optimalizálás mind beletartozik.
         </p>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {whatWeOffer.map((item) => (
             <div key={item.title} className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 flex flex-col gap-3">
               <h3 className="text-lg font-black">{item.title}</h3>
-              <p className="text-sm leading-7 text-neutral-400">{item.text}</p>
+              <p className="text-sm leading-7 text-neutral-300">{item.text}</p>
             </div>
           ))}
         </div>
 
         {/* Creative tests */}
         <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
-          <p className="text-sm font-black text-neutral-400 mb-5">Kreatívtesztelési irányok például:</p>
+          <p className="text-sm font-black text-neutral-300 mb-5">Kreatívtesztelési irányok például:</p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {creativeTests.map((item) => (
               <div key={item} className="flex items-center gap-3 text-sm text-neutral-300">
@@ -354,16 +354,16 @@ export default function MetaHirdeteskezelesPage() {
           <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Kampánytípusok</p>
           <h2 className="text-3xl font-black mb-8">Milyen kampányokat kezelünk?</h2>
           <div className="mb-10 max-w-xs mx-auto lg:mx-0">
-            <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-3">A Meta hirdetési tölcsér</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-neutral-300 mb-3">A Meta hirdetési tölcsér</p>
             <MarketingFunnel variant="meta" />
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {campaignTypes.map((ct) => (
               <div key={ct.title} className="rounded-[2rem] border border-white/10 bg-neutral-950 p-7 flex flex-col gap-4">
                 <h3 className="text-xl font-black">{ct.title}</h3>
-                <p className="text-sm leading-7 text-neutral-400">{ct.desc}</p>
+                <p className="text-sm leading-7 text-neutral-300">{ct.desc}</p>
                 <div className="rounded-2xl bg-white/[0.04] px-4 py-3">
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-1">Cél</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">Cél</p>
                   <p className="text-sm text-neutral-300">{ct.goal}</p>
                 </div>
               </div>
@@ -380,7 +380,7 @@ export default function MetaHirdeteskezelesPage() {
           {whyItWorks.map((item) => (
             <div key={item.title} className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="text-lg font-black mb-3">{item.title}</h3>
-              <p className="text-sm leading-7 text-neutral-400">{item.text}</p>
+              <p className="text-sm leading-7 text-neutral-300">{item.text}</p>
             </div>
           ))}
         </div>
@@ -391,7 +391,7 @@ export default function MetaHirdeteskezelesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Csomagok</p>
           <h2 className="text-4xl font-black mb-4">Válaszd ki, milyen szinten akarsz növekedni.</h2>
-          <p className="max-w-2xl text-lg leading-8 text-neutral-600 mb-12">
+          <p className="max-w-2xl text-lg leading-8 text-neutral-300 mb-12">
             Nem minden vállalkozásnak ugyanaz kell — ezért három szint közül választhatsz.
           </p>
           <div className="grid gap-6 lg:grid-cols-3">
@@ -408,10 +408,10 @@ export default function MetaHirdeteskezelesPage() {
                   {pkg.highlight && (
                     <span className="mb-3 inline-block rounded-full bg-rose-500 px-3 py-1 text-xs font-black text-white">Legjobb választás</span>
                   )}
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-1">{pkg.name}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">{pkg.name}</p>
                   <p className="text-3xl font-black mb-1">{pkg.price}</p>
-                  <p className="text-sm text-neutral-500 mb-3">+ külön hirdetési költés</p>
-                  <p className="text-sm leading-7 text-neutral-600">{pkg.desc}</p>
+                  <p className="text-sm text-neutral-300 mb-3">+ külön hirdetési költés</p>
+                  <p className="text-sm leading-7 text-neutral-300">{pkg.desc}</p>
                 </div>
                 <ul className="space-y-2 flex-1">
                   {pkg.items.map((item) => (
@@ -422,10 +422,10 @@ export default function MetaHirdeteskezelesPage() {
                   ))}
                 </ul>
                 <div className="rounded-2xl bg-neutral-950/5 p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-1">Ideális, ha</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-1">Ideális, ha</p>
                   <p className="text-sm leading-7 text-neutral-700">{pkg.ideal}</p>
                 </div>
-                <p className="text-xs leading-6 text-neutral-500 italic">{pkg.note}</p>
+                <p className="text-xs leading-6 text-neutral-300 italic">{pkg.note}</p>
                 <a
                   href={`mailto:hello@blummarketing.hu?subject=${encodeURIComponent(`Érdeklődés – ${pkg.name} csomag`)}`}
                   className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition ${
@@ -459,9 +459,9 @@ export default function MetaHirdeteskezelesPage() {
                 ].map((row) => (
                   <tr key={row.name}>
                     <td className="py-4 font-semibold text-neutral-950">{row.name}</td>
-                    <td className="py-4 text-neutral-600">{row.price}</td>
-                    <td className="py-4 text-neutral-600">{row.who}</td>
-                    <td className="py-4 text-neutral-600">{row.focus}</td>
+                    <td className="py-4 text-neutral-300">{row.price}</td>
+                    <td className="py-4 text-neutral-300">{row.who}</td>
+                    <td className="py-4 text-neutral-300">{row.focus}</td>
                   </tr>
                 ))}
               </tbody>
@@ -505,7 +505,7 @@ export default function MetaHirdeteskezelesPage() {
                 "Több landing oldal fut egyszerre",
                 "Erős növekedési célok vannak",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-neutral-400">
+                <li key={item} className="flex items-start gap-3 text-sm text-neutral-300">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-500" />
                   {item}
                 </li>
@@ -515,7 +515,7 @@ export default function MetaHirdeteskezelesPage() {
         </div>
         <div className="mt-8 rounded-[2rem] border border-rose-500/15 bg-rose-500/5 p-8">
           <h3 className="text-xl font-black mb-4">Mennyi pénzt érdemes hirdetésre költeni?</h3>
-          <p className="text-neutral-400 leading-8 mb-5">A pontos hirdetési büdzsé az üzleti céltól, a piactól, az ajánlat árától és a versenytől függ. Néhány tájékoztató szám:</p>
+          <p className="text-neutral-300 leading-8 mb-5">A pontos hirdetési büdzsé az üzleti céltól, a piactól, az ajánlat árától és a versenytől függ. Néhány tájékoztató szám:</p>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               { label: "Kisebb induló kampányok", range: "150 000–300 000 Ft / hó" },
@@ -523,7 +523,7 @@ export default function MetaHirdeteskezelesPage() {
               { label: "Intenzívebb növekedés", range: "800 000 Ft / hó felett" },
             ].map((b) => (
               <div key={b.label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-                <p className="text-xs font-black uppercase tracking-widest text-neutral-500 mb-2">{b.label}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-neutral-300 mb-2">{b.label}</p>
                 <p className="text-lg font-black text-white">{b.range}</p>
               </div>
             ))}
@@ -539,9 +539,9 @@ export default function MetaHirdeteskezelesPage() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((item) => (
               <div key={item.step} className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-7">
-                <p className="text-sm font-black text-neutral-400">{item.step}</p>
+                <p className="text-sm font-black text-neutral-300">{item.step}</p>
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-neutral-600">{item.text}</p>
+                <p className="mt-3 text-sm leading-7 text-neutral-300">{item.text}</p>
               </div>
             ))}
           </div>
@@ -567,7 +567,7 @@ export default function MetaHirdeteskezelesPage() {
               </div>
             ))}
           </div>
-          <p className="text-neutral-400 leading-8 max-w-2xl">
+          <p className="text-neutral-300 leading-8 max-w-2xl">
             Egy jól felépített hirdetéskezelés ezeket a pontokat rendszerszinten nézi. <span className="text-white font-semibold">Mi nem csak az Ads Managerben dolgozunk — a teljes ügyfélszerzési útvonalat figyeljük.</span>
           </p>
         </div>
@@ -593,13 +593,13 @@ export default function MetaHirdeteskezelesPage() {
             <p className="text-xl font-black text-rose-300 mb-6">Kinek nem ajánlott</p>
             <ul className="space-y-3 mb-5">
               {noPoints.map((point) => (
-                <li key={point} className="flex items-start gap-3 leading-7 text-neutral-400">
+                <li key={point} className="flex items-start gap-3 leading-7 text-neutral-300">
                   <X className="mt-0.5 h-5 w-5 shrink-0 text-rose-500" aria-hidden="true" />
                   {point}
                 </li>
               ))}
             </ul>
-            <p className="text-sm leading-7 text-neutral-500">
+            <p className="text-sm leading-7 text-neutral-300">
               A Meta hirdetés akkor működik igazán jól, ha a kampány, a kreatív, az ajánlat és a fogadóoldal együtt dolgozik.
             </p>
           </div>
@@ -629,7 +629,7 @@ export default function MetaHirdeteskezelesPage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Nézzük meg, hogyan tudna több eredményt hozni a Meta hirdetésed.
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Írj pár mondatot a vállalkozásodról, az ajánlatodról és arról, futtattál-e már Facebook vagy Instagram hirdetéseket.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

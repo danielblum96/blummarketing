@@ -24,7 +24,7 @@ export default function AuditBeforeAfter() {
               <span className="mt-0.5 shrink-0 h-5 w-5 rounded-full bg-rose-500/15 flex items-center justify-center">
                 <span className="text-[11px] font-black text-rose-400">?</span>
               </span>
-              <span className="text-xs leading-snug text-neutral-500">{q}</span>
+              <span className="text-xs leading-snug text-neutral-300">{q}</span>
             </div>
           ))}
         </div>
@@ -33,7 +33,7 @@ export default function AuditBeforeAfter() {
       {/* Arrow */}
       <div className="flex justify-center">
         <div className="flex flex-col items-center gap-1.5">
-          <span className="text-[9px] font-black uppercase tracking-widest text-neutral-600">Audit</span>
+          <span className="text-[9px] font-black uppercase tracking-widest text-neutral-300">Audit</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             <path d="M4 10h12M10 4l6 6-6 6" className="sm:hidden" stroke="#525252" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M4 10h12M10 4l6 6-6 6" stroke="#525252" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -47,7 +47,7 @@ export default function AuditBeforeAfter() {
         <div className="space-y-3">
           {afterItems.map((m) => (
             <div key={m.label} className="flex items-center justify-between gap-3">
-              <span className="text-xs text-neutral-500">{m.label}</span>
+              <span className="text-xs text-neutral-300">{m.label}</span>
               <div className="flex items-center gap-1.5">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <path d="M6 10V2M2 6l4-4 4 4" stroke="#34d399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

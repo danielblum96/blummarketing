@@ -168,7 +168,7 @@ export default function HomePage() {
               <p className="mt-7 text-lg leading-8 text-neutral-300 sm:text-xl">
                 Google, Meta és TikTok kampányokat kezelünk vállalkozásoknak, akik nem csak kattintásokat akarnak látni, hanem érdeklődőket, vásárlásokat és ajánlatkéréseket.
               </p>
-              <p className="mt-4 text-lg leading-8 text-neutral-400">
+              <p className="mt-4 text-lg leading-8 text-neutral-300">
                 Rendet teszünk a mérésben, teszteljük a kreatívokat, és megmutatjuk, melyik kampányod hoz valódi eredményt.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -198,10 +198,10 @@ export default function HomePage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Mit nézünk meg egy kampányauditban?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Nem érzésre mondjuk meg, mi a baj. Azokat a pontokat nézzük át, ahol gyakran elfolyik a hirdetési pénz.
               </p>
-              <p className="mt-3 text-base leading-7 text-neutral-500">Egy audit során többek között ezeket vizsgáljuk:</p>
+              <p className="mt-3 text-base leading-7 text-neutral-300">Egy audit során többek között ezeket vizsgáljuk:</p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {auditPoints.map((point) => (
@@ -228,7 +228,7 @@ export default function HomePage() {
             <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
               Hirdetsz, de nem látod tisztán, mi hozza az ügyfeleket?
             </h2>
-            <p className="mt-5 text-lg leading-8 text-neutral-400">
+            <p className="mt-5 text-lg leading-8 text-neutral-300">
               Sok cég futtat hirdetéseket Google-ben, Facebookon, Instagramon vagy TikTokon, de közben nincs pontos válasz a legfontosabb kérdésekre.
             </p>
             <p className="mt-6 text-lg leading-8 text-neutral-300">
@@ -258,11 +258,11 @@ export default function HomePage() {
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             <div className="rounded-[2rem] bg-white p-8 text-neutral-950">
               <p className="text-lg font-black leading-7">A kampányokat nem különálló hirdetésként kezeljük, hanem teljes ügyfélszerzési útvonalként.</p>
-              <p className="mt-4 leading-7 text-neutral-600">Megnézzük, mire kattintanak az emberek, hova érkeznek, mit csinálnak az oldalon, megtörténik-e a konverzió.</p>
+              <p className="mt-4 leading-7 text-neutral-300">Megnézzük, mire kattintanak az emberek, hova érkeznek, mit csinálnak az oldalon, megtörténik-e a konverzió.</p>
             </div>
             <div className="rounded-[2rem] bg-white p-8 text-neutral-950">
               <p className="text-lg font-black leading-7">Mert nem a lájkokból fizeted a számlákat.</p>
-              <p className="mt-4 leading-7 text-neutral-600">A végső kérdés mindig az: hoz-e ez leadet, vásárlást vagy bevételt?</p>
+              <p className="mt-4 leading-7 text-neutral-300">A végső kérdés mindig az: hoz-e ez leadet, vásárlást vagy bevételt?</p>
             </div>
             <div className="rounded-[2rem] bg-rose-600 p-8 text-white">
               <p className="text-lg font-black leading-7">A cél nem több adat, hanem jobb döntés.</p>
@@ -286,7 +286,7 @@ export default function HomePage() {
               className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl transition hover:-translate-y-1 hover:bg-white/[0.07]"
             >
               <h3 className="text-xl font-black group-hover:text-rose-200 transition">{s.title}</h3>
-              <p className="mt-4 leading-7 text-neutral-400 text-sm">{s.text}</p>
+              <p className="mt-4 leading-7 text-neutral-300 text-sm">{s.text}</p>
               <div className="mt-5 flex items-center gap-2 text-sm font-bold text-rose-300 group-hover:gap-3 transition-all">
                 Részletek <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </div>
@@ -301,16 +301,16 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600">Hogyan kezdünk</p>
             <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Mit kapsz az első 30 napban?</h2>
-            <p className="mt-5 text-lg leading-8 text-neutral-600">
+            <p className="mt-5 text-lg leading-8 text-neutral-300">
               Az első hónap célja, hogy kiderüljön, mi működik — és hol kell azonnal beavatkozni.
             </p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {firstMonthSteps.map((item) => (
               <div key={item.step} className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-7">
-                <p className="text-sm font-black text-neutral-400">{item.step}</p>
+                <p className="text-sm font-black text-neutral-300">{item.step}</p>
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
-                <p className="mt-3 leading-7 text-neutral-600 text-sm">{item.text}</p>
+                <p className="mt-3 leading-7 text-neutral-300 text-sm">{item.text}</p>
               </div>
             ))}
           </div>
@@ -328,16 +328,16 @@ export default function HomePage() {
             <p className="mt-5 text-lg leading-8 text-neutral-300">
               Sokszor nem a kampányok számával van a legnagyobb gond, hanem azzal, hogy a rendszer rossz jelek alapján optimalizál.
             </p>
-            <p className="mt-4 leading-8 text-neutral-400">
+            <p className="mt-4 leading-8 text-neutral-300">
               Például előfordulhat, hogy a kampány nem valódi ajánlatkérésre vagy vásárlásra optimalizál, hanem egy gyengébb minőségű eseményre. Ilyenkor a hirdetési fiók látszólag hoz eredményeket, de ezek üzletileg nem elég értékesek.
             </p>
-            <p className="mt-4 leading-8 text-neutral-400">
+            <p className="mt-4 leading-8 text-neutral-300">
               A mérés rendbetétele után már látszik, melyik kampány hoz valódi leadet, melyik csak olcsó forgalmat, és mire érdemes költeni a következő hónapban.
             </p>
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
             <p className="text-xl font-black text-white">Nem csak kampányokat kezelünk. Döntéseket készítünk elő.</p>
-            <p className="mt-4 leading-7 text-neutral-400">A legtöbb riport megmutatja, mennyi volt a kattintás, az elérés vagy a CPC. Ez önmagában kevés. Egy cégvezetőnek ezek a kérdések fontosak:</p>
+            <p className="mt-4 leading-7 text-neutral-300">A legtöbb riport megmutatja, mennyi volt a kattintás, az elérés vagy a CPC. Ez önmagában kevés. Egy cégvezetőnek ezek a kérdések fontosak:</p>
             <ul className="mt-5 space-y-2">
               {decisionPoints.map((point) => (
                 <li key={point} className="flex gap-3 leading-7 text-neutral-300">
@@ -346,7 +346,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm leading-7 text-neutral-400">Nem csodát ígérünk, hanem tiszta képet, következetes munkát és jobb döntéseket.</p>
+            <p className="mt-5 text-sm leading-7 text-neutral-300">Nem csodát ígérünk, hanem tiszta képet, következetes munkát és jobb döntéseket.</p>
           </div>
         </div>
       </section>
@@ -363,10 +363,10 @@ export default function HomePage() {
               <p className="mt-5 text-lg leading-8 text-neutral-300">
                 A Blummarketing a Photozoom tartalomkészítő csapatával együttműködve kínál havi rendszert azoknak a vállalkozásoknak, akik rendszeresen friss videókkal szeretnének hirdetni Facebookon, Instagramon és TikTokon.
               </p>
-              <p className="mt-4 leading-8 text-neutral-400">
+              <p className="mt-4 leading-8 text-neutral-300">
                 A kreatív tartalmak elkészítéséről a Photozoom csapata gondoskodik — a Blummarketing pedig a kampányok stratégiai kezeléséért, optimalizálásáért és teljesítménykövetéséért felel.
               </p>
-              <p className="mt-4 leading-8 text-neutral-400">
+              <p className="mt-4 leading-8 text-neutral-300">
                 Ideális, ha már hirdetsz Meta vagy TikTok felületen, de nincs elég friss kreatívod a növekedéshez.
               </p>
               <a href="/szolgaltatasok/havi-videos-tartalom-hirdeteskezeles/" className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-bold text-white backdrop-blur transition hover:bg-white/10">
@@ -375,7 +375,7 @@ export default function HomePage() {
               </a>
             </div>
             <div className="rounded-[2rem] border border-white/10 bg-neutral-950 p-8">
-              <p className="text-xs font-black uppercase tracking-widest text-neutral-500">Growth csomag</p>
+              <p className="text-xs font-black uppercase tracking-widest text-neutral-300">Growth csomag</p>
               <h3 className="mt-3 text-3xl font-black">Havi 10 videó + Meta és TikTok hirdetéskezelés</h3>
               <div className="mt-6 space-y-3">
                 {["Havi 10 rövid videó", "Fotós kreatívok", "TikTok Ads kezelés", "Meta Ads kezelés", "Kreatívtesztelés", "Havi riport és következő lépések"].map((item) => (
@@ -412,7 +412,7 @@ export default function HomePage() {
             <p className="text-xl font-black text-rose-300 mb-6">Nem biztos, ha…</p>
             <ul className="space-y-4">
               {noPoints.map((point) => (
-                <li key={point} className="flex gap-3 leading-7 text-neutral-400">
+                <li key={point} className="flex gap-3 leading-7 text-neutral-300">
                   <X className="mt-0.5 h-5 w-5 shrink-0 text-rose-500" aria-hidden="true" />
                   {point}
                 </li>
@@ -431,7 +431,7 @@ export default function HomePage() {
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Nézzük meg, mit mutatnak a számaid
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Ha hirdetsz, de nem látod pontosan, mi hoz ügyfelet, érdemes átnézni a rendszert. Megnézzük, mit mérsz, hol vesznek el az érdeklődők, és melyik kampányod hoz valódi eredményt.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

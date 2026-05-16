@@ -100,8 +100,8 @@ function ExampleCard({ label, weak, strong }: { label: string; weak: string; str
   return (
     <div className="my-6 grid gap-3 sm:grid-cols-2">
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-        <p className="mb-2 text-xs font-black uppercase tracking-widest text-neutral-500">Gyenge</p>
-        <p className="text-sm leading-7 text-neutral-400">{weak}</p>
+        <p className="mb-2 text-xs font-black uppercase tracking-widest text-neutral-300">Gyenge</p>
+        <p className="text-sm leading-7 text-neutral-300">{weak}</p>
       </div>
       <div className="rounded-2xl border border-rose-500/20 bg-rose-500/5 p-5">
         <p className="mb-2 text-xs font-black uppercase tracking-widest text-rose-400">Erősebb</p>
@@ -130,7 +130,7 @@ export default function KreativokEsVideosTartalom() {
         <Navbar />
 
         <div className="mx-auto max-w-4xl px-6 pb-16 pt-14 lg:px-8">
-          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition">
+          <a href="/tudastar/" className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition">
             ← Vissza a Tudástárba
           </a>
           <div className="flex flex-wrap gap-2 mb-6">
@@ -144,7 +144,7 @@ export default function KreativokEsVideosTartalom() {
           <p className="mt-6 text-xl leading-8 text-neutral-300">
             A PPC kampányok teljesítményét nem csak a célzás, a büdzsé vagy a kampánybeállítás határozza meg. Sok esetben a kreatív dönti el, hogy egy hirdetésből lesz-e kattintás, érdeklődő, vásárlás vagy ajánlatkérés.
           </p>
-          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-500">
+          <div className="mt-6 flex items-center gap-4 text-sm text-neutral-300">
             <span>Blummarketing</span>
             <span>·</span>
             <span>2025. január 1.</span>
@@ -413,7 +413,7 @@ CTA`}</CodeBlock>
           ].map((item) => (
             <div key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
               <p className="mb-1 font-black text-white">{item.title}</p>
-              <p className="text-sm leading-6 text-neutral-400">{item.desc}</p>
+              <p className="text-sm leading-6 text-neutral-300">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -466,8 +466,8 @@ CTA`}</CodeBlock>
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <p className="mb-2 text-xs font-black uppercase tracking-widest text-neutral-500">Rossz összhang</p>
-            <p className="text-sm leading-7 text-neutral-400">
+            <p className="mb-2 text-xs font-black uppercase tracking-widest text-neutral-300">Rossz összhang</p>
+            <p className="text-sm leading-7 text-neutral-300">
               A hirdetés kampányauditról szól, de a kattintás után az általános főoldalra érkezik a felhasználó. Megszakad az üzenet, romlik a konverzió.
             </p>
           </div>
@@ -491,7 +491,7 @@ CTA`}</CodeBlock>
           ].map((item) => (
             <li key={item.n} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
               <p className="mb-1 font-black text-white"><span className="text-rose-400 mr-1">{item.n}</span>{item.title}</p>
-              <p className="text-sm leading-6 text-neutral-400">{item.desc}</p>
+              <p className="text-sm leading-6 text-neutral-300">{item.desc}</p>
             </li>
           ))}
         </ul>
@@ -532,7 +532,7 @@ CTA`}</CodeBlock>
               <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
                 Szükséged van hirdetési kreatívokra, amelyek nem csak jól néznek ki, hanem teljesítenek is?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Segítünk olyan képi, videós és UGC jellegű kreatívokat készíteni, amelyek illeszkednek a kampánystratégiához, tesztelhetők, mérhetők, és valódi üzleti célokat támogatnak.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">

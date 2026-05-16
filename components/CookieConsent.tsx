@@ -113,7 +113,7 @@ export default function CookieConsent() {
           {/* Reject – text link style */}
           <p
             onClick={rejectAll}
-            className="mt-1 cursor-pointer text-center text-xs text-neutral-600 transition hover:text-neutral-400"
+            className="mt-1 cursor-pointer text-center text-xs text-neutral-300 transition hover:text-neutral-300"
           >
             Csak a szükséges sütiket fogadom el
           </p>
@@ -126,7 +126,7 @@ export default function CookieConsent() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-neutral-200">Szükséges</p>
-                <p className="text-xs text-neutral-500 mt-0.5">
+                <p className="text-xs text-neutral-300 mt-0.5">
                   Az oldal működéséhez elengedhetetlen
                 </p>
               </div>
@@ -140,7 +140,7 @@ export default function CookieConsent() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-neutral-200">Statisztikai (GA4)</p>
-                <p className="text-xs text-neutral-500 mt-0.5">
+                <p className="text-xs text-neutral-300 mt-0.5">
                   Segít megérteni hogyan használják az oldalt
                 </p>
               </div>
@@ -164,7 +164,7 @@ export default function CookieConsent() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-neutral-200">Marketing</p>
-                <p className="text-xs text-neutral-500 mt-0.5">
+                <p className="text-xs text-neutral-300 mt-0.5">
                   Facebook, TikTok hirdetések személyre szabása
                 </p>
               </div>
@@ -195,9 +195,9 @@ export default function CookieConsent() {
         )}
 
         {/* Footer link */}
-        <p className="mt-6 text-center text-xs text-neutral-600">
+        <p className="mt-6 text-center text-xs text-neutral-300">
           Az adatkezelésről bővebben:{" "}
-          <a href="/adatkezeles/" className="underline hover:text-neutral-400 transition">
+          <a href="/adatkezeles/" className="underline hover:text-neutral-300 transition">
             Adatkezelési tájékoztató
           </a>
         </p>
