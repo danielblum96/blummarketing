@@ -93,7 +93,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a href="/rolunk/" className="hover:text-white transition-colors">Rólunk</a>
+          <a href="/rolam/" className="hover:text-white transition-colors">Rólam</a>
           <a href="/#kapcsolat" className="hover:text-white transition-colors">Kapcsolat</a>
           <a href="/#kapcsolat" className="ml-2 rounded-full bg-white px-5 py-2.5 font-semibold text-neutral-950 transition hover:bg-neutral-200">
             Ajánlatkérés
@@ -180,7 +180,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <a href="/rolunk/" className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>Rólunk</a>
+              <a href="/rolam/" className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>Rólam</a>
             </li>
             <li>
               <a href="/#kapcsolat" className="block rounded-xl px-4 py-3 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>Kapcsolat</a>

@@ -1,52 +1,16 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { ogImage } from "@/lib/og";
-
 export const metadata = {
-  title: "Rólunk | Blummarketing",
-  description: "Kik vagyunk? A Blummarketing csapata és a mögöttünk álló szemlélet.",
-  openGraph: {
-    title: "Rólunk | Blummarketing",
-    description: "Kik vagyunk? A Blummarketing csapata és a mögöttünk álló szemlélet.",
-    type: "website",
-    locale: "hu_HU",
-    siteName: "Blummarketing",
-    images: ogImage,
-  },
+  title: "Átirányítás | Blummarketing",
+  robots: { index: false, follow: false },
 };
 
-export default function RolunkPage() {
+export default function RolunkRedirect() {
   return (
-    <main className="min-h-screen bg-neutral-950 text-white antialiased">
-      <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.14),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
-        <Navbar />
-        <div className="mx-auto max-w-7xl px-6 pb-16 pt-14 lg:px-8">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-300">Rólunk</p>
-          <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">Kik vagyunk?</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
-            Megismerheted a Blummarketing csapatát és azt a szemléletet, amivel a vállalkozások marketingjéhez közelítünk.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-12 text-center">
-          <p className="text-6xl mb-6">✍️</p>
-          <h2 className="text-3xl font-black mb-4">Hamarosan</h2>
-          <p className="text-lg text-neutral-400 max-w-xl mx-auto">
-            A bemutatkozó oldal hamarosan elkészül. Addig is örömmel mesélünk magunkról egy rövid egyeztetésen.
-          </p>
-          <a
-            href="/#kapcsolat"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-7 py-4 font-bold text-neutral-950 transition hover:bg-neutral-200"
-          >
-            Vegyük fel a kapcsolatot
-          </a>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
+    <html>
+      <head>
+        <meta httpEquiv="refresh" content="0;url=/rolam/" />
+        <script dangerouslySetInnerHTML={{ __html: "window.location.replace('/rolam/');" }} />
+      </head>
+      <body />
+    </html>
   );
 }
