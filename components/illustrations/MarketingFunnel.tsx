@@ -4,93 +4,90 @@ interface MarketingFunnelProps {
 
 const LEVELS = [
   {
-    num: "1",
-    label: "Elérés & ismertség",
-    sub: "Minél több ember látja a hirdetést a célcsoportból",
-    badge: "Hideg közönség",
+    step: "01",
+    label: "Elérés",
+    sublabel: "Ismertség",
+    desc: "Minél több ember látja a hirdetést a célcsoportból",
     pct: "100%",
-    alphaBase: 0.07,
-    alphaBorder: 0.22,
+    alphaBase: 0.06,
+    alphaBorder: 0.20,
   },
   {
-    num: "2",
-    label: "Érdeklődés & forgalom",
-    sub: "Kattintás, weboldal-látogatás, videómegtekintés",
-    badge: "Meleg közönség",
+    step: "02",
+    label: "Érdeklődés",
+    sublabel: "Forgalom",
+    desc: "Kattintás, weboldal-látogatás, videómegtekintés",
     pct: "20–40%",
-    alphaBase: 0.12,
-    alphaBorder: 0.32,
+    alphaBase: 0.11,
+    alphaBorder: 0.30,
   },
   {
-    num: "3",
+    step: "03",
     label: "Konverzió",
-    sub: "Lead, ajánlatkérés, vásárlás — mérhető üzleti eredmény",
-    badge: "Vásárlási szándék",
+    sublabel: "Lead · Vásárlás",
+    desc: "Ajánlatkérés, vásárlás — mérhető üzleti eredmény",
     pct: "2–15%",
-    alphaBase: 0.20,
-    alphaBorder: 0.50,
+    alphaBase: 0.19,
+    alphaBorder: 0.48,
   },
 ];
 
 export default function MarketingFunnel({ variant = "meta" }: MarketingFunnelProps) {
   const isMeta = variant === "meta";
   const [r, g, b] = isMeta ? [96, 165, 250] : [251, 113, 133];
-  const textClass = isMeta ? "text-blue-400" : "text-rose-400";
-  const textLightClass = isMeta ? "text-blue-300" : "text-rose-300";
+  const color = `rgb(${r},${g},${b})`;
+  const colorFaint = `rgba(${r},${g},${b},0.45)`;
 
   return (
     <>
-      {/* ── Desktop: horizontal 3-column ── */}
-      <div className="hidden md:flex items-stretch gap-0">
+      {/* ── Desktop: horizontal ── */}
+      <div className="hidden md:flex items-stretch gap-4">
         {LEVELS.map((level, i) => (
-          <div key={level.label} className="flex items-stretch flex-1">
+          <div key={level.label} className="flex items-center flex-1 gap-4">
             {/* Card */}
             <div
-              className="flex-1 rounded-2xl p-6 flex flex-col justify-between"
+              className="flex-1 rounded-2xl p-7 flex flex-col gap-4 h-full"
               style={{
                 background: `rgba(${r},${g},${b},${level.alphaBase})`,
                 border: `1px solid rgba(${r},${g},${b},${level.alphaBorder})`,
               }}
             >
-              {/* Top */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span
-                    className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full"
-                    style={{
-                      background: `rgba(${r},${g},${b},0.15)`,
-                      color: `rgb(${r},${g},${b})`,
-                    }}
-                  >
-                    {level.badge}
-                  </span>
-                  <span
-                    className={`text-xs font-black ${textClass} opacity-70`}
-                  >
-                    {level.pct}
-                  </span>
-                </div>
-                <p className="text-base font-black text-white leading-tight mt-1">{level.label}</p>
-                <p className="text-xs text-neutral-500 mt-2 leading-relaxed">{level.sub}</p>
-              </div>
-
-              {/* Step number bottom */}
-              <div className="mt-6">
+              {/* Step + percentage row */}
+              <div className="flex items-center justify-between">
                 <span
-                  className={`text-4xl font-black ${textClass} opacity-15`}
+                  className="text-[11px] font-black tracking-widest"
+                  style={{ color: colorFaint }}
                 >
-                  0{level.num}
+                  {level.step}
+                </span>
+                <span
+                  className="text-xs font-black px-2.5 py-1 rounded-full"
+                  style={{
+                    background: `rgba(${r},${g},${b},0.15)`,
+                    color,
+                  }}
+                >
+                  {level.pct}
                 </span>
               </div>
+
+              {/* Title */}
+              <div>
+                <p className="text-2xl font-black text-white leading-tight">{level.label}</p>
+                <p className="text-sm font-bold mt-0.5" style={{ color: colorFaint }}>{level.sublabel}</p>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-neutral-500 leading-relaxed mt-auto">{level.desc}</p>
             </div>
 
-            {/* Arrow between cards */}
+            {/* Arrow */}
             {i < LEVELS.length - 1 && (
-              <div className="flex items-center px-3 shrink-0">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <div className="shrink-0">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                   <path
-                    d="M4 10h12M10 4l6 6-6 6"
-                    stroke={`rgba(${r},${g},${b},0.4)`}
+                    d="M3 9h12M9 3l6 6-6 6"
+                    stroke={`rgba(${r},${g},${b},0.35)`}
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -103,7 +100,7 @@ export default function MarketingFunnel({ variant = "meta" }: MarketingFunnelPro
       </div>
 
       {/* ── Mobile: vertical stacked ── */}
-      <div className="flex flex-col items-center gap-1.5 md:hidden">
+      <div className="flex flex-col items-center gap-2 md:hidden">
         {LEVELS.map((level, i) => {
           const widths = ["w-full", "w-[84%]", "w-[66%]"];
           return (
@@ -116,29 +113,16 @@ export default function MarketingFunnel({ variant = "meta" }: MarketingFunnelPro
                 }}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span
-                    className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full"
-                    style={{
-                      background: `rgba(${r},${g},${b},0.15)`,
-                      color: `rgb(${r},${g},${b})`,
-                    }}
-                  >
-                    {level.badge}
-                  </span>
-                  <span className={`text-xs font-black ${textClass} opacity-70`}>{level.pct}</span>
+                  <span className="text-[10px] font-black tracking-widest" style={{ color: colorFaint }}>{level.step}</span>
+                  <span className="text-xs font-black px-2 py-0.5 rounded-full" style={{ background: `rgba(${r},${g},${b},0.15)`, color }}>{level.pct}</span>
                 </div>
-                <p className="text-sm font-black text-white leading-tight">{level.label}</p>
-                <p className="text-xs text-neutral-500 mt-1 leading-snug">{level.sub}</p>
+                <p className="text-base font-black text-white leading-tight">{level.label}</p>
+                <p className="text-xs font-bold mt-0.5" style={{ color: colorFaint }}>{level.sublabel}</p>
+                <p className="text-xs text-neutral-500 mt-2 leading-snug">{level.desc}</p>
               </div>
               {i < LEVELS.length - 1 && (
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" aria-hidden="true">
-                  <path
-                    d="M8 0v10M3 7l5 5 5-5"
-                    stroke={`rgba(${r},${g},${b},0.4)`}
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                  <path d="M8 0v10M3 7l5 5 5-5" stroke={`rgba(${r},${g},${b},0.35)`} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               )}
             </div>
