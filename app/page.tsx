@@ -3,8 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ogImage } from "@/lib/og";
 import { HeroMetrics, MobileStats } from "@/components/HeroMetrics";
-import AuditBeforeAfter from "@/components/illustrations/AuditBeforeAfter";
-import FirstMonthTimeline from "@/components/illustrations/FirstMonthTimeline";
 
 export const metadata = {
   title: "Blummarketing | Google, Meta és TikTok hirdetéskezelés",
@@ -218,9 +216,6 @@ export default function HomePage() {
             <p className="text-lg leading-8 text-neutral-300">
               Gyakran már az első átnézésnél kiderül, ha rossz konverzióra optimalizál a kampány, hibás a mérés, gyenge a céloldal, vagy túl sok pénz megy olyan hirdetésekre, amelyek nem hoznak valódi érdeklődőt.
             </p>
-            <div className="mt-8">
-              <AuditBeforeAfter />
-            </div>
           </div>
         </div>
       </section>
@@ -309,9 +304,6 @@ export default function HomePage() {
             <p className="mt-5 text-lg leading-8 text-neutral-600">
               Az első hónap célja, hogy kiderüljön, mi működik — és hol kell azonnal beavatkozni.
             </p>
-          </div>
-          <div className="mt-10 overflow-x-auto">
-            <FirstMonthTimeline />
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {firstMonthSteps.map((item) => (
