@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, Check } from "lucide-react";
 import { ogImage } from "@/lib/og";
+import IntentSpectrum from "@/components/illustrations/IntentSpectrum";
+import CampaignHierarchy from "@/components/illustrations/CampaignHierarchy";
 
 export const metadata = {
   title: "Google hirdetéskezelés | Blummarketing",
@@ -83,8 +85,16 @@ export default function GoogleHirdeteskezelesPage() {
         </div>
       </section>
 
+      {/* Intent spectrum */}
+      <section className="mx-auto max-w-7xl px-6 pt-20 pb-4 lg:px-8">
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Miért erős a Google Ads</p>
+        <h2 className="text-3xl font-black mb-3">Nem hideg közönséget ér el — aktívan kereső embereket</h2>
+        <p className="text-neutral-400 leading-7 mb-8 max-w-2xl">Meta és TikTok hirdetéseknél a platform dönti el, kinek mutatja a hirdetést. Google Ads-nél a felhasználó maga keres rád — ez az egyik legnagyobb különbség.</p>
+        <IntentSpectrum />
+      </section>
+
       {/* What's included */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Mit tartalmaz</p>
         <h2 className="text-3xl font-black mb-10">Ami benne van a kezelésben</h2>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -99,8 +109,16 @@ export default function GoogleHirdeteskezelesPage() {
         </div>
       </section>
 
+      {/* Campaign structure */}
+      <section className="mx-auto max-w-7xl px-6 pb-4 lg:px-8">
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Kampányfelépítés</p>
+        <h2 className="text-3xl font-black mb-3">Hogyan épül fel egy Google Ads fiók?</h2>
+        <p className="text-neutral-400 leading-7 mb-8 max-w-2xl">Egy rendezett fiókban minden szintnek megvan a szerepe — ez az alap ahhoz, hogy utólag is átlátható legyen, mi működik és mi nem.</p>
+        <CampaignHierarchy />
+      </section>
+
       {/* For whom */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Kiknek ajánljuk</p>
         <h2 className="text-3xl font-black mb-10">Kinek való a Google hirdetéskezelés?</h2>
         <div className="grid gap-6 md:grid-cols-3">

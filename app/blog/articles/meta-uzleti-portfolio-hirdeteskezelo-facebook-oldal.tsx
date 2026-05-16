@@ -1,6 +1,7 @@
 import { ArrowRight, Check, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MetaPortfolioHierarchy from "@/components/illustrations/MetaPortfolioHierarchy";
 
 function JsonLd() {
   const data = {
@@ -175,6 +176,9 @@ export default function MetaPortfolioArticle({ backHref = "/blog/", backLabel = 
           A Facebook-oldal adja a hirdetések nyilvános márkaidentitását.</strong>
         </Blockquote>
         <P>Ez a három fogalom nem ugyanaz, még akkor sem, ha a mindennapi beszédben sokszor összekeverjük őket.</P>
+        <div className="my-8">
+          <MetaPortfolioHierarchy />
+        </div>
 
         <HR />
 

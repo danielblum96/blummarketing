@@ -2,6 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ogImage } from "@/lib/og";
+import DataFlowDiagram from "@/components/illustrations/DataFlowDiagram";
 
 export const metadata = {
   title: "Online marketing mérés: ha rossz adatból döntesz, rossz irányba költöd a pénzt",
@@ -267,7 +268,10 @@ export default function MeresEsAnalitika() {
         <HR />
 
         <H2>Milyen eszközökből áll egy komoly mérési rendszer?</H2>
-        <P>Egy profi mérési rendszer nem egyetlen eszközből áll. Több réteg dolgozik együtt.</P>
+        <P>Egy profi mérési rendszer nem egyetlen eszközből áll. Több réteg dolgozik együtt — a látogató böngészőjétől egészen a riportig:</P>
+        <div className="my-8">
+          <DataFlowDiagram />
+        </div>
 
         <H3>Google Analytics 4</H3>
         <P>A GA4 a weboldali viselkedés és forgalmi források elemzésére szolgál. Megmutatja, honnan jönnek a látogatók, milyen oldalakat néznek, milyen események történnek, milyen csatornák hoznak konverziót, hogyan viselkednek a különböző forgalmi források.</P>

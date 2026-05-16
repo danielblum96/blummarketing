@@ -2,6 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ogImage } from "@/lib/og";
+import CampaignHierarchy from "@/components/illustrations/CampaignHierarchy";
 
 export const metadata = {
   title: "Google Ads hirdetéskezelés érthetően: mikor működik, mire jó, és mire kell figyelni?",
@@ -341,7 +342,11 @@ Ajánlatot kér`}</CodeBlock>
         <P>Ezek viszik a pénzt, de nem feltétlen hoznak ügyfelet.</P>
 
         <H4>4. Kampánystruktúra</H4>
-        <P>Egy jó Google Ads fiókban átlátható, melyik kampány milyen célt szolgál. Nem szerencsés mindent egy kampányba tenni. Jobb külön kezelni például:</P>
+        <P>Egy jó Google Ads fiókban átlátható, melyik kampány milyen célt szolgál. Az alap hierarchia minden Google Ads fiókon belül ugyanaz:</P>
+        <div className="my-8">
+          <CampaignHierarchy />
+        </div>
+        <P>Nem szerencsés mindent egy kampányba tenni. Jobb külön kezelni például:</P>
         <UL items={[
           "fő szolgáltatásokat",
           "termékkategóriákat",

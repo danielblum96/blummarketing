@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, Check, X } from "lucide-react";
 import { ogImage } from "@/lib/og";
+import MarketingFunnel from "@/components/illustrations/MarketingFunnel";
 
 export const metadata = {
   title: "Meta hirdetéskezelés | Facebook és Instagram kampányok | Blummarketing",
@@ -351,7 +352,11 @@ export default function MetaHirdeteskezelesPage() {
       <section className="bg-neutral-900 py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-rose-400 mb-2">Kampánytípusok</p>
-          <h2 className="text-3xl font-black mb-12">Milyen kampányokat kezelünk?</h2>
+          <h2 className="text-3xl font-black mb-8">Milyen kampányokat kezelünk?</h2>
+          <div className="mb-10 max-w-xs mx-auto lg:mx-0">
+            <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-3">A Meta hirdetési tölcsér</p>
+            <MarketingFunnel variant="meta" />
+          </div>
           <div className="grid gap-5 md:grid-cols-2">
             {campaignTypes.map((ct) => (
               <div key={ct.title} className="rounded-[2rem] border border-white/10 bg-neutral-950 p-7 flex flex-col gap-4">

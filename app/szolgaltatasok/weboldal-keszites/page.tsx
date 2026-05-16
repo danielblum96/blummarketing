@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, Check, X } from "lucide-react";
 import { ogImage } from "@/lib/og";
+import ProcessFlow from "@/components/illustrations/ProcessFlow";
 
 export const metadata = {
   title: "Weboldal készítés | Blummarketing",
@@ -504,7 +505,17 @@ export default function WeboldalKeszitesPage() {
       <section className="bg-white py-20 text-neutral-950">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-rose-600 mb-2">Folyamat</p>
-          <h2 className="text-4xl font-black mb-12">Hogyan készül el a weboldalad?</h2>
+          <h2 className="text-4xl font-black mb-8">Hogyan készül el a weboldalad?</h2>
+          <div className="mb-12">
+            <ProcessFlow steps={[
+              { num: "01", label: "Konzultáció" },
+              { num: "02", label: "Struktúra" },
+              { num: "03", label: "Szöveg & dizájn" },
+              { num: "04", label: "Fejlesztés" },
+              { num: "05", label: "Tesztelés" },
+              { num: "06", label: "Átadás" },
+            ]} />
+          </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((item) => (
               <div key={item.step} className="rounded-[2rem] border border-neutral-200 bg-neutral-50 p-7">
