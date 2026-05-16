@@ -61,8 +61,8 @@ export default function RolamPage() {
               </div>
             </div>
 
-            {/* Right: photo – first on mobile, right on desktop */}
-            <div className="relative mx-auto w-full max-w-sm lg:max-w-none order-first lg:order-none">
+            {/* Right: photo */}
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-rose-500/10 via-transparent to-blue-500/10 blur-2xl" aria-hidden="true" />
               <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
                 <img
