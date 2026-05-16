@@ -63,7 +63,7 @@ function CardRoas() {
         <LiveDot />
       </div>
       <div className="flex items-end gap-2">
-        <span className="text-4xl font-black text-white leading-none">4.1×</span>
+        <span className="text-4xl font-black text-white leading-none">9×</span>
         <span className="mb-0.5 text-xs font-bold uppercase tracking-widest text-neutral-500">
           ROAS
         </span>
@@ -125,7 +125,7 @@ function MobileStats() {
   return (
     <div className="mt-10 grid grid-cols-3 gap-3 lg:hidden">
       {[
-        { label: "ROAS", value: "4.1×", trend: "↑ +23%", dot: "bg-blue-500" },
+        { label: "ROAS", value: "9×", trend: "↑ +23%", dot: "bg-blue-500" },
         { label: "CTR", value: "5.2%", trend: "↑ +0.8pp", dot: "bg-amber-400" },
         { label: "CPL", value: "−18%", trend: "↓ csökkent", dot: "bg-rose-400" },
       ].map(({ label, value, trend, dot }) => (
