@@ -2,6 +2,7 @@ import { ArrowRight, Check, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ogImage } from "@/lib/og";
+import { HeroMetrics, MobileStats } from "@/components/HeroMetrics";
 
 export const metadata = {
   title: "Blummarketing | Google, Meta és TikTok hirdetéskezelés",
@@ -158,25 +159,32 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.28),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.24),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]" />
         <Navbar />
         <div className="mx-auto max-w-7xl px-6 pb-24 pt-16 lg:px-8 lg:pb-32 lg:pt-24">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl leading-[1.08]">
-              Ne költs többet hirdetésre, amíg nem látod, mi térül meg
-            </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              Google, Meta és TikTok kampányokat kezelünk vállalkozásoknak, akik nem csak kattintásokat akarnak látni, hanem érdeklődőket, vásárlásokat és ajánlatkéréseket.
-            </p>
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-neutral-400">
-              Rendet teszünk a mérésben, teszteljük a kreatívokat, és megmutatjuk, melyik kampányod hoz valódi eredményt.
-            </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/#kapcsolat" className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:scale-[1.02] hover:bg-neutral-200">
-                Kérek egy kampányauditot
-                <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" aria-hidden="true" />
-              </a>
-              <a href="/szolgaltatasok/" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10">
-                Megnézem, hogyan dolgozunk
-              </a>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+            {/* Bal oszlop – szöveg */}
+            <div>
+              <h1 className="text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-6xl leading-[1.08]">
+                Ne költs többet hirdetésre, amíg nem látod, mi térül meg
+              </h1>
+              <p className="mt-7 text-lg leading-8 text-neutral-300 sm:text-xl">
+                Google, Meta és TikTok kampányokat kezelünk vállalkozásoknak, akik nem csak kattintásokat akarnak látni, hanem érdeklődőket, vásárlásokat és ajánlatkéréseket.
+              </p>
+              <p className="mt-4 text-lg leading-8 text-neutral-400">
+                Rendet teszünk a mérésben, teszteljük a kreatívokat, és megmutatjuk, melyik kampányod hoz valódi eredményt.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a href="/#kapcsolat" className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-bold text-neutral-950 shadow-2xl transition hover:scale-[1.02] hover:bg-neutral-200">
+                  Kérek egy kampányauditot
+                  <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" aria-hidden="true" />
+                </a>
+                <a href="/szolgaltatasok/" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10">
+                  Megnézem, hogyan dolgozunk
+                </a>
+              </div>
+              {/* Mobilon megjelenő stat strip */}
+              <MobileStats />
             </div>
+            {/* Jobb oszlop – lebegő metrika kártyák (csak desktop) */}
+            <HeroMetrics />
           </div>
         </div>
       </section>
