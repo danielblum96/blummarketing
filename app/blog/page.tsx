@@ -12,6 +12,7 @@ export const metadata = {
 };
 
 const tagMap: Record<string, string[]> = {
+  "google-search-ai-korszak-online-marketing": ["Google", "SEO", "AI", "Google Ads"],
   "meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal": ["Meta", "Hirdetéskezelő", "Facebook"],
 };
 
