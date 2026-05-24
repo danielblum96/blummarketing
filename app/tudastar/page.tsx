@@ -46,6 +46,14 @@ const categories: Category[] = [
         date: "2025. január 1.",
         readTime: "18 perc",
       },
+      {
+        href: "/tudastar/google-search-ai-korszak-online-marketing/",
+        title: "A Google Search AI-korszaka elkezdődött – és ez mindent átír az online marketingben",
+        description: "A Google keresője döntési motorrá válik. Mi változik SEO-ban, Google Ads-ben és tartalomstratégiában – és mit kell most tenned vállalkozóként.",
+        tags: ["Google", "SEO", "AI", "Google Ads"],
+        date: "2026. május 24.",
+        readTime: "12 perc",
+      },
     ],
   },
   {

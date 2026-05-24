@@ -2,12 +2,10 @@ import { blogPosts } from '@/app/blog/posts'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import MetaPortfolioArticle from '@/app/blog/articles/meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal'
-import GoogleAIKorszakArticle from '@/app/blog/articles/google-search-ai-korszak-online-marketing'
 
 type ArticleComponent = React.ComponentType<{ backHref?: string; backLabel?: string }>
 
 const articleComponents: Record<string, ArticleComponent> = {
-  'google-search-ai-korszak-online-marketing': GoogleAIKorszakArticle,
   'meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal': MetaPortfolioArticle,
 }
 
