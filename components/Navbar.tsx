@@ -15,18 +15,43 @@ const szolgaltatasok = {
   ],
 };
 
+type NavArticle = { href: string; label: string };
+type NavSection = { sectionLabel: string; articles: NavArticle[] };
+
 const tudastar = {
   label: "Tudástár",
   href: "/tudastar/",
-  sectionLabel: "PPC cikkek",
-  children: [
-    { href: "/tudastar/google-ads/", label: "Google Ads" },
-    { href: "/tudastar/meta-hirdetesek/", label: "Meta hirdetések" },
-    { href: "/tudastar/tiktok-hirdetesek/", label: "TikTok hirdetések" },
-    { href: "/tudastar/meres-es-analitika/", label: "Mérés és analitika" },
-    { href: "/tudastar/kreativok-es-videos-tartalom/", label: "Kreatívok és videós tartalom" },
-    { href: "/tudastar/fogalomtar/", label: "Fogalomtár" },
-  ],
+  sections: [
+    {
+      sectionLabel: "Google Ads",
+      articles: [
+        { href: "/tudastar/google-ads/", label: "Google Ads hirdetéskezelés érthetően" },
+        { href: "/tudastar/google-search-ai-korszak-online-marketing/", label: "A Google Search AI-korszaka" },
+      ],
+    },
+    {
+      sectionLabel: "Meta hirdetések",
+      articles: [
+        { href: "/tudastar/meta-hirdetesek/", label: "Meta hirdetések érthetően" },
+        { href: "/tudastar/meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal/", label: "Meta üzleti portfólió: mi micsoda?" },
+      ],
+    },
+    {
+      sectionLabel: "TikTok hirdetések",
+      articles: [
+        { href: "/tudastar/tiktok-hirdetesek/", label: "TikTok hirdetések érthetően" },
+        { href: "/tudastar/tiktok-hirdetesek-beallitasa/", label: "TikTok hirdetések beállítása" },
+      ],
+    },
+    {
+      sectionLabel: "Egyéb",
+      articles: [
+        { href: "/tudastar/meres-es-analitika/", label: "Mérés és analitika" },
+        { href: "/tudastar/kreativok-es-videos-tartalom/", label: "Kreatívok és videós tartalom" },
+        { href: "/tudastar/fogalomtar/", label: "Fogalomtár" },
+      ],
+    },
+  ] as NavSection[],
 };
 
 export default function Navbar() {
@@ -77,19 +102,30 @@ export default function Navbar() {
               Tudástár
               <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" aria-hidden="true" />
             </a>
-            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 rounded-2xl border border-white/10 bg-neutral-900 p-3 shadow-2xl">
-              <p className="mb-2 px-3 text-xs font-black uppercase tracking-widest text-neutral-300">
-                {tudastar.sectionLabel}
-              </p>
-              {tudastar.children.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
-                >
-                  {item.label}
+            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 rounded-2xl border border-white/10 bg-neutral-900 p-4 shadow-2xl">
+              <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+                {tudastar.sections.map((section) => (
+                  <div key={section.sectionLabel} className="mb-2">
+                    <p className="mb-1 px-2 text-[10px] font-black uppercase tracking-[0.15em] text-rose-400">
+                      {section.sectionLabel}
+                    </p>
+                    {section.articles.map((article) => (
+                      <a
+                        key={article.href}
+                        href={article.href}
+                        className="block rounded-xl px-2 py-1.5 text-xs font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white leading-snug"
+                      >
+                        {article.label}
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-2 border-t border-white/10 pt-2">
+                <a href="/tudastar/" className="block rounded-xl px-2 py-1.5 text-xs font-semibold text-neutral-400 transition hover:bg-white/10 hover:text-white">
+                  → Összes cikk
                 </a>
-              ))}
+              </div>
             </div>
           </div>
 
@@ -161,20 +197,29 @@ export default function Navbar() {
               </button>
               {mobileTudasOpen && (
                 <ul className="mt-1 ml-4 flex flex-col gap-1 border-l border-white/10 pl-4">
-                  <li>
-                    <p className="px-2 py-1 text-xs font-black uppercase tracking-widest text-neutral-300">{tudastar.sectionLabel}</p>
-                  </li>
-                  {tudastar.children.map((item) => (
-                    <li key={item.href}>
-                      <a
-                        href={item.href}
-                        className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
-                        onClick={closeAll}
-                      >
-                        {item.label}
-                      </a>
+                  {tudastar.sections.map((section) => (
+                    <li key={section.sectionLabel}>
+                      <p className="px-2 pt-2 pb-0.5 text-[10px] font-black uppercase tracking-[0.15em] text-rose-400">{section.sectionLabel}</p>
+                      <ul className="flex flex-col gap-0.5">
+                        {section.articles.map((article) => (
+                          <li key={article.href}>
+                            <a
+                              href={article.href}
+                              className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-300 transition hover:bg-white/10 hover:text-white"
+                              onClick={closeAll}
+                            >
+                              {article.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
                   ))}
+                  <li>
+                    <a href="/tudastar/" className="block rounded-xl px-3 py-2 text-sm font-semibold text-neutral-400 transition hover:bg-white/10 hover:text-white" onClick={closeAll}>
+                      → Összes cikk
+                    </a>
+                  </li>
                 </ul>
               )}
             </li>
