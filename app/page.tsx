@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ogImage } from "@/lib/og";
 import { HeroMetrics, MobileStats } from "@/components/HeroMetrics";
+import AjanlatkeresForm from "@/components/AjanlatkeresForm";
 
 export const metadata = {
   title: "Blummarketing | Google, Meta és TikTok hirdetéskezelés",
@@ -431,24 +432,10 @@ export default function HomePage() {
               <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
                 Nézzük meg, mit mutatnak a számaid
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-700">
+              <p className="mt-5 mb-8 text-lg leading-8 text-neutral-700">
                 Ha hirdetsz, de nem látod pontosan, mi hoz ügyfelet, érdemes átnézni a rendszert. Megnézzük, mit mérsz, hol vesznek el az érdeklődők, és melyik kampányod hoz valódi eredményt.
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="mailto:hello@blummarketing.hu?subject=Kamp%C3%A1nyaudit%20-%20Blummarketing"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-7 py-4 font-bold text-white transition hover:bg-neutral-800"
-                >
-                  Kérek egy kampányauditot
-                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                </a>
-                <a
-                  href="mailto:hello@blummarketing.hu"
-                  className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-7 py-4 font-bold transition hover:bg-neutral-100"
-                >
-                  Írok nektek
-                </a>
-              </div>
+              <AjanlatkeresForm />
             </div>
             <div className="bg-neutral-950 p-8 text-white sm:p-12 lg:p-16">
               <h3 className="text-2xl font-black">Kérj kampányauditot, és nézzük meg:</h3>
