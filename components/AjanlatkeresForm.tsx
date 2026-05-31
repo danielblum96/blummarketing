@@ -26,7 +26,7 @@ export default function AjanlatkeresForm() {
     setStatus('loading')
     setErrorMsg('')
     try {
-      const res = await fetch('/api/ajanlatkeres', {
+      const res = await fetch('/api/ajanlatkeres/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
