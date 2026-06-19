@@ -4,7 +4,7 @@ import WebpConverter from "@/components/WebpConverter";
 import { ogImage } from "@/lib/og";
 
 export const metadata = {
-  title: "PNG/JPG → WebP konvertáló | Blummarketing",
+  title: "PNG/JPG → WebP konvertáló",
   description: "Ingyenes online eszköz PNG és JPG képek WebP formátumra konvertálásához. A konvertálás teljesen a böngészőben történik, semmi nem kerül feltöltésre.",
   openGraph: {
     title: "PNG/JPG → WebP konvertáló | Blummarketing",
