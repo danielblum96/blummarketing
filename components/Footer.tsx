@@ -6,6 +6,7 @@ export default function Footer() {
       <p>© {new Date().getFullYear()} Blummarketing. Minden jog fenntartva.</p>
       <div className="flex items-center gap-4">
         <p>Havidíjas tartalomgyártás és hirdetéskezelés TikTokra és Metára.</p>
+        <a href="/webp/" className="text-neutral-400 underline hover:text-white transition">Ingyenes WebP konvertáló</a>
         <CookieSettingsLink />
       </div>
     </footer>

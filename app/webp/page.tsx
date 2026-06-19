@@ -34,6 +34,18 @@ const faqs = [
     q: "Can I control the output quality?",
     a: "Yes. Use the quality slider (1–100%) to balance file size against visual quality. 75–85% is a good default for most websites.",
   },
+  {
+    q: "Can I convert multiple images at once (batch conversion)?",
+    a: "Yes. Drop or select as many PNG/JPG files as you like and each one will be converted and downloaded automatically as a separate .webp file.",
+  },
+  {
+    q: "Does this work on mobile devices?",
+    a: "Yes. The converter runs in any modern mobile browser. You can select images from your phone's gallery and download the WebP files directly.",
+  },
+  {
+    q: "Will converting to WebP reduce image quality?",
+    a: "At quality settings of 75% or higher, the visual difference is usually unnoticeable, while the file size drops significantly. You can always increase the quality slider for near-lossless results.",
+  },
 ];
 
 function JsonLd() {
@@ -144,6 +156,38 @@ export default function WebpPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* Comparison table */}
+      <section className="mx-auto max-w-3xl px-6 py-10 lg:px-8">
+        <h2 className="text-2xl font-black mb-6">WebP vs PNG vs JPG</h2>
+        <div className="overflow-x-auto rounded-2xl border border-white/10">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-white/10 bg-white/[0.06]">
+                <th className="px-5 py-3 text-left font-black text-neutral-200">Feature</th>
+                <th className="px-5 py-3 text-left font-black text-neutral-200">WebP</th>
+                <th className="px-5 py-3 text-left font-black text-neutral-200">PNG</th>
+                <th className="px-5 py-3 text-left font-black text-neutral-200">JPG</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Typical file size", "Smallest", "Largest", "Medium"],
+                ["Transparency support", "Yes", "Yes", "No"],
+                ["Lossless option", "Yes", "Yes", "No"],
+                ["Best for", "Websites, apps", "Logos, graphics", "Photos"],
+                ["Browser support", "All modern browsers", "Universal", "Universal"],
+              ].map((row, i) => (
+                <tr key={i} className="border-b border-white/5 last:border-0 odd:bg-white/[0.02]">
+                  {row.map((cell, j) => (
+                    <td key={j} className={`px-5 py-3 leading-6 ${j === 0 ? "font-semibold text-neutral-200" : "text-neutral-400"}`}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       {/* FAQ */}
