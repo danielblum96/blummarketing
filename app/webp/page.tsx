@@ -190,6 +190,25 @@ export default function WebpPage() {
         </div>
       </section>
 
+      {/* Related tool */}
+      <section className="mx-auto max-w-3xl px-6 py-10 lg:px-8">
+        <a
+          href="/img-compress/"
+          className="group flex flex-col gap-4 rounded-2xl border border-rose-500/20 bg-rose-500/[0.06] p-6 sm:flex-row sm:items-center sm:justify-between transition hover:bg-rose-500/[0.1]"
+        >
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.15em] text-rose-400 mb-2">Related tool</p>
+            <p className="font-black text-white text-lg mb-1">Is your WebP file still too large?</p>
+            <p className="text-sm text-neutral-400">
+              File size depends on pixel dimensions, not just format. Try our free Image Compressor &amp; Resizer to shrink huge photos first.
+            </p>
+          </div>
+          <span className="shrink-0 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-neutral-950 transition group-hover:bg-neutral-200">
+            Open Image Compressor →
+          </span>
+        </a>
+      </section>
+
       {/* FAQ */}
       <section className="mx-auto max-w-3xl px-6 py-10 lg:px-8">
         <h2 className="text-2xl font-black mb-6">Frequently asked questions</h2>
