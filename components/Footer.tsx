@@ -7,6 +7,7 @@ export default function Footer() {
       <div className="flex items-center gap-4">
         <p>Havidíjas tartalomgyártás és hirdetéskezelés TikTokra és Metára.</p>
         <a href="/webp/" className="text-neutral-400 underline hover:text-white transition">Ingyenes WebP konvertáló</a>
+        <a href="/img-compress/" className="text-neutral-400 underline hover:text-white transition">Kép tömörítő</a>
         <CookieSettingsLink />
       </div>
     </footer>

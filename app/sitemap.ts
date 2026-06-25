@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tudastar/kreativok-es-videos-tartalom/', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/tudastar/fogalomtar/', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/webp/', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/img-compress/', changeFrequency: 'weekly', priority: 0.9 },
     { path: '/adatkezeles/', changeFrequency: 'yearly', priority: 0.3 },
   ]
 

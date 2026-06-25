@@ -206,6 +206,8 @@ export default function WebpPage() {
       <footer className="mx-auto max-w-3xl px-6 pb-12 pt-4 text-center lg:px-8">
         <p className="text-xs text-neutral-600">
           A free tool by <a href="https://blummarketing.hu" className="underline hover:text-neutral-400">Blummarketing</a>
+          {" · "}
+          <a href="/img-compress/" className="underline hover:text-neutral-400">Try our Image Compressor</a>
         </p>
       </footer>
     </main>
