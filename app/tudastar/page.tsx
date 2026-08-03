@@ -85,6 +85,20 @@ const categories: Category[] = [
     ],
   },
   {
+    label: "Helyi SEO",
+    description: "Google Cégem (Business Profile), helyi keresés, Local Pack, vélemények.",
+    articles: [
+      {
+        href: "/tudastar/google-cegem-beallitasa/",
+        title: "Google Cégem beállítása: teljes útmutató vállalkozásoknak",
+        description: "Mi az a Google Cégem, miért érdemes létrehozni, mit kell beállítani. Verificálás, képek, vélemények, posztok, Q&A – lépésről lépésre.",
+        tags: ["Helyi SEO", "Google", "Ingyenes"],
+        date: "2026. július 15.",
+        readTime: "22 perc",
+      },
+    ],
+  },
+  {
     label: "Mérés és analitika",
     description: "GA4, GTM, konverziókövetés, attribúció, riportálás.",
     articles: [

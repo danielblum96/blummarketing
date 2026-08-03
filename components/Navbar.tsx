@@ -44,6 +44,12 @@ const tudastar = {
       ],
     },
     {
+      sectionLabel: "Helyi SEO",
+      articles: [
+        { href: "/tudastar/google-cegem-beallitasa/", label: "Google Cégem beállítása" },
+      ],
+    },
+    {
       sectionLabel: "Egyéb",
       articles: [
         { href: "/tudastar/meres-es-analitika/", label: "Mérés és analitika" },

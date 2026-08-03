@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tudastar/meta-uzleti-portfolio-hirdeteskezelo-facebook-oldal/', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/tudastar/tiktok-hirdetesek/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/tudastar/tiktok-hirdetesek-beallitasa/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/tudastar/google-cegem-beallitasa/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/tudastar/meres-es-analitika/', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/tudastar/kreativok-es-videos-tartalom/', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/tudastar/fogalomtar/', changeFrequency: 'monthly', priority: 0.6 },
