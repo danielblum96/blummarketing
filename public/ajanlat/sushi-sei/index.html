@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi Sei – Ajánlat</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:      #F7F5F2;
+      --bg-2:    #EDEAE5;
+      --text:    #191716;
+      --muted:   #3A3632;
+      --faint:   #9A9590;
+      --accent:  #B31B34;
+      --div:     #DDD9D3;
+      --card:    #E8E5DF;
+      --num:     #D9D4CE;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:    #131110;
+        --bg-2:  #1C1A18;
+        --text:  #F0ECE7;
+        --muted: #9A9590;
+        --faint: #65615C;
+        --accent:#D42840;
+        --div:   #2A2723;
+        --card:  #1C1A18;
+        --num:   #2A2723;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LOCK SCREEN ── */
+    #lock {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    #lock.hidden { display: none; }
+
+    .lock-box {
+      width: 100%;
+      max-width: 360px;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .lock-brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 40px;
+    }
+    .lock-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.15;
+    }
+    .lock-sub {
+      font-size: 13px;
+      color: var(--faint);
+      margin-bottom: 40px;
+    }
+    .lock-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    .lock-input {
+      width: 100%;
+      padding: 13px 16px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--bg-2);
+      border: 1px solid var(--div);
+      border-radius: 0;
+      outline: none;
+      margin-bottom: 12px;
+      transition: border-color 0.15s;
+      -webkit-appearance: none;
+    }
+    .lock-input:focus { border-color: var(--accent); }
+    .lock-input.error { border-color: var(--accent); animation: shake 0.3s ease; }
+    .lock-btn {
+      width: 100%;
+      padding: 13px 16px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .lock-btn:hover { opacity: 0.88; }
+    .lock-err {
+      font-size: 12px;
+      color: var(--accent);
+      margin-top: 12px;
+      min-height: 18px;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%       { transform: translateX(-6px); }
+      60%       { transform: translateX(6px); }
+    }
+
+    /* ── MAIN CONTENT ── */
+    #content { display: none; }
+    #content.visible { display: block; }
+
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 72px 48px 120px;
+    }
+
+    /* ── HEADER ── */
+    .doc-header {
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--div);
+      margin-bottom: 56px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 36px;
+    }
+    .brand-mark {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .doc-date { font-size: 12px; color: var(--faint); }
+    .doc-eyebrow {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .doc-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(32px, 5.5vw, 48px);
+      font-weight: 500;
+      line-height: 1.12;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .doc-subtitle { font-size: 13px; color: var(--faint); font-weight: 400; letter-spacing: 0.02em; }
+
+    /* ── INTRO ── */
+    .intro { margin-bottom: 64px; }
+    .intro p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 22px;
+      max-width: 640px;
+    }
+    .intro p:last-child { margin-bottom: 0; color: var(--text); font-weight: 500; }
+
+    /* ── PACKAGE BLOCK ── */
+    .pkg { margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--div); }
+    .pkg:last-of-type { border-bottom: none; }
+
+    .pkg-header { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 40px; }
+    .pkg-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 0.85;
+      color: var(--num);
+      flex-shrink: 0;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+      user-select: none;
+    }
+    .pkg-head-right { flex: 1; }
+    .pkg-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .pkg-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+    .pkg-price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px; }
+    .price {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(38px, 6vw, 52px);
+      font-weight: 600;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.01em;
+    }
+    .price-unit { font-size: 14px; color: var(--muted); }
+    .pkg-summary { font-size: 12.5px; color: var(--faint); margin-top: 8px; }
+    .pkg-recommend {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 3px 10px;
+      margin-top: 12px;
+    }
+
+    .pkg-desc { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 28px; max-width: 600px; }
+
+    /* Feature list */
+    .feature-section { margin-bottom: 36px; }
+    .feature-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--div);
+    }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .feature-list li { display: flex; gap: 14px; font-size: 15px; color: var(--muted); line-height: 1.6; align-items: baseline; }
+    .feature-list li::before { content: '—'; color: var(--faint); flex-shrink: 0; font-size: 12px; }
+
+    /* Content direction cards */
+    .directions { margin-bottom: 36px; }
+    .dir-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--div);
+    }
+    .dir-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .dir-card { background: var(--bg-2); padding: 18px 20px; }
+    .dir-card-title { font-size: 14.5px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+    .dir-card-desc { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+
+    .goal-note {
+      margin-top: 18px;
+      font-size: 15px;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.75;
+      padding-left: 18px;
+      border-left: 2px solid var(--div);
+    }
+
+    /* References */
+    .ref-section { margin-bottom: 0; }
+    .ref-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--div);
+    }
+    .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .ref-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      background: var(--bg-2);
+      padding: 13px 16px;
+      transition: background 0.15s, border-color 0.15s;
+      border-left: 2px solid transparent;
+    }
+    .ref-card:hover { background: var(--card); border-left-color: var(--accent); }
+    .ref-card-name { font-size: 12.5px; font-weight: 500; color: var(--text); line-height: 1.35; }
+    .ref-card-sub { font-size: 11px; color: var(--faint); margin-top: 2px; }
+    .ref-arrow { font-size: 12px; color: var(--accent); flex-shrink: 0; margin-left: 12px; opacity: 0; transition: opacity 0.15s; }
+    .ref-card:hover .ref-arrow { opacity: 1; }
+
+    /* TikTok ref */
+    .tiktok-ref { margin-bottom: 16px; }
+    .tiktok-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      background: var(--bg-2);
+      padding: 13px 18px;
+      border-left: 2px solid transparent;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .tiktok-card:hover { background: var(--card); border-left-color: var(--accent); }
+    .tiktok-name { font-size: 12.5px; font-weight: 500; color: var(--text); }
+    .tiktok-handle { font-size: 11px; color: var(--faint); margin-top: 2px; }
+    .tiktok-arrow { font-size: 12px; color: var(--accent); opacity: 0; transition: opacity 0.15s; }
+    .tiktok-card:hover .tiktok-arrow { opacity: 1; }
+
+    .collab-note { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+    .recommend-when {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      padding: 18px 22px;
+      background: var(--bg-2);
+      border-left: 2px solid var(--div);
+      font-style: italic;
+    }
+
+    /* ── META SECTION ── */
+    .meta-section { margin-bottom: 72px; padding-top: 64px; border-top: 1px solid var(--div); }
+    .section-eyebrow {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 16px;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .section-body { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 32px; max-width: 600px; }
+
+    .meta-service-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--div);
+    }
+    .meta-service-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; margin-bottom: 40px; }
+    .meta-service-list li { display: flex; gap: 12px; font-size: 15px; color: var(--muted); line-height: 1.6; align-items: baseline; }
+    .meta-service-list li::before { content: '—'; color: var(--faint); flex-shrink: 0; font-size: 11px; }
+
+    .wp-note { background: var(--bg-2); padding: 20px 24px; margin-bottom: 36px; }
+    .wp-note-title { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+    .wp-note-body { font-size: 15px; color: var(--muted); line-height: 1.8; }
+
+    .data-loop { margin-bottom: 0; }
+    .data-loop-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .data-loop-intro { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 18px; }
+    .data-list { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 24px; }
+    .data-list li { display: flex; gap: 14px; font-size: 15px; color: var(--muted); line-height: 1.6; align-items: baseline; }
+    .data-list li::before { content: '—'; color: var(--faint); flex-shrink: 0; font-size: 12px; }
+    .data-loop-close { font-size: 16px; color: var(--muted); line-height: 1.85; }
+    .data-loop-close strong { color: var(--text); font-weight: 500; }
+
+    /* ── COMPARISON ── */
+    .comparison { margin-bottom: 72px; padding-top: 64px; border-top: 1px solid var(--div); }
+    .comparison-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+    .compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .compare-card { background: var(--bg-2); padding: 24px 22px; display: flex; flex-direction: column; gap: 14px; }
+    .compare-card.is-rec { background: var(--card); border-top: 2px solid var(--accent); padding-top: 22px; }
+    .cc-label { font-size: 9.5px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
+    .cc-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 500; line-height: 1.2; color: var(--text); }
+    .cc-price { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 600; font-style: italic; color: var(--text); line-height: 1; font-variant-numeric: tabular-nums; }
+    .cc-unit { font-size: 11.5px; color: var(--faint); margin-top: 3px; }
+    .cc-desc { font-size: 13.5px; color: var(--muted); line-height: 1.65; flex: 1; }
+    .cc-badge { display: inline-block; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 2px 8px; align-self: flex-start; }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 64px; padding: 32px 36px; background: var(--bg-2); border-left: 3px solid var(--div); }
+    .faq-question { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 500; color: var(--text); margin-bottom: 16px; line-height: 1.25; }
+    .faq-body { font-size: 15px; color: var(--muted); line-height: 1.85; }
+    .faq-body p { margin-bottom: 16px; }
+    .faq-body p:last-child { margin-bottom: 0; }
+
+    /* ── CTA ── */
+    .cta-section { margin-bottom: 56px; }
+    .cta-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(26px, 4vw, 36px); font-weight: 500; line-height: 1.18; color: var(--text); margin-bottom: 20px; }
+    .cta-body { font-size: 16px; color: var(--muted); line-height: 1.85; max-width: 580px; margin-bottom: 32px; }
+    .contact-rows { display: flex; flex-direction: column; gap: 10px; }
+    .contact-row { display: flex; align-items: baseline; gap: 16px; }
+    .c-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); width: 54px; flex-shrink: 0; }
+    .c-val { font-size: 15px; color: var(--text); }
+
+    /* ── DISCLAIMER / FOOTER ── */
+    .disclaimer { padding-top: 32px; border-top: 1px solid var(--div); font-size: 11.5px; color: var(--faint); line-height: 1.65; }
+    .doc-footer { margin-top: 24px; display: flex; justify-content: space-between; font-size: 11px; color: var(--faint); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      .page { padding: 44px 22px 80px; }
+      .header-top { flex-direction: column; gap: 12px; }
+      .pkg-header { flex-direction: column; gap: 12px; }
+      .pkg-num { font-size: 44px; }
+      .dir-grid { grid-template-columns: 1fr; }
+      .ref-grid { grid-template-columns: 1fr; }
+      .meta-service-list { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .faq-section { padding: 24px 20px; }
+      .doc-footer { flex-direction: column; gap: 4px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- LOCK SCREEN -->
+  <div id="lock">
+    <div class="lock-box">
+      <div class="lock-brand">Blummarketing</div>
+      <div class="lock-title">Sushi Sei</div>
+      <div class="lock-sub">Együttműködési ajánlat</div>
+      <label class="lock-label" for="pw">Hozzáférési kód</label>
+      <input id="pw" class="lock-input" type="password" placeholder="••••••••••••" autocomplete="off" autocapitalize="off">
+      <button class="lock-btn" onclick="unlock()">Megnyitás</button>
+      <div class="lock-err" id="err"></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="content">
+  <div class="page">
+
+    <header class="doc-header">
+      <div class="header-top">
+        <div class="brand-mark">Blummarketing</div>
+        <div class="doc-date">2026. szeptember 10.</div>
+      </div>
+      <div class="doc-eyebrow">Személyre szabott együttműködési ajánlat</div>
+      <h1 class="doc-title">Sushi Sei</h1>
+      <div class="doc-subtitle">Videótartalom-gyártás és Meta hirdetéskezelés</div>
+    </header>
+
+    <section class="intro">
+      <p>A beszélgetésünk alapján a Sushi Sei esetében nem a minél nagyobb videómennyiség a cél, hanem havi 4 olyan tartalom, amely vizuálisan is képviseli az étterem színvonalát, és hirdetésként is jól használható.</p>
+      <p>Az autentikus japán konyha, a prémium éttermi környezet és az Európa-bajnok séf önmagában is erős megkülönböztető érték.</p>
+      <p>A videós kommunikáció feladata, hogy ezt már az első néhány másodpercben érzékelhetővé tegye.</p>
+      <p>Erre három együttműködési lehetőséget állítottam össze.</p>
+    </section>
+
+    <!-- 01 PRÉMIUM -->
+    <section class="pkg">
+      <div class="pkg-header">
+        <div class="pkg-num">01</div>
+        <div class="pkg-head-right">
+          <div class="pkg-label">Prémium</div>
+          <h2 class="pkg-name">Prémium videótartalom + Meta hirdetéskezelés</h2>
+          <div class="pkg-price-row">
+            <span class="price">410 000</span>
+            <span class="price-unit">Ft / hó</span>
+          </div>
+          <div class="pkg-summary">4 prémium videó havonta + teljes Meta hirdetéskezelés</div>
+          <div class="pkg-recommend">A megbeszéltek alapján ezt javaslom.</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <p class="pkg-desc">A videógyártást a WOW Content Production csapata végzi.</p>
+        <p class="pkg-desc">Ez az irány akkor ideális, ha a Sushi Sei prémium pozicionálását a videós kommunikációban is egyértelműen meg szeretnétek jeleníteni.</p>
+        <p class="pkg-desc">A hangsúly a filmesebb képi világon, az imázsépítésen, az éttermi atmoszféra átadásán és a részletek magas minőségű bemutatásán van.</p>
+        <div class="feature-section">
+          <div class="feature-label">A havi videógyártás tartalma</div>
+          <ul class="feature-list">
+            <li>1 tömbösített forgatási nap havonta</li>
+            <li>2 fős stáb: operatőr + gyártásvezető</li>
+            <li>4 db kész, vágott, imázs jellegű videó</li>
+            <li>4K felbontású nyersanyag</li>
+            <li>professzionális színkorrekció</li>
+            <li>licencelt zene</li>
+            <li>hirdetésekhez optimalizált formátumok</li>
+            <li>5 munkanapos átadási idő</li>
+            <li>felhőalapú anyagátadás</li>
+            <li>videónként 1 módosítási kör</li>
+          </ul>
+        </div>
+        <div class="directions">
+          <div class="dir-label">Javasolt tartalmi irányok</div>
+          <div class="dir-grid">
+            <div class="dir-card">
+              <div class="dir-card-title">Európa-bajnok séf</div>
+              <div class="dir-card-desc">A szakmai tudás, a precizitás és az ember a fogások mögött.</div>
+            </div>
+            <div class="dir-card">
+              <div class="dir-card-title">Signature fogások</div>
+              <div class="dir-card-desc">A Sushi Sei különleges ételeinek látványos, részletgazdag bemutatása.</div>
+            </div>
+            <div class="dir-card">
+              <div class="dir-card-title">Az elkészítés</div>
+              <div class="dir-card-desc">Technikák, mozdulatok, alapanyagok és olyan részletek, amelyeket a vendég általában nem lát.</div>
+            </div>
+            <div class="dir-card">
+              <div class="dir-card-title">Az éttermi élmény</div>
+              <div class="dir-card-desc">Enteriőr, tálalás, felszolgálás és atmoszféra.</div>
+            </div>
+          </div>
+          <p class="goal-note">A cél nem egyszerűen az ételek bemutatása, hanem annak érzékeltetése, mitől különleges a Sushi Sei, és miért érdemes ezt az éttermet választani.</p>
+        </div>
+        <div class="ref-section">
+          <div class="ref-label">Referenciák</div>
+          <div class="ref-grid">
+            <a class="ref-card" href="https://www.youtube.com/watch?v=An62kH91R4I" target="_blank" rel="noopener">
+              <div><div class="ref-card-name">Bárdi Autó Zrt.</div><div class="ref-card-sub">Hungexpo</div></div>
+              <span class="ref-arrow">↗</span>
+            </a>
+            <a class="ref-card" href="https://www.youtube.com/watch?v=n-GJXniOXbY&t=53s" target="_blank" rel="noopener">
+              <div><div class="ref-card-name">Balatonfüredi Kongresszusi Központ</div></div>
+              <span class="ref-arrow">↗</span>
+            </a>
+            <a class="ref-card" href="https://www.youtube.com/watch?v=CqVMBQfskHY&t=3s" target="_blank" rel="noopener">
+              <div><div class="ref-card-name">Anantara New York Palace</div></div>
+              <span class="ref-arrow">↗</span>
+            </a>
+            <a class="ref-card" href="https://www.youtube.com/watch?v=w2rmkOp_ct8" target="_blank" rel="noopener">
+              <div><div class="ref-card-name">DRX Sport</div></div>
+              <span class="ref-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 MODERN SOCIAL -->
+    <section class="pkg">
+      <div class="pkg-header">
+        <div class="pkg-num">02</div>
+        <div class="pkg-head-right">
+          <div class="pkg-label">Modern Social</div>
+          <h2 class="pkg-name">Minőségi videótartalom + Meta hirdetéskezelés</h2>
+          <div class="pkg-price-row">
+            <span class="price">300 000</span>
+            <span class="price-unit">Ft / hó</span>
+          </div>
+          <div class="pkg-summary">4 minőségi videó havonta + teljes Meta hirdetéskezelés</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <p class="pkg-desc">Ez a konstrukció kedvezőbb alternatíva a filmesebb prémium produkcióhoz képest, anélkül, hogy az igényes vizuális megjelenésről le kellene mondani.</p>
+        <p class="pkg-desc">A tartalomgyártást a Photozoom csapata végzi.</p>
+        <p class="pkg-desc">A fő különbség a két videós irány között a vizuális karakter.<br>A prémium konstrukció filmesebb, erősebben imázsépítő megjelenésre épül, míg a Modern Social irány dinamikusabb, közvetlenebb és közelebb áll az Instagram Reels és TikTok vizuális világához.</p>
+        <p class="pkg-desc">A videók itt is magas minőségben készülnek, de a fókusz elsősorban a modern social megjelenésen és a platformokon jól működő tartalmi formátumokon van.</p>
+        <div class="ref-section" style="margin-bottom: 28px;">
+          <div class="ref-label">Gasztronómiai referencia</div>
+          <div class="tiktok-ref">
+            <a class="tiktok-card" href="https://www.tiktok.com/@mono.cakedessert" target="_blank" rel="noopener">
+              <div>
+                <div class="tiktok-name">Mono Cake &amp; Dessert</div>
+                <div class="tiktok-handle">@mono.cakedessert · TikTok</div>
+              </div>
+              <span class="tiktok-arrow">↗</span>
+            </a>
+          </div>
+          <p class="collab-note">A Mono Cake &amp; Dessert esetében jelenleg is ebben a felállásban dolgozunk együtt: a Photozoom csapata készíti a videós tartalmakat, én pedig a Meta- és TikTok-hirdetéseket kezelem.<br>Ez egy már működő együttműködési modell, ahol a tartalomgyártás és a performance marketing összehangoltan működik.</p>
+        </div>
+        <p class="recommend-when">Ezt a konstrukciót akkor javaslom, ha fontos a magas vizuális minőség és a professzionális social megjelenés, de nincs szükség a prémium csomag filmesebb produkciós szintjére.</p>
+      </div>
+    </section>
+
+    <!-- 03 META ONLY -->
+    <section class="pkg" style="margin-bottom: 0; padding-bottom: 0; border-bottom: none;">
+      <div class="pkg-header">
+        <div class="pkg-num">03</div>
+        <div class="pkg-head-right">
+          <div class="pkg-label">Meglévő videós csapattal</div>
+          <h2 class="pkg-name">Meta hirdetéskezelés + kreatív és technikai együttműködés</h2>
+          <div class="pkg-price-row">
+            <span class="price">150 000</span>
+            <span class="price-unit">Ft / hó</span>
+          </div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <p class="pkg-desc">Ha a jelenlegi videós csapat munkájával elégedettek vagytok, nem szükséges videóst váltani.</p>
+        <p class="pkg-desc">Ebben az esetben én venném át a Meta-hirdetések teljes kezelését, és közvetlenül együtt dolgoznék a meglévő videós csapattal.</p>
+        <p class="pkg-desc">A cél, hogy a tartalomgyártás és a hirdetések ne egymástól függetlenül működjenek.</p>
+        <p class="pkg-desc">A kampányeredmények alapján a videós csapat konkrét visszajelzést és kreatív iránymutatást kapna arról, hogy:</p>
+        <div class="feature-section" style="margin-bottom: 28px;">
+          <ul class="feature-list">
+            <li>milyen témákból érdemes új videókat készíteni</li>
+            <li>milyen videónyitások működnek jól</li>
+            <li>mely fogásokat vagy üzeneteket érdemes kiemelni</li>
+            <li>milyen kreatív verziókat érdemes tesztelni</li>
+            <li>mely tartalmi irányok teljesítenek a legerősebben</li>
+          </ul>
+        </div>
+        <p class="recommend-when">Ezt a konstrukciót akkor javaslom, ha a jelenlegi videós tartalmak minősége megfelel az elvárásoknak, és elsősorban a hirdetési oldalt szeretnétek professzionálisan felépíteni.</p>
+      </div>
+    </section>
+
+    <!-- META SERVICE SECTION -->
+    <section class="meta-section">
+      <div class="section-eyebrow">Minden csomagban</div>
+      <h2 class="section-heading">Mit tartalmaz a Meta hirdetéskezelés?</h2>
+      <p class="section-body">A hirdetéskezelés nem csak a kampányok elindítását és optimalizálását jelenti.<br>Az együttműködés elején beállítom és ellenőrzöm a szükséges mérési hátteret is, hogy ne csak a hirdetési mutatókat lássuk, hanem megfelelően mérni tudjuk a weboldalon történő fontos eseményeket és konverziókat is.</p>
+      <div class="meta-service-label">A szolgáltatás része</div>
+      <ul class="meta-service-list">
+        <li>Meta kampánystratégia kialakítása</li>
+        <li>kampányok létrehozása és kezelése</li>
+        <li>célközönségek kialakítása</li>
+        <li>remarketing</li>
+        <li>kreatívok és hirdetési üzenetek tesztelése</li>
+        <li>folyamatos kampányoptimalizálás</li>
+        <li>eredmények követése és elemzése</li>
+        <li>hirdetési szempontú kreatív javaslatok</li>
+        <li>Meta Pixel és a szükséges eseménymérések ellenőrzése, beállítása</li>
+        <li>konverziómérés kialakítása</li>
+        <li>kampányok megfelelő paraméterezése és visszamérése</li>
+      </ul>
+      <div class="wp-note">
+        <div class="wp-note-title">WordPress technikai együttműködés</div>
+        <div class="wp-note-body">A Sushi Sei weboldala WordPress alapú, ezért a szükséges technikai setup kialakításában is tudok segíteni. Amennyiben valamelyik méréshez vagy kampányfunkcióhoz weboldali módosítás szükséges, közvetlenül együtt tudok dolgozni a webes kollégával: meghatározom a szükséges technikai beállításokat, egyeztetek vele a megvalósításról, majd ellenőrzöm, hogy a mérés megfelelően működik-e.</div>
+      </div>
+      <p class="section-body">A cél, hogy a videógyártás, a weboldal és a hirdetési rendszer ne három különálló területként működjön.</p>
+      <div class="data-loop">
+        <h3 class="data-loop-heading">Az adatok visszakerülnek a tartalomgyártásba</h3>
+        <p class="data-loop-intro">A kampányok eredményeiből folyamatosan láthatóvá válik, hogy:</p>
+        <ul class="data-list">
+          <li>mely videók működnek a legerősebben</li>
+          <li>mely fogások keltik fel leginkább az érdeklődést</li>
+          <li>milyen üzenetekre reagál jól a közönség</li>
+          <li>milyen kreatív irányokat érdemes továbbvinni</li>
+        </ul>
+        <p class="data-loop-close">Ezeket az információkat a következő tartalmak tervezésénél is felhasználjuk.<br>Így nem csak új videók készülnek hónapról hónapra, hanem egyre több saját adatunk lesz arról, <strong>milyen kommunikáció működik a Sushi Sei közönségénél.</strong></p>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="comparison">
+      <h2 class="comparison-heading">Melyik irány illeszkedik hozzátok?</h2>
+      <div class="compare-grid">
+        <div class="compare-card is-rec">
+          <div class="cc-label">Ha prémium, filmesebb megjelenés a cél</div>
+          <div class="cc-name">Prémium</div>
+          <div><div class="cc-price">410 000</div><div class="cc-unit">Ft / hó</div></div>
+          <div class="cc-desc">4 prémium videó + teljes Meta hirdetéskezelés</div>
+          <div class="cc-badge">A megbeszéltek alapján ezt javaslom.</div>
+        </div>
+        <div class="compare-card">
+          <div class="cc-label">Ha modern, magas minőségű social tartalom a cél</div>
+          <div class="cc-name">Modern Social</div>
+          <div><div class="cc-price">300 000</div><div class="cc-unit">Ft / hó</div></div>
+          <div class="cc-desc">4 minőségi social videó + teljes Meta hirdetéskezelés</div>
+        </div>
+        <div class="compare-card">
+          <div class="cc-label">Ha megtartanátok a jelenlegi videós csapatot</div>
+          <div class="cc-name">Meta</div>
+          <div><div class="cc-price">150 000</div><div class="cc-unit">Ft / hó</div></div>
+          <div class="cc-desc">Teljes Meta hirdetéskezelés + kreatív és technikai együttműködés</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="faq-question">És a weboldalon látott 270 000 Ft-os csomag?</div>
+      <div class="faq-body">
+        <p>A weboldalon szereplő konstrukció havi 10 rövidebb, elsősorban folyamatos social jelenlétre épülő videót + Meta hirdetéskezelést tartalmaz. Ez a konstrukció továbbra is elérhető.</p>
+        <p>A mostani ajánlat azért tér el ettől, mert a beszélgetésünk alapján nálatok nem a havi 10 videós volumen, hanem 4 magasabb minőségű tartalom merült fel prioritásként.</p>
+        <p>A Modern Social konstrukció sem a weboldalas csomag 4 videós változata, hanem egy másik videós csapattal kialakított, minőségközpontú együttműködés.</p>
+        <p>Ha viszont a nagyobb havi videómennyiség áll közelebb a céljaitokhoz, a weboldalon látott konstrukció természetesen továbbra is választható.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2 class="cta-heading">Következő lépés</h2>
+      <p class="cta-body">A választott konstrukció alapján egyeztetjük az indulás időpontját, az első időszak tartalmi fókuszait és a kampány céljait.<br><br>A cél egy olyan rendszer felépítése, ahol a minőségi tartalom, a pontos mérés és a hirdetéskezelés egymást erősíti — és közösen dolgozik azon, hogy minél több megfelelő vendég találkozzon a Sushi Sei kínálatával.</p>
+      <div class="contact-rows">
+        <div class="contact-row">
+          <span class="c-label">E-mail</span>
+          <span class="c-val">daniel@blummarketing.hu</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      A Meta részére fizetett hirdetési költség nem része a feltüntetett havidíjaknak.
+    </div>
+
+    <footer class="doc-footer">
+      <span>Blummarketing · Blum Dániel</span>
+      <span>2026. szeptember 10.</span>
+    </footer>
+
+  </div>
+  </div>
+
+  <script>
+    const CODE = 'SushiSei2026';
+    const SESSION_KEY = 'ss_unlocked';
+
+    function unlock() {
+      const input = document.getElementById('pw');
+      const err = document.getElementById('err');
+      if (input.value === CODE) {
+        try { sessionStorage.setItem(SESSION_KEY, '1'); } catch(e) {}
+        show();
+      } else {
+        err.textContent = 'Helytelen kód. Kérjük próbálja újra.';
+        input.classList.add('error');
+        input.value = '';
+        setTimeout(() => input.classList.remove('error'), 400);
+        input.focus();
+      }
+    }
+
+    function show() {
+      document.getElementById('lock').classList.add('hidden');
+      document.getElementById('content').classList.add('visible');
+    }
+
+    // Enter key support
+    document.getElementById('pw').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') unlock();
+    });
+
+    // Check session
+    try {
+      if (sessionStorage.getItem(SESSION_KEY) === '1') show();
+    } catch(e) {}
+  </script>
+</body>
+</html>
