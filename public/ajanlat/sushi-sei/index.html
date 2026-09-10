@@ -449,6 +449,67 @@
     .c-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); width: 54px; flex-shrink: 0; }
     .c-val { font-size: 15px; color: var(--text); }
 
+    /* ── CLOSING ── */
+    .closing {
+      margin-bottom: 64px;
+      padding: 40px 44px;
+      background: var(--bg-2);
+      border-top: 2px solid var(--accent);
+    }
+    .closing-inner {
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+    }
+    .closing-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      flex-shrink: 0;
+    }
+    .closing-text { flex: 1; }
+    .closing-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 3px;
+    }
+    .closing-role {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 18px;
+    }
+    .closing-body {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 12px;
+      max-width: 520px;
+    }
+    .closing-body:last-of-type { margin-bottom: 16px; }
+    .closing-email {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .closing-email:hover { border-bottom-color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .closing { padding: 28px 22px; }
+      .closing-inner { flex-direction: column; gap: 20px; }
+      .closing-photo { width: 80px; height: 80px; }
+    }
+
     /* ── DISCLAIMER / FOOTER ── */
     .disclaimer { padding-top: 32px; border-top: 1px solid var(--div); font-size: 11.5px; color: var(--faint); line-height: 1.65; }
     .doc-footer { margin-top: 24px; display: flex; justify-content: space-between; font-size: 11px; color: var(--faint); }
@@ -737,6 +798,20 @@
         </div>
       </div>
     </section>
+
+    <!-- CLOSING -->
+    <div class="closing">
+      <div class="closing-inner">
+        <img class="closing-photo" src="/images/Blum_Daniel.webp" alt="Blum Dániel">
+        <div class="closing-text">
+          <div class="closing-name">Blum Dániel</div>
+          <div class="closing-role">Alapító · Blummarketing</div>
+          <p class="closing-body">Személyesen foglalkozom minden ügyféllel – nem adok át asszisztensnek vagy junior kollégának. Ha elindulunk együtt, én leszek az, aki a kampányokat kezeli, a videós csapattal egyeztet, és a havi eredményekről visszajelzést ad.</p>
+          <p class="closing-body">Ha bármi kérdése van az ajánlattal kapcsolatban, keressen bátran.</p>
+          <a class="closing-email" href="mailto:hello@blummarketing.hu">hello@blummarketing.hu</a>
+        </div>
+      </div>
+    </div>
 
     <div class="disclaimer">
       A Meta részére fizetett hirdetési költség nem része a feltüntetett havidíjaknak.
