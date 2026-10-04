@@ -12,6 +12,7 @@ const szolgaltatasok = {
     { href: "/szolgaltatasok/tiktok-hirdeteskezeles/", label: "TikTok hirdetéskezelés" },
     { href: "/szolgaltatasok/meta-hirdeteskezeles/", label: "Meta hirdetéskezelés" },
     { href: "/szolgaltatasok/weboldal-keszites/", label: "Weboldal készítés" },
+    { href: "/konzultacio/", label: "Szakmai konzultáció" },
   ],
 };
 
