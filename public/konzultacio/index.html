@@ -699,64 +699,75 @@
 <section class="section section-dark" id="foglalas">
   <div class="wrap-narrow">
     <div class="label">Foglalás</div>
-    <div class="booking-grid">
-      <div>
-        <h2 class="booking-h2">Hozd a kérdéseidet. 60 percig csak a ti rendszeretekkel foglalkozunk.</h2>
-        <p class="booking-lead">A foglalás csak sikeres előrefizetéssel véglegesül. Fizetés után visszaigazoló emailt, naptárbejegyzést és videóhívás linket kapsz.</p>
+    <h2 class="booking-h2" style="margin-bottom: 12px;">Hozd a kérdéseidet. 60 percig csak a ti rendszeretekkel foglalkozunk.</h2>
+    <p class="booking-lead">A foglalás csak sikeres előrefizetéssel véglegesül. Fizetés után visszaigazoló emailt, naptárbejegyzést és Google Meet linket kapsz.</p>
 
-        <div class="steps">
-          <div class="step">
-            <span class="step-num">01</span>
-            <span class="step-text">Válaszd ki az időtartamot (60 vagy 120 perc)</span>
-          </div>
-          <div class="step">
-            <span class="step-num">02</span>
-            <span class="step-text">Válassz szabad időpontot (16:00 vagy 17:00)</span>
-          </div>
-          <div class="step">
-            <span class="step-num">03</span>
-            <span class="step-text">Add meg a céges adatokat és a konzultáció témáját</span>
-          </div>
-          <div class="step">
-            <span class="step-num">04</span>
-            <span class="step-text">Fizesd ki online – a foglalás ezután végleges</span>
-          </div>
-        </div>
-
-        <div class="avail-grid">
-          <div class="avail-row">
-            <span class="avail-key">Napok</span>
-            <span class="avail-val">Hétfő – Péntek</span>
-          </div>
-          <div class="avail-row">
-            <span class="avail-key">Időszak</span>
-            <span class="avail-val">16:00 – 18:00</span>
-          </div>
-          <div class="avail-row">
-            <span class="avail-key">Előzetes foglalás</span>
-            <span class="avail-val">Minimum 24 óra</span>
-          </div>
-          <div class="avail-row">
-            <span class="avail-key">Platform</span>
-            <span class="avail-val">Online (Google Meet)</span>
-          </div>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <a href="https://cal.com/daniel-blum-h1k8pn/60-perces-megbeszeles" target="_blank" rel="noopener" class="btn btn-white" style="justify-content: center; padding: 18px 28px; font-size: 16px;">
-          Időpontot foglalok – 50 000 Ft / óra
-        </a>
-        <a href="https://cal.com/daniel-blum-h1k8pn/60-perces-megbeszeles" target="_blank" rel="noopener" class="btn btn-ghost" style="justify-content: center; padding: 18px 28px; font-size: 16px;">
-          Időpontot foglalok – 100 000 Ft / 2 óra
-        </a>
-        <p style="font-size: 12px; color: var(--subtle); text-align: center; line-height: 1.6;">
-          Fizetés után visszaigazoló email · Google Meet link · Naptárbejegyzés
-        </p>
-      </div>
+    <!-- Tab váltó -->
+    <div style="display:flex; gap:12px; margin-bottom:28px;">
+      <button id="tab-60" onclick="switchTab('60')"
+        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid #fff; background:#fff; color:#0a0a0a; transition:all 0.15s;">
+        60 perc – 50 000 Ft
+      </button>
+      <button id="tab-120" onclick="switchTab('120')"
+        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid rgba(255,255,255,0.2); background:transparent; color:#fff; transition:all 0.15s;">
+        120 perc – 100 000 Ft
+      </button>
     </div>
+
+    <!-- 60 perces naptár -->
+    <div id="cal-60" style="border-radius:1.5rem; overflow:hidden; background:#fff;">
+      <div style="width:100%;min-height:700px;overflow:scroll" id="my-cal-inline-60-perces-megbeszeles"></div>
+    </div>
+
+    <!-- 120 perces naptár -->
+    <div id="cal-120" style="display:none; border-radius:1.5rem; overflow:hidden; background:#fff;">
+      <div style="width:100%;min-height:700px;overflow:scroll" id="my-cal-inline-120-perces-konzultacio"></div>
+    </div>
+
+    <p style="font-size:12px; color:var(--subtle); text-align:center; margin-top:16px; line-height:1.6;">
+      Fizetés után visszaigazoló email · Google Meet link · Naptárbejegyzés
+    </p>
   </div>
 </section>
+
+<!-- Cal.com embed scripts -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", "60-perces-megbeszeles", {origin:"https://app.cal.com"});
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
+  Cal.ns["60-perces-megbeszeles"]("inline", {
+    elementOrSelector:"#my-cal-inline-60-perces-megbeszeles",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "daniel-blum-h1k8pn/60-perces-megbeszeles",
+  });
+  Cal.ns["60-perces-megbeszeles"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+
+  Cal("init", "120-perces-konzultacio", {origin:"https://app.cal.com"});
+  Cal.ns["120-perces-konzultacio"]("inline", {
+    elementOrSelector:"#my-cal-inline-120-perces-konzultacio",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "daniel-blum-h1k8pn/120-perces-konzultacio",
+  });
+  Cal.ns["120-perces-konzultacio"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+
+<script>
+  function switchTab(tab) {
+    var is60 = tab === '60';
+    document.getElementById('cal-60').style.display  = is60 ? 'block' : 'none';
+    document.getElementById('cal-120').style.display = is60 ? 'none'  : 'block';
+
+    var active   = {background:'#fff', color:'#0a0a0a', border:'1px solid #fff'};
+    var inactive = {background:'transparent', color:'#fff', border:'1px solid rgba(255,255,255,0.2)'};
+
+    var t60  = document.getElementById('tab-60');
+    var t120 = document.getElementById('tab-120');
+    Object.assign(t60.style,  is60 ? active : inactive);
+    Object.assign(t120.style, is60 ? inactive : active);
+  }
+</script>
 
 
 <!-- ══ SCOPE ══ -->
