@@ -701,12 +701,12 @@
     </div>
 
     <!-- 60 perces naptár -->
-    <div id="cal-60" style="border-radius:1.5rem; overflow:hidden; background:#fff;">
+    <div id="cal-60" style="border-radius:1.5rem; overflow:hidden; background:#fff; color-scheme:light;">
       <div style="width:100%;min-height:680px;" id="my-cal-inline-60-perces-megbeszeles"></div>
     </div>
 
     <!-- 120 perces naptár -->
-    <div id="cal-120" style="display:none; border-radius:1.5rem; overflow:hidden; background:#fff;">
+    <div id="cal-120" style="display:none; border-radius:1.5rem; overflow:hidden; background:#fff; color-scheme:light;">
       <div style="width:100%;min-height:680px;" id="my-cal-inline-120-perces-konzultacio"></div>
     </div>
 
@@ -721,22 +721,20 @@
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 
   Cal("init", "60-perces-megbeszeles", {origin:"https://app.cal.com"});
-  Cal.config = Cal.config || {};
-  Cal.config.forwardQueryParams = true;
   Cal.ns["60-perces-megbeszeles"]("inline", {
     elementOrSelector:"#my-cal-inline-60-perces-megbeszeles",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
     calLink: "daniel-blum-h1k8pn/60-perces-megbeszeles",
   });
-  Cal.ns["60-perces-megbeszeles"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#e11d48"}},"theme":"light"});
+  Cal.ns["60-perces-megbeszeles"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#e11d48"}}});
 
   Cal("init", "120-perces-konzultacio", {origin:"https://app.cal.com"});
   Cal.ns["120-perces-konzultacio"]("inline", {
     elementOrSelector:"#my-cal-inline-120-perces-konzultacio",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
     calLink: "daniel-blum-h1k8pn/120-perces-konzultacio",
   });
-  Cal.ns["120-perces-konzultacio"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#e11d48"}},"theme":"light"});
+  Cal.ns["120-perces-konzultacio"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#e11d48"}}});
 </script>
 
 <script>
