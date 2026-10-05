@@ -60,8 +60,8 @@
     .nav-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.5rem;
-      height: 64px;
+      padding: 0 2rem;
+      height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -70,31 +70,152 @@
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 18px;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: -0.02em;
       color: #fff;
+      text-decoration: none;
+      flex-shrink: 0;
     }
     .nav-brand-icon {
       width: 40px; height: 40px;
       background: #fff;
-      border-radius: 14px;
+      border-radius: 16px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
     .nav-brand-icon svg { width: 20px; height: 20px; }
+
+    /* Desktop nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #d4d4d4;
+    }
+    .nav-links a { color: #d4d4d4; transition: color 0.15s; }
+    .nav-links a:hover { color: #fff; }
+
+    /* Dropdown */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-trigger {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      color: #d4d4d4;
+      font-size: 14px;
+      transition: color 0.15s;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-weight: inherit;
+      padding: 0;
+    }
+    .nav-dropdown-trigger:hover { color: #fff; }
+    .nav-dropdown-trigger svg { transition: transform 0.15s; }
+    .nav-dropdown:hover .nav-dropdown-trigger svg { transform: rotate(180deg); }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #171717;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 10px;
+      min-width: 260px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #d4d4d4;
+      transition: all 0.12s;
+    }
+    .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .nav-dropdown-menu a.active { color: #fda4af; }
+
     .nav-cta {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       color: #0a0a0a;
       background: #fff;
-      padding: 10px 22px;
+      padding: 10px 20px;
       border-radius: 9999px;
       white-space: nowrap;
       transition: background 0.15s;
     }
     .nav-cta:hover { background: #e5e5e5; }
+
+    /* Mobile hamburger */
+    .nav-hamburger {
+      display: none;
+      width: 40px; height: 40px;
+      align-items: center; justify-content: center;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      cursor: pointer;
+    }
+    .nav-mobile-menu {
+      display: none;
+      position: absolute;
+      top: 76px;
+      left: 1rem; right: 1rem;
+      background: #171717;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+      z-index: 200;
+    }
+    .nav-mobile-menu.open { display: block; }
+    .nav-mobile-menu a {
+      display: block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #d4d4d4;
+      transition: all 0.12s;
+    }
+    .nav-mobile-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+    .nav-mobile-section {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fda4af;
+      padding: 10px 14px 4px;
+    }
+    .nav-mobile-cta {
+      display: block;
+      margin-top: 8px;
+      padding: 12px;
+      text-align: center;
+      background: #fff;
+      color: #0a0a0a !important;
+      border-radius: 9999px;
+      font-weight: 700;
+    }
+    .nav-mobile-cta:hover { background: #e5e5e5 !important; }
+
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
 
     /* ── Hero ── */
     .hero {
@@ -500,17 +621,81 @@
 <body>
 
 <!-- NAV -->
-<header class="nav">
+<header class="nav" style="position:sticky;">
   <div class="nav-inner">
-    <a href="https://blummarketing.hu" class="nav-brand">
+
+    <!-- Logo -->
+    <a href="https://blummarketing.hu" class="nav-brand" aria-label="Blummarketing főoldal">
       <div class="nav-brand-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
       </div>
       Blummarketing
     </a>
-    <a href="#foglalas" class="nav-cta">Időpontot foglalok</a>
+
+    <!-- Desktop links -->
+    <nav class="nav-links">
+
+      <!-- Szolgáltatások -->
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger">
+          Szolgáltatások
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="https://blummarketing.hu/szolgaltatasok/havi-videos-tartalom-hirdeteskezeles/">Havi videós tartalom + hirdetéskezelés</a>
+          <a href="https://blummarketing.hu/szolgaltatasok/google-hirdeteskezeles/">Google hirdetéskezelés</a>
+          <a href="https://blummarketing.hu/szolgaltatasok/tiktok-hirdeteskezeles/">TikTok hirdetéskezelés</a>
+          <a href="https://blummarketing.hu/szolgaltatasok/meta-hirdeteskezeles/">Meta hirdetéskezelés</a>
+          <a href="https://blummarketing.hu/szolgaltatasok/weboldal-keszites/">Weboldal készítés</a>
+          <a href="/konzultacio/" class="active">Szakmai konzultáció</a>
+        </div>
+      </div>
+
+      <a href="https://blummarketing.hu/esettanulmanyok/">Esettanulmányok</a>
+
+      <!-- Tudástár -->
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger">
+          Tudástár
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" style="min-width:300px;">
+          <a href="https://blummarketing.hu/tudastar/google-ads/">Google Ads hirdetéskezelés érthetően</a>
+          <a href="https://blummarketing.hu/tudastar/meta-hirdetesek/">Meta hirdetések érthetően</a>
+          <a href="https://blummarketing.hu/tudastar/tiktok-hirdetesek/">TikTok hirdetések érthetően</a>
+          <a href="https://blummarketing.hu/tudastar/meres-es-analitika/">Mérés és analitika</a>
+          <a href="https://blummarketing.hu/tudastar/" style="color:#a3a3a3; margin-top:4px;">→ Összes cikk</a>
+        </div>
+      </div>
+
+      <a href="https://blummarketing.hu/rolam/">Rólam</a>
+      <a href="https://blummarketing.hu/#kapcsolat">Kapcsolat</a>
+      <a href="https://blummarketing.hu/#kapcsolat" class="nav-cta" style="margin-left:8px;">Ajánlatkérés</a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menü">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="nav-mobile-menu">
+    <div class="nav-mobile-section">Szolgáltatások</div>
+    <a href="https://blummarketing.hu/szolgaltatasok/havi-videos-tartalom-hirdeteskezeles/">Havi videós tartalom + hirdetéskezelés</a>
+    <a href="https://blummarketing.hu/szolgaltatasok/google-hirdeteskezeles/">Google hirdetéskezelés</a>
+    <a href="https://blummarketing.hu/szolgaltatasok/tiktok-hirdeteskezeles/">TikTok hirdetéskezelés</a>
+    <a href="https://blummarketing.hu/szolgaltatasok/meta-hirdeteskezeles/">Meta hirdetéskezelés</a>
+    <a href="https://blummarketing.hu/szolgaltatasok/weboldal-keszites/">Weboldal készítés</a>
+    <a href="/konzultacio/" style="color:#fda4af;">Szakmai konzultáció</a>
+    <div class="nav-mobile-section" style="margin-top:8px;">Egyéb</div>
+    <a href="https://blummarketing.hu/esettanulmanyok/">Esettanulmányok</a>
+    <a href="https://blummarketing.hu/tudastar/">Tudástár</a>
+    <a href="https://blummarketing.hu/rolam/">Rólam</a>
+    <a href="https://blummarketing.hu/#kapcsolat">Kapcsolat</a>
+    <a href="https://blummarketing.hu/#kapcsolat" class="nav-mobile-cta">Ajánlatkérés</a>
   </div>
 </header>
 
