@@ -701,12 +701,12 @@
     </div>
 
     <!-- 60 perces naptár -->
-    <div id="cal-60" style="border-radius:1.5rem; overflow:hidden; border:1px solid rgba(255,255,255,0.1);">
+    <div id="cal-60" style="border-radius:1.5rem; overflow:hidden; background:#fff;">
       <div style="width:100%;min-height:680px;" id="my-cal-inline-60-perces-megbeszeles"></div>
     </div>
 
     <!-- 120 perces naptár -->
-    <div id="cal-120" style="display:none; border-radius:1.5rem; overflow:hidden; border:1px solid rgba(255,255,255,0.1);">
+    <div id="cal-120" style="display:none; border-radius:1.5rem; overflow:hidden; background:#fff;">
       <div style="width:100%;min-height:680px;" id="my-cal-inline-120-perces-konzultacio"></div>
     </div>
 
@@ -728,7 +728,7 @@
     config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
     calLink: "daniel-blum-h1k8pn/60-perces-megbeszeles",
   });
-  Cal.ns["60-perces-megbeszeles"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns["60-perces-megbeszeles"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#e11d48"}},"theme":"light"});
 
   Cal("init", "120-perces-konzultacio", {origin:"https://app.cal.com"});
   Cal.ns["120-perces-konzultacio"]("inline", {
@@ -736,7 +736,7 @@
     config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
     calLink: "daniel-blum-h1k8pn/120-perces-konzultacio",
   });
-  Cal.ns["120-perces-konzultacio"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns["120-perces-konzultacio"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#e11d48"}},"theme":"light"});
 </script>
 
 <script>
