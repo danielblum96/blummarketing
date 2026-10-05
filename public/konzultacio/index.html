@@ -606,6 +606,14 @@
     .footer-links a { font-size: 14px; color: rgba(255,255,255,0.35); }
     .footer-links a:hover { color: rgba(255,255,255,0.7); }
 
+    /* ── Cal.com mobil/desktop ── */
+    .cal-mobile-buttons { display:none; flex-direction:column; gap:12px; }
+    .cal-desktop-embed  { display:block; }
+    @media (max-width: 768px) {
+      .cal-mobile-buttons { display:flex; }
+      .cal-desktop-embed  { display:none; }
+    }
+
     /* ── Responsive ── */
     @media (max-width: 680px) {
       .problem-grid,
@@ -875,26 +883,40 @@
     <h2 class="booking-h2" style="margin-bottom:12px; color:#0a0a0a;">Hozd a kérdéseidet. 60 percig csak a ti rendszeretekkel foglalkozunk.</h2>
     <p class="booking-lead" style="color:#525252;">A foglalás csak sikeres előrefizetéssel véglegesül. Fizetés után visszaigazoló emailt, naptárbejegyzést és Google Meet linket kapsz.</p>
 
-    <!-- Tab váltó -->
-    <div style="display:flex; gap:12px; margin-bottom:28px;">
-      <button id="tab-60" onclick="switchTab('60')"
-        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid #0a0a0a; background:#0a0a0a; color:#fff; transition:all 0.15s;">
-        60 perc – 50 000 Ft
-      </button>
-      <button id="tab-120" onclick="switchTab('120')"
-        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid rgba(0,0,0,0.2); background:transparent; color:#525252; transition:all 0.15s;">
-        120 perc – 100 000 Ft
-      </button>
+    <!-- Mobil: közvetlen linkek Cal.com-ra -->
+    <div class="cal-mobile-buttons">
+      <a href="https://cal.com/daniel-blum-h1k8pn/60-perces-megbeszeles" target="_blank" rel="noopener"
+        style="display:block; padding:16px; background:#0a0a0a; color:#fff; border-radius:9999px; font-size:15px; font-weight:700; text-align:center; text-decoration:none;">
+        60 perces konzultáció – 50 000 Ft
+      </a>
+      <a href="https://cal.com/daniel-blum-h1k8pn/120-perces-konzultacio" target="_blank" rel="noopener"
+        style="display:block; padding:16px; background:transparent; color:#0a0a0a; border:1px solid rgba(0,0,0,0.25); border-radius:9999px; font-size:15px; font-weight:700; text-align:center; text-decoration:none;">
+        120 perces konzultáció – 100 000 Ft
+      </a>
+      <p style="font-size:12px; color:#a3a3a3; text-align:center; line-height:1.6; margin-top:4px;">
+        Megnyílik a Cal.com foglalási oldalon
+      </p>
     </div>
 
-    <!-- 60 perces naptár -->
-    <div id="cal-60" style="color-scheme:light;">
-      <div style="width:100%;min-height:680px;" id="my-cal-inline-60-perces-megbeszeles"></div>
-    </div>
+    <!-- Desktop: inline naptár -->
+    <div class="cal-desktop-embed">
+      <div style="display:flex; gap:12px; margin-bottom:28px;">
+        <button id="tab-60" onclick="switchTab('60')"
+          style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid #0a0a0a; background:#0a0a0a; color:#fff; transition:all 0.15s;">
+          60 perc – 50 000 Ft
+        </button>
+        <button id="tab-120" onclick="switchTab('120')"
+          style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid rgba(0,0,0,0.2); background:transparent; color:#525252; transition:all 0.15s;">
+          120 perc – 100 000 Ft
+        </button>
+      </div>
 
-    <!-- 120 perces naptár -->
-    <div id="cal-120" style="display:none; color-scheme:light;">
-      <div style="width:100%;min-height:680px;" id="my-cal-inline-120-perces-konzultacio"></div>
+      <div id="cal-60" style="color-scheme:light;">
+        <div style="width:100%;min-height:680px;" id="my-cal-inline-60-perces-megbeszeles"></div>
+      </div>
+      <div id="cal-120" style="display:none; color-scheme:light;">
+        <div style="width:100%;min-height:680px;" id="my-cal-inline-120-perces-konzultacio"></div>
+      </div>
     </div>
 
     <p style="font-size:12px; color:#a3a3a3; text-align:center; margin-top:16px; line-height:1.6;">
