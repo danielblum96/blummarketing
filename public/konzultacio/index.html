@@ -869,20 +869,20 @@
 
 
 <!-- ══ FOGLALÁS ══ -->
-<section class="section section-dark" id="foglalas">
+<section class="section" id="foglalas" style="background:#f4f4f5; color-scheme:light;">
   <div class="wrap-narrow">
-    <div class="label">Foglalás</div>
-    <h2 class="booking-h2" style="margin-bottom: 12px;">Hozd a kérdéseidet. 60 percig csak a ti rendszeretekkel foglalkozunk.</h2>
-    <p class="booking-lead">A foglalás csak sikeres előrefizetéssel véglegesül. Fizetés után visszaigazoló emailt, naptárbejegyzést és Google Meet linket kapsz.</p>
+    <div class="label" style="color:#e11d48;">Foglalás</div>
+    <h2 class="booking-h2" style="margin-bottom:12px; color:#0a0a0a;">Hozd a kérdéseidet. 60 percig csak a ti rendszeretekkel foglalkozunk.</h2>
+    <p class="booking-lead" style="color:#525252;">A foglalás csak sikeres előrefizetéssel véglegesül. Fizetés után visszaigazoló emailt, naptárbejegyzést és Google Meet linket kapsz.</p>
 
     <!-- Tab váltó -->
     <div style="display:flex; gap:12px; margin-bottom:28px;">
       <button id="tab-60" onclick="switchTab('60')"
-        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid #fff; background:#fff; color:#0a0a0a; transition:all 0.15s;">
+        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid #0a0a0a; background:#0a0a0a; color:#fff; transition:all 0.15s;">
         60 perc – 50 000 Ft
       </button>
       <button id="tab-120" onclick="switchTab('120')"
-        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid rgba(255,255,255,0.2); background:transparent; color:#fff; transition:all 0.15s;">
+        style="padding:10px 24px; border-radius:9999px; font-size:14px; font-weight:700; cursor:pointer; border:1px solid rgba(0,0,0,0.2); background:transparent; color:#525252; transition:all 0.15s;">
         120 perc – 100 000 Ft
       </button>
     </div>
@@ -897,7 +897,7 @@
       <div style="width:100%;min-height:680px;" id="my-cal-inline-120-perces-konzultacio"></div>
     </div>
 
-    <p style="font-size:12px; color:var(--subtle); text-align:center; margin-top:16px; line-height:1.6;">
+    <p style="font-size:12px; color:#a3a3a3; text-align:center; margin-top:16px; line-height:1.6;">
       Fizetés után visszaigazoló email · Google Meet link · Naptárbejegyzés
     </p>
   </div>
@@ -930,8 +930,8 @@
     document.getElementById('cal-60').style.display  = is60 ? 'block' : 'none';
     document.getElementById('cal-120').style.display = is60 ? 'none'  : 'block';
 
-    var active   = {background:'#fff', color:'#0a0a0a', border:'1px solid #fff'};
-    var inactive = {background:'transparent', color:'#fff', border:'1px solid rgba(255,255,255,0.2)'};
+    var active   = {background:'#0a0a0a', color:'#fff', border:'1px solid #0a0a0a'};
+    var inactive = {background:'transparent', color:'#525252', border:'1px solid rgba(0,0,0,0.2)'};
 
     var t60  = document.getElementById('tab-60');
     var t120 = document.getElementById('tab-120');
