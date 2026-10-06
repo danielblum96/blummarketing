@@ -607,12 +607,15 @@
     .footer-links a:hover { color: rgba(255,255,255,0.7); }
 
     /* ── Szakmai háttér ── */
-    .expert-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:48px 0; }
-    .expert-bio   { display:grid; grid-template-columns:auto 1fr; gap:48px; align-items:start; }
+    .expert-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .expert-photo-grid { display:grid; grid-template-columns:1fr 460px; gap:64px; align-items:start; }
+    .expert-photo-wrap { position:relative; }
+    @media (max-width: 900px) {
+      .expert-photo-grid { grid-template-columns:1fr; }
+      .expert-photo-wrap { max-width:400px; }
+    }
     @media (max-width: 680px) {
       .expert-stats { grid-template-columns:repeat(2,1fr); }
-      .expert-bio   { grid-template-columns:1fr; }
-      .expert-bio-photo { display:flex; align-items:center; gap:16px; text-align:left !important; }
     }
 
     /* ── Cal.com mobil/desktop ── */
@@ -860,66 +863,81 @@
 
 
 <!-- ══ SZAKMAI HÁTTÉR ══ -->
-<section class="section section-dark">
-  <div class="wrap-narrow">
-    <div class="label">Miért én</div>
-    <h2 style="max-width:680px;">9 éve csinálom. 350 millió forint hirdetési büdzséből tanultam meg, mi működik és mi nem.</h2>
+<section class="section section-dark" style="padding-bottom:0;">
+  <div class="wrap" style="max-width:1100px; margin:0 auto; padding:0 1.5rem;">
+    <div class="expert-photo-grid">
 
-    <!-- Stat sor -->
-    <div class="expert-stats">
-      <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:28px 20px; text-align:center;">
-        <div style="font-size:36px; font-weight:900; letter-spacing:-0.03em; color:#fff; line-height:1;">350M+</div>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:8px;">Ft kezelt büdzsé</div>
-      </div>
-      <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:28px 20px; text-align:center;">
-        <div style="font-size:36px; font-weight:900; letter-spacing:-0.03em; color:#fff; line-height:1;">9 év</div>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:8px;">aktív tapasztalat</div>
-      </div>
-      <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:28px 20px; text-align:center;">
-        <div style="font-size:36px; font-weight:900; letter-spacing:-0.03em; color:#fff; line-height:1;">200+</div>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:8px;">sikeres kampány</div>
-      </div>
-      <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:28px 20px; text-align:center;">
-        <div style="font-size:36px; font-weight:900; letter-spacing:-0.03em; color:var(--rose-light); line-height:1;">12×</div>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:8px;">ROAS webshopnál</div>
-      </div>
-    </div>
+      <!-- Bal: szöveg + számok -->
+      <div style="padding-bottom:80px;">
+        <div class="label">Miért én</div>
+        <h2 style="margin-bottom:28px;">Nem jól hangzó számokat hozok. Üzleti eredményt.</h2>
 
-    <!-- Bio + expertise -->
-    <div class="expert-bio">
-      <div class="expert-bio-photo" style="flex-shrink:0; text-align:center;">
-        <img src="https://blummarketing.hu/images/Blum_Daniel_close.webp"
-             width="120" height="120"
-             style="width:120px; height:120px; border-radius:50%; object-fit:cover; display:block; border:2px solid var(--border);"
-             alt="Blum Dániel">
-        <div style="font-size:15px; font-weight:800; color:#fff; margin-top:14px; letter-spacing:-0.01em;">Blum Dániel</div>
-        <div style="font-size:12px; color:var(--rose-light); font-weight:600; margin-top:2px;">Alapító · Blummarketing</div>
-      </div>
-      <div>
-        <p style="font-size:16px; color:var(--muted); line-height:1.75; margin-bottom:28px;">
-          2017-ben, még egyetem mellett kezdtem el foglalkozni a Meta és Google hirdetésekkel. Ma kizárólag a hirdetéskezeléssel, méréssel és kampányoptimalizálással foglalkozom — nincs más szolgáltatás, nincs szétszórt figyelem.
+        <p style="font-size:16px; color:var(--muted); line-height:1.75; margin-bottom:20px;">
+          9 éve dolgozom hirdetéskezeléssel, méréssel és marketing automatizálással. Több mint 350 millió forint kezelt büdzsé alatt megtanultam, mi mozgatja valójában a bevételt — és mi az, ami csak szép számokat produkál, de nem fizet meg.
         </p>
         <p style="font-size:16px; color:var(--muted); line-height:1.75; margin-bottom:32px;">
-          Azt látom, amit egy belső marketinges tapasztalat nélkül nem láthat: hol vesznek el a konverziók, miért nem mér a Pixel rendesen, és miért nem a kreatív a probléma.
+          Nemcsak a hirdetéseket látom — látom a teljes rendszert: hogyan konvertál a landing oldal, hol vesznek el az érdeklődők, és hogyan lehet az első kattintástól az ismétlő vásárlásig egy összefüggő, automatizált folyamatot építeni.
         </p>
-        <div style="display:flex; flex-direction:column; gap:12px;">
+
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:40px;">
           <div style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--muted); line-height:1.55;">
             <span style="color:var(--rose-light); font-weight:700; flex-shrink:0;">›</span>
-            Meta Ads kampánystruktúra, célzás és optimalizálás — aktív fiókok alapján, nem elméletből
+            Meta Ads — kampánystruktúra, célzás, optimalizálás aktív fiókok alapján, nem tankönyvből
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--muted); line-height:1.55;">
             <span style="color:var(--rose-light); font-weight:700; flex-shrink:0;">›</span>
-            Konverziómérés: Meta Pixel, CAPI, GA4, GTM — tracking hibák diagnózisa és javítása
+            Konverziómérés — Meta Pixel, CAPI, GA4, GTM; tracking hibák diagnózisa és javítása
           </div>
           <div style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--muted); line-height:1.55;">
             <span style="color:var(--rose-light); font-weight:700; flex-shrink:0;">›</span>
-            Üzleti szemlélet: az eredményt az üzleti számokhoz mérem, nem a kattintásokhoz
+            CRM és email automatizálás — lead nurturing, szegmentált kampányok, utánkövetési folyamatok
+          </div>
+          <div style="display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--muted); line-height:1.55;">
+            <span style="color:var(--rose-light); font-weight:700; flex-shrink:0;">›</span>
+            Komplett marketing rendszer — hirdetés, mérés, automatizálás és konverzióoptimalizálás együtt
           </div>
         </div>
-        <a href="https://blummarketing.hu/rolam/" style="display:inline-flex; align-items:center; gap:6px; margin-top:28px; font-size:14px; font-weight:600; color:var(--subtle); transition:color 0.15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--subtle)'">
+
+        <!-- Stat sor -->
+        <div class="expert-stats" style="margin:0;">
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:20px 16px; text-align:center;">
+            <div style="font-size:28px; font-weight:900; letter-spacing:-0.03em; color:#fff; line-height:1;">350M+</div>
+            <div style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:6px;">Ft kezelt büdzsé</div>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:20px 16px; text-align:center;">
+            <div style="font-size:28px; font-weight:900; letter-spacing:-0.03em; color:#fff; line-height:1;">9 év</div>
+            <div style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:6px;">tapasztalat</div>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:20px 16px; text-align:center;">
+            <div style="font-size:28px; font-weight:900; letter-spacing:-0.03em; color:#fff; line-height:1;">200+</div>
+            <div style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:6px;">sikeres kampány</div>
+          </div>
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:1.5rem; padding:20px 16px; text-align:center;">
+            <div style="font-size:28px; font-weight:900; letter-spacing:-0.03em; color:var(--rose-light); line-height:1;">12×</div>
+            <div style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--subtle); margin-top:6px;">ROAS webshopnál</div>
+          </div>
+        </div>
+
+        <a href="https://blummarketing.hu/rolam/" style="display:inline-flex; align-items:center; gap:6px; margin-top:28px; font-size:14px; font-weight:600; color:var(--subtle);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--subtle)'">
           Részletes bemutatkozó →
         </a>
       </div>
+
+      <!-- Jobb: nagy fotó -->
+      <div class="expert-photo-wrap">
+        <div style="position:absolute; inset:-40px; border-radius:2.5rem; background:radial-gradient(ellipse at 60% 40%, rgba(244,63,94,0.15), transparent 60%); pointer-events:none;"></div>
+        <div style="position:relative; border-radius:2rem; overflow:hidden; border:1px solid rgba(255,255,255,0.1); box-shadow:0 32px 64px rgba(0,0,0,0.5);">
+          <img src="https://blummarketing.hu/images/Blum_Daniel.webp"
+               alt="Blum Dániel"
+               style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top; display:block; max-height:680px;">
+          <div style="position:absolute; inset-x:0; bottom:0; height:120px; background:linear-gradient(to top, rgba(10,10,10,0.7), transparent);"></div>
+          <div style="position:absolute; bottom:24px; left:24px;">
+            <div style="font-size:16px; font-weight:800; color:#fff; letter-spacing:-0.01em;">Blum Dániel</div>
+            <div style="font-size:12px; color:var(--rose-light); font-weight:600; margin-top:2px;">Alapító · Blummarketing</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
